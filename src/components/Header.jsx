@@ -16,8 +16,7 @@ const Header = () => {
                            <a 
                            href={`#${link}`}
                            className={`${active === link && 'active'}`}
-                           onMouseEnter={() => setActive(link)}
-                           onMouseLeave={() => setActive('')}
+                           // onClick={() => setActive(link)}
                            >{link}</a>
                            <div className={`item-container ${active === link && 'active'}`}>
                               

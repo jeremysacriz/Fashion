@@ -1,16 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
-/* Font-Family: 'League Spartan' */
-@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
-/* Google Icons */
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap"); /* Font-Family: 'League Spartan' */
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"); /* Google Icons */
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-  font-family: 'League Spartan', sans-serif;
+  font-family: "League Spartan", sans-serif;
   font-size: 12px;
 }
 
@@ -18,33 +15,23 @@ html {
   height: 100vh;
   width: 100%;
 }
-
 #index .header {
   width: 100%;
   background-color: black;
 }
-
 #index .header .header-container {
   padding: 40px 50px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   position: relative;
 }
-
 #index .header .header-container .logo {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   height: 80px;
   width: 80px;
   -o-object-fit: cover;
@@ -52,28 +39,19 @@ html {
   -o-object-position: center;
      object-position: center;
 }
-
 #index .header .header-container .header-left ul,
 #index .header .header-container .header-right ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
 }
-
 #index .header .header-container .header-left ul a,
 #index .header .header-container .header-right ul a {
   color: white;
   text-decoration: none;
 }
-
 #index .header .header-container .header-left ul li:not(:last-child) {
   margin-right: 50px;
 }
-
 #index .header .header-container .header-left ul li .item-container {
   position: absolute;
   top: -40vh;
@@ -81,15 +59,12 @@ html {
   height: 40vh;
   width: 100%;
   background-color: black;
-  -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
   z-index: -1;
 }
-
 #index .header .header-container .header-left ul li .item-container.active {
   top: 0;
 }
-
 #index .header .header-container .header-left ul a {
   font-size: 1.6rem;
   font-weight: 500;
@@ -97,52 +72,36 @@ html {
   position: relative;
   bottom: -3px;
 }
-
 #index .header .header-container .header-left ul a:after {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -3px;
   width: 100%;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  transform: scaleX(0);
   height: 2px;
   background-color: white;
-  -webkit-transform-origin: bottom right;
-          transform-origin: bottom right;
-  -webkit-transition: -webkit-transform 0.2s ease-out;
-  transition: -webkit-transform 0.2s ease-out;
+  transform-origin: bottom right;
   transition: transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, -webkit-transform 0.2s ease-out;
 }
-
 #index .header .header-container .header-left ul a:hover:after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: bottom left;
-          transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
-
 #index .header .header-container .header-right ul li:not(:last-child) {
   margin-right: 20px;
 }
-
 #index .header .header-container .header-right ul a {
-  -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
 }
-
 #index .header .header-container .header-right ul a:hover {
   color: #808080;
 }
-
 #index .header .header-container .header-right ul a span {
   font-size: 2.4rem;
 }
-
 #index .index-container {
   height: 100%;
   width: 90%;
   margin: 0 auto;
-}
-/*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
