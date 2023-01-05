@@ -1,25 +1,48 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const Header = () => {
+   const [active, setActive] = useState(null)
+
+   const handleToggle = (index) => {
+      if (active === index) {
+         setActive(null)
+      } else {
+         setActive(index)
+      }
+   }
+
+   const box = useRef(null)
+   useOutsideAlerter(box)
+   function useOutsideAlerter(ref) {
+      useEffect(() => {
+         function handleOutsideClick(e) {
+            if (ref.current && !ref.current.contains(e.target)) {
+               setActive('')
+            }
+         }
+
+         document.addEventListener('click', handleOutsideClick)
+         return () => document.removeEventListener('click', handleOutsideClick)
+      }, [ref])
+   }
+   
    const links = ['MEN', 'WOMEN', 'GIFTS']
 
-   const [active, setActive] = useState()
-
    return (
-      <header className="header">
+      <header className="header" ref={box}>
          <div className="header-container">
             <nav className="header-left">
                <ul>
-                  {links.map((link) => {
+                  {links.map((link, index) => {
                      return (
-                        <li key={link}>
+                        <li key={index}>
                            <a 
                            href={`#${link}`}
                            className={`${active === link && 'active'}`}
-                           // onClick={() => setActive(link)}
+                           onClick={() => handleToggle(link)}
                            >{link}</a>
                            <div className={`item-container ${active === link && 'active'}`}>
-                              
+
                            </div>
                         </li>
                      )
