@@ -4,9 +4,7 @@ import  { headerItems } from './Data';
 import { MensDropdown, WomensDropdown, GiftsDropdown } from './index';
 
 export const Header = () => {
-   const [mensActive, setMensActive] = useState(false)
-   const [womensActive, setWomensActive] = useState(false)
-   const [giftsActive, setGiftsActive] = useState(false)
+   const [active, setActive] = useState()
 
    return (
       <>
@@ -20,11 +18,11 @@ export const Header = () => {
                            <li 
                            key={item.id}
                            className={item.cName}
-                           onMouseEnter={() => setMensActive(true)}
-                           onMouseLeave={() => setMensActive(false)}
+                           onMouseEnter={() => setActive(item.title)}
+                           onMouseLeave={() => setActive()}
                            >
-                              <Link className={`${mensActive === true ? 'list-btn active' : 'list-btn'}`}>{item.title}</Link>
-                              <div className={mensActive === true ? "submenu-container active" : 'submenu-container'}>
+                              <Link className={active === "MEN" ? 'list-btn active' : 'list-btn'}>{item.title}</Link>
+                              <div className={active === "MEN" ? "submenu-container active" : 'submenu-container'}>
                                  <MensDropdown />
                               </div>
                            </li>
@@ -34,11 +32,11 @@ export const Header = () => {
                            <li 
                            key={item.id}
                            className={item.cName}
-                           onMouseEnter={() => setWomensActive(true)}
-                           onMouseLeave={() => setWomensActive(false)}
+                           onMouseEnter={() => setActive(item.title)}
+                           onMouseLeave={() => setActive()}
                            >
-                              <Link className={`${womensActive === true ? 'list-btn active' : 'list-btn'}`}>{item.title}</Link>
-                              <div className={womensActive === true ? "submenu-container active" : 'submenu-container'}>
+                              <Link className={active === "WOMEN" ? 'list-btn active' : 'list-btn'}>{item.title}</Link>
+                              <div className={active === "WOMEN" ? "submenu-container active" : 'submenu-container'}>
                                  <WomensDropdown />
                               </div>
                            </li>
@@ -48,11 +46,11 @@ export const Header = () => {
                            <li 
                            key={item.id}
                            className={item.cName}
-                           onMouseEnter={() => setGiftsActive(true)}
-                           onMouseLeave={() => setGiftsActive(false)}
+                           onMouseEnter={() => setActive(item.title)}
+                           onMouseLeave={() => setActive()}
                            >
-                              <Link className={`${giftsActive === true ? 'list-btn active' : 'list-btn'}`}>{item.title}</Link>
-                              <div className={giftsActive === true ? "submenu-container active" : 'submenu-container'}>
+                              <Link className={active === "GIFTS" ? 'list-btn active' : 'list-btn'}>{item.title}</Link>
+                              <div className={active === "GIFTS" ? "submenu-container active" : 'submenu-container'}>
                                  <GiftsDropdown />
                               </div>
                            </li>
