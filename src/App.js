@@ -1,16 +1,15 @@
 import React from 'react';
 import './css/index.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header } from './components';
+import { Header, Main, Footer } from './components';
 
 const App = () => {
    return (
          <section id="index">
             <BrowserRouter>
                <Header />
-               <div className="index-container">
-                  
-               </div>
+               <Main />
+               <Footer />
                <Routes>
                   <Route></Route>
                </Routes>

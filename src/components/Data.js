@@ -173,7 +173,7 @@ export const mensShoes = [
 export const mensAccessories = [
    {
       id: 25,
-      title: "All accessories",
+      title: "All Accessories",
       path: "./all-accessories",
       cName: "mens-item",
    },
@@ -421,7 +421,7 @@ export const womensShoes = [
 export const womensAccessories = [
    {
       id: 32,
-      title: "All accessories",
+      title: "all accessories",
       path: "./all-accessories",
       cName: "womens-item",
    },

@@ -1,11 +1,13 @@
 import { Header } from './Header'
-import { MensDropdown } from './Dropdown'
-import { WomensDropdown } from './Dropdown'
-import { GiftsDropdown } from './Dropdown'
+import { MensDropdown, WomensDropdown, GiftsDropdown } from './Dropdown'
+import { Main } from './Main'
+import { Footer } from './Footer'
 
 export {
    Header,
    MensDropdown,
    WomensDropdown,
    GiftsDropdown,
+   Main,
+   Footer,
 }
