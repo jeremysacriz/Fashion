@@ -13,26 +13,94 @@
       justify-content: center;
 
       .main-img-container {
+         height: 900px;
          width: 100%;
+         margin: 10px;
          position: relative;
 
+         &:hover {
+            &::after {
+               background-color: rgba(0, 0, 0, 0);
+            }
+
+            .main-title {
+               background-position: 0;
+            }
+
+            .main-img-btn {
+               color: #171717;
+               background-color: white;
+            }
+         }
+
+         &:hover::after {
+            background-color: rgba(0, 0, 0, 0);
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            transition: 0.4s ease;
+         }
+
          .main-img {
-            height: 900px;
+            height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center 60%;
-            padding: 10px;
          }
    
          .main-img-mens {
             object-position: 0 30%;
          }
 
-         .main-img-title {
+         .main-title {
+            position: absolute;
+            left: 40px;
+            bottom: 200px;
+            font-size: 8rem;
+            font-weight: 500;
+            color: white;
+            transition: 0.4s ease;
+            text-decoration: none;
+            text-transform: uppercase;
+            z-index: 2;
+
+            &:before {
+               content: '';
+               background-color: black;
+               display: block;
+               position: absolute;
+               bottom: -3px;
+               left: 0;
+               width: 0;
+               height: 3px;
+            }
+
+            background-image: linear-gradient(
+               to right,
+               #171717,
+               #171717 50%,
+               white 50%
+            );
+
+            background-size: 200% 100%;
+            background-position: 100%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease-in-out;
+         }
+
+         .main-img-btn {
             position: absolute;
             left: 40px;
             bottom: 100px;
-            padding: 25px 30px;
+            padding: 20px 30px;
             padding-left: 42px;
             color: white;
             background-color: #171717;
@@ -40,14 +108,10 @@
             align-items: center;
             transition: 0.4s ease;
             cursor: pointer;
-
-            &:hover {
-               color: #171717;
-               background-color: white;
-            }
+            z-index: 2;
 
             h1 {
-               font-size: 2rem;
+               font-size: 1.8rem;
                font-weight: 500;
                display: flex;
                align-items: center;
@@ -71,17 +135,82 @@
       justify-content: center;
 
       .gifts-img-container {
+         height: 750px;
          width: 80%;
          position: relative;
 
+         &:hover {
+            &::after {
+               background-color: rgba(0, 0, 0, 0);
+            }
+
+            .gifts-title {
+               background-position: 0%;
+            }
+
+            .gifts-img-btn {
+               color: #171717;
+               background-color: white;
+            }
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            transition: 0.4s ease;
+         }
+
          .gifts-img {
-            height: 750px;
+            height: 100%;
             width: 100%;
             object-fit: cover;
             object-position: center;
          }
 
-         .gifts-img-title {
+         .gifts-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 160px;
+            font-size: 9rem;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: 0.4s ease;
+            z-index: 2;
+
+            &:before {
+               content: '';
+               background-color: black;
+               display: block;
+               position: absolute;
+               bottom: -3px;
+               left: 0;
+               width: 0;
+               height: 3px;
+            }
+
+            background-image: linear-gradient(
+               to right,
+               #171717,
+               #171717 50%,
+               white 50%
+            );
+
+            background-size: 200% 100%;
+            background-position: 100%;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: all 0.3s ease-in-out;
+         }
+
+         .gifts-img-btn {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
@@ -94,6 +223,7 @@
             align-items: center;
             transition: 0.4s ease;
             cursor: pointer;
+            z-index: 2;
 
             &:hover {
                color: #171717;

@@ -145,19 +145,148 @@
             li:not(:last-child) {
                margin-right: 20px;
             }
-   
-            a {
-               transition: 0.4s ease;
-   
-               &:hover {
-                  color: #808080;
+
+            li {
+               a {
+                  transition: 0.4s ease;
+      
+                  &:hover {
+                     color: #808080;
+                  }
+      
+                  span {
+                     font-size: 2.4rem;
+                  }
                }
+
+               .search-overlay {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                  height: 100vh;
+                  width: 100%;
+                  background-color: rgba(255, 255, 255, 0.3);
+                  visibility: hidden;
+                  opacity: 0;
+                  transition: 0.4s ease;
+
+                  &.active {
+                     visibility: visible;
+                     opacity: 1;
+                     z-index: 2;
+                  }
+               }
+
+               .search-container {
+                  position: absolute;
+                  top: 0;
+                  right: -100%;
+                  height: 100vh;
+                  width: 100%;
+                  transition: 0.5s ease;
+                  z-index: 3;
+
+                  &.active {
+                     right: 0;
+                  }
+
+                  .search {
+                     position: absolute;
+                     right: -50%;
+                     height: 100%;
+                     width: 50%;
+                     padding: 100px 80px;
+                     background-color: white;
+                     z-index: 3;
+                     transition: 0.4s ease;
+
+                     &.active {
+                        right: 0;
+                     }
+
+                     .search-content {
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                        animation: fadeIn 1s ease forwards;
+                        animation-delay: 0.6s;
+
+                        .close {
+                           position: absolute;
+                           top: 20px;
+                           right: 20px;
+                           padding: 5px;
+                           color: white;
+                           background-color: black;
+                           border: 2px solid transparent;
+                           border-radius: 50%;
+                           transition: 0.4s ease;
+                           cursor: pointer;
    
-               span {
-                  font-size: 2.4rem;
+                           &:hover {
+                              border: 2px dashed black;
+                              background-color: white;
+                              color: black;
+                              transform: rotate(90deg) scale(1.2);
+                           }
+                        }
+   
+                        .search-input-container {
+                           width: 100%;
+                           position: relative;
+                           display: flex;
+                           align-items: center;
+                           padding-bottom: 20px;
+   
+                           .search-input {
+                              font-size: 1.4rem;
+                              font-weight: 100;
+                              width: 100%;
+                              padding: 10px 20px;
+                              outline: none;
+                              border: none;
+                              border-bottom: 2px solid black;
+                           }
+   
+                           .search-btn {
+                              position: absolute;
+                              right: 10px;
+                              background-color: transparent;
+                              outline: none;
+                              border: none;
+
+                              .search-icon {
+                                 font-weight: 900;
+                                 transition: 0.4s ease;
+                                 cursor: pointer;
+                              }
+
+                              &:hover {
+                                 color: #AEAEAE;
+                              }
+                           }
+                        }
+   
+                        .search-body-container {
+                           height: 100%;
+                           width: 100%;
+                           border: 2px solid black;
+                        }
+                     }
+                  }
                }
             }
          }
       }
+   }
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
    }
 }

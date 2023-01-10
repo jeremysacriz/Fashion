@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import  { headerItems } from './Data';
 import { MensDropdown, WomensDropdown, GiftsDropdown } from './index';
 
 export const Header = () => {
    const [active, setActive] = useState()
+   const [search, setSearch] = useState()
+
+   const inputRef = useRef(null)
 
    return (
       <>
@@ -73,9 +76,33 @@ export const Header = () => {
             <div className="header-right">
                <ul>
                   <li>
-                     <Link to="/search">
+                     <Link to="/search" onClick={() => {
+                        setSearch(true)
+                        inputRef.current.focus()
+                        document.body.style.overflow = "hidden"
+                     }}>
                         <span className="material-symbols-outlined">search</span>
-                        </Link>
+                     </Link>
+                     <div className={search === true ? 'search-overlay active' : 'search-overlay'}></div>
+                     <div className={search === true ? 'search-container active' : 'search-container'}>
+                        <div className={search === true ? 'search active' : 'search'}>
+                           <div className={search === true ? 'search-content' : null}>
+                              <span className="material-symbols-outlined close" onClick={() => {
+                                 setSearch(false)
+                                 document.body.style.overflow = "visible"
+                              }}>close</span>
+                              <div className="search-input-container">
+                                 <input type="text" className="search-input" placeholder="Search..." ref={inputRef} />
+                                 <button className="search-btn">
+                                    <span className="material-symbols-outlined search-icon">search</span>
+                                 </button>
+                              </div>
+                              <div className="search-body-container">
+
+                              </div>
+                           </div>
+                        </div>
+                     </div>
                   </li>
                   <li>
                      <Link to="/bags">
