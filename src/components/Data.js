@@ -421,7 +421,7 @@ export const womensShoes = [
 export const womensAccessories = [
    {
       id: 32,
-      title: "all accessories",
+      title: "All Accessories",
       path: "./all-accessories",
       cName: "womens-item",
    },
