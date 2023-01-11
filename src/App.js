@@ -1,12 +1,16 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './css/index.css';
-import { Header, Main, Footer } from './components';
+import { Header, Main, Footer, Mens } from './components';
 
 const App = () => {
    return (
       <section id="index">
          <Header />
-         <Main />
+         <Routes>
+            <Route path="/" element={<Main />}></Route>
+            <Route path="/Mens" element={<Mens />}></Route>
+         </Routes>
          <Footer />
       </section>
    )
