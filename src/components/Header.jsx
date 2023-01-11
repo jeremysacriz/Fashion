@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import  { headerItems } from './Data';
+import  { headerItems } from './HeaderData';
 import { MensDropdown, WomensDropdown, GiftsDropdown } from './index';
 
 export const Header = () => {
@@ -69,33 +69,35 @@ export const Header = () => {
                </ul>
             </nav>
 
-            <Link to="/home">
+            <Link to="/">
                <img src="./img/logo.jpg" alt="logo" className="logo" />
             </Link>
 
             <div className="header-right">
                <ul>
                   <li>
-                     <Link to="/search" onClick={() => {
+                     <button onClick={() => {
                         setSearch(true)
                         inputRef.current.focus()
                         document.body.style.overflow = "hidden"
                      }}>
                         <span className="material-symbols-outlined">search</span>
-                     </Link>
+                     </button>
                      <div className={search === true ? 'search-overlay active' : 'search-overlay'}></div>
                      <div className={search === true ? 'search-container active' : 'search-container'}>
                         <div className={search === true ? 'search active' : 'search'}>
                            <div className={search === true ? 'search-content' : null}>
-                              <span className="material-symbols-outlined close" onClick={() => {
-                                 setSearch(false)
-                                 document.body.style.overflow = "visible"
-                              }}>close</span>
-                              <div className="search-input-container">
-                                 <input type="text" className="search-input" placeholder="Search..." ref={inputRef} />
-                                 <button className="search-btn">
-                                    <span className="material-symbols-outlined search-icon">search</span>
-                                 </button>
+                              <div className="search-input-width">
+                                 <div className="search-input-container">
+                                    <input type="text" className="search-input" placeholder="Search..." ref={inputRef} />
+                                    <button className="search-btn">
+                                       <span className="material-symbols-outlined search-icon">search</span>
+                                    </button>
+                                 </div>
+                                 <span className="material-symbols-outlined close" onClick={() => {
+                                    setSearch(false)
+                                    document.body.style.overflow = "visible"
+                                 }}>close</span>
                               </div>
                               <div className="search-body-container">
 
@@ -105,7 +107,7 @@ export const Header = () => {
                      </div>
                   </li>
                   <li>
-                     <Link to="/bags">
+                     <Link to="/cart">
                         <span className="material-symbols-outlined">shopping_bag</span>
                      </Link>
                   </li>

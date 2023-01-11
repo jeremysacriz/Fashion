@@ -1,6 +1,6 @@
 import React, {useState } from 'react';
 import { Link } from 'react-router-dom';
-import { mensReadyToWear, mensBags, mensShoes, mensAccessories, womensReadyToWear, womensBags, womensShoes, womensAccessories, gifts } from "./Data";
+import { mensReadyToWear, mensBags, mensShoes, mensAccessories, womensReadyToWear, womensBags, womensShoes, womensAccessories, gifts } from "./HeaderData";
 
 export const MensDropdown = () => {
    const [dropdown, setDropdown] = useState(false)
