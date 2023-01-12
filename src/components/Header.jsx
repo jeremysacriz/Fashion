@@ -24,7 +24,14 @@ export const Header = () => {
                            onMouseEnter={() => setActive(item.title)}
                            onMouseLeave={() => setActive()}
                            >
-                              <Link className={active === "MEN" ? 'list-btn active' : 'list-btn'}>{item.title}</Link>
+                              <Link 
+                              to='/mens' 
+                              className={active === "MEN" ? 'list-btn active' : 'list-btn'}
+                              onClick={() => {
+                                 setActive()
+                              }}>
+                                 {item.title}
+                              </Link>
                               <div className={active === "MEN" ? "submenu-container active" : 'submenu-container'}>
                                  <MensDropdown />
                               </div>
@@ -38,7 +45,14 @@ export const Header = () => {
                            onMouseEnter={() => setActive(item.title)}
                            onMouseLeave={() => setActive()}
                            >
-                              <Link className={active === "WOMEN" ? 'list-btn active' : 'list-btn'}>{item.title}</Link>
+                              <Link 
+                              to="/womens" 
+                              className={active === "WOMEN" ? 'list-btn active' : 'list-btn'} 
+                              onClick={() => {
+                                 setActive()
+                              }}>
+                                 {item.title}
+                              </Link>
                               <div className={active === "WOMEN" ? "submenu-container active" : 'submenu-container'}>
                                  <WomensDropdown />
                               </div>
@@ -52,7 +66,14 @@ export const Header = () => {
                            onMouseEnter={() => setActive(item.title)}
                            onMouseLeave={() => setActive()}
                            >
-                              <Link className={active === "GIFTS" ? 'list-btn active' : 'list-btn'}>{item.title}</Link>
+                              <Link 
+                              to="/gifts" 
+                              className={active === "GIFTS" ? 'list-btn active' : 'list-btn'}
+                              onClick={() => {
+                                 setActive()
+                              }}>
+                                 {item.title}
+                              </Link>
                               <div className={active === "GIFTS" ? "submenu-container active" : 'submenu-container'}>
                                  <GiftsDropdown />
                               </div>
