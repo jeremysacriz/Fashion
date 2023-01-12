@@ -1,7 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './css/index.css';
-import { Header, Main, Footer, Mens, Womens, Gifts, Hoodies } from './components';
+import { Header, Main, Footer, Mens, Womens, Gifts, Hoodies, Product } from './components';
 
 const App = () => {
    return (
@@ -13,6 +13,7 @@ const App = () => {
             <Route path="/womens" element={<Womens />}></Route>
             <Route path="/gifts" element={<Gifts />}></Route>
             <Route path="/sweats-hoodies" element={<Hoodies />}></Route>
+            <Route path="/tommy-hilfiger-hoodie" element={<Product />}></Route>
          </Routes>
          <Footer />
       </section>

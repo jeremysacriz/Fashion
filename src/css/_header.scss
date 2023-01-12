@@ -41,6 +41,66 @@
             height: 100%;
             display: flex;
             align-items: center;
+
+            .submenu-container {
+               position: absolute;
+               top: -634px;
+               left: 0;
+               height: auto;
+               width: 100%;
+               background-color: black;
+               padding: 0 50px;
+               padding-top: 10px;
+               padding-bottom: 40px;
+               transition: 0.3s ease;
+               z-index: -2;
+
+               &.active {
+                  top: 111px;
+               }
+
+               .submenu {
+                  height: 100%;
+                  width: 100%;
+                  list-style: none;
+                  opacity: 0;
+
+                  &.active {
+                     animation: fadeIn 0.6s ease forwards;
+                     animation-delay: 0.35s;
+                  }
+
+                  .submenu-list {
+                     display: flex;
+                     flex-direction: column;
+                     margin-right: 150px;
+
+                     .submenu-title {
+                        font-size: 1.6rem;
+                        font-weight: 500;
+                        color: white;
+                        margin-bottom: 30px;
+                        text-transform: uppercase;
+                     }
+
+                     .submenu-item:not(:last-child) {
+                        margin-bottom: 20px;
+                     }
+
+                     .submenu-item .submenu-btn {
+                        font-size: 1.4rem;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        text-decoration: none;
+                        transition: 0.4s ease;
+                        
+                        &:hover {
+                           color: rgba(255, 255, 255, 0.4)
+                        }
+                     }
+                  }
+               }
+            }
             
             .header-list-item:first-child {
                padding-left: 0px;
@@ -80,64 +140,6 @@
                   &.active:after {
                      transform: scaleX(1);
                      transform-origin: bottom left;
-                  }
-               }
-
-               .submenu-container {
-                  position: absolute;
-                  top: 111px;
-                  left: 0;
-                  height: auto;
-                  width: 100%;
-                  background-color: black;
-                  padding: 0 50px;
-                  padding-top: 10px;
-                  padding-bottom: 40px;
-                  transition: 0.3s ease;
-                  opacity: 0;
-                  visibility: hidden;
-                  z-index: -1;
-
-                  &.active {
-                     opacity: 1;
-                     visibility: visible;
-                     z-index: 2;
-                  }
-
-                  .submenu {
-                     height: 100%;
-                     width: 100%;
-                     list-style: none;
-
-                     .submenu-list {
-                        display: flex;
-                        flex-direction: column;
-                        margin-right: 150px;
-
-                        .submenu-title {
-                           font-size: 1.6rem;
-                           font-weight: 500;
-                           color: white;
-                           margin-bottom: 30px;
-                           text-transform: uppercase;
-                        }
-   
-                        .submenu-item:not(:last-child) {
-                           margin-bottom: 20px;
-                        }
-   
-                        .submenu-item .submenu-btn {
-                           font-size: 1.4rem;
-                           font-weight: 500;
-                           text-transform: capitalize;
-                           text-decoration: none;
-                           transition: 0.4s ease;
-                           
-                           &:hover {
-                              color: rgba(255, 255, 255, 0.4)
-                           }
-                        }
-                     }
                   }
                }
             }

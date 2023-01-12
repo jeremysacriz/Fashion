@@ -21,7 +21,7 @@ export const mensReadyToWear = [
    {
       id: 1,
       title: "All Ready-to-Wear",
-      path: "./readytowear",
+      path: "./ready-to-wear",
       cName: "mens-item",
    },
    {

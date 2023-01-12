@@ -1,4 +1,4 @@
-import React from 'react';
+// import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HoodieData } from "./HoodieData";
 
@@ -7,14 +7,15 @@ export const Hoodies = () => {
       <div className="hoodies-container">
          <div className="hoodies-title">
             <h1>Sweatshirts & Hoodies</h1>
+            <p>Keeping you warm for the Winter season !</p>
          </div>
 
          <div className="hoodies-grid-container">
             {HoodieData.map(item => {
                return (
-                  <Link to="/mens" className="grid-item" key={item.id}>
-                     <div className="grid-overlay">
-                        <div className="grid-info">
+                  <Link to={item.path} className="hoodies-grid-item" key={item.id}>
+                     <div className="hoodies-grid-overlay">
+                        <div className="hoodies-grid-info">
                            <h1>{item.title}</h1>
                            <p>{item.price}</p>
                         </div>

@@ -6,6 +6,7 @@ import { Mens } from './Mens'
 import { Womens } from './Womens'
 import { Gifts } from './Gifts'
 import { Hoodies } from './Hoodies'
+import { Product } from './Product'
 
 export {
    Header,
@@ -18,4 +19,5 @@ export {
    Womens,
    Gifts,
    Hoodies,
+   Product,
 }

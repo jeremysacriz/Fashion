@@ -1,14 +1,14 @@
-import React, {useState } from 'react';
+import {useState } from 'react';
 import { Link } from 'react-router-dom';
 import { mensReadyToWear, mensBags, mensShoes, mensAccessories, womensReadyToWear, womensBags, womensShoes, womensAccessories, gifts } from "./HeaderData";
 
-export const MensDropdown = () => {
+export const MensDropdown = (props) => {
    const [dropdown, setDropdown] = useState(false)
 
-   const MensList = ({item}) => {
+   const MensList = ({item, setActive}) => {
       return (
          <li className={`submenu-item ${item.cName}`}>
-            <Link to={item.path} className="submenu-btn">{item.title}</Link>
+            <Link to={item.path} className="submenu-btn" onClick={() => setActive(false)}>{item.title}</Link>
          </li>
       )
    }
@@ -16,7 +16,7 @@ export const MensDropdown = () => {
    return (
       <>
          <ul
-         className="submenu"
+         className={props.className}
          onClick={() => setDropdown(!dropdown)}
          >
             <div className="submenu-list">
@@ -57,7 +57,7 @@ export const MensDropdown = () => {
 }
 
 
-export const WomensDropdown = () => {
+export const WomensDropdown = (props) => {
    const [dropdown, setDropdown] = useState(false)
 
    const WomensList = ({item}) => {
@@ -71,7 +71,7 @@ export const WomensDropdown = () => {
    return (
       <>
          <ul
-         className="submenu"
+         className={props.className}
          onClick={() => setDropdown(!dropdown)}
          >
             <div className="submenu-list">
@@ -112,7 +112,7 @@ export const WomensDropdown = () => {
 }
 
 
-export const GiftsDropdown = () => {
+export const GiftsDropdown = (props) => {
    const [dropdown, setDropdown] = useState(false)
 
    const GiftsList = ({item}) => {
@@ -126,7 +126,7 @@ export const GiftsDropdown = () => {
    return (
       <>
          <ul
-         className="submenu"
+         className={props.className}
          onClick={() => setDropdown(!dropdown)}
          >
             <div className="submenu-list">
