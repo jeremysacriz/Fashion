@@ -1,12 +1,13 @@
-import { Header } from './Header'
-import { MensDropdown, WomensDropdown, GiftsDropdown } from './Dropdown'
-import { Main } from './Main'
-import { Footer } from './Footer'
-import { Mens } from './Mens'
-import { Womens } from './Womens'
-import { Gifts } from './Gifts'
-import { Hoodies } from './Hoodies'
-import { Product } from './Product'
+import { Header } from './Header';
+import { MensDropdown, WomensDropdown, GiftsDropdown } from './Dropdown';
+import { Main } from './Main';
+import { Footer } from './Footer';
+import { Mens } from './Mens';
+import { Womens } from './Womens';
+import { Gifts } from './Gifts';
+import { Hoodies } from './Hoodies';
+import { CategoryItem } from './CategoryItem';
+import { Product } from './Product';
 
 export {
    Header,
@@ -19,5 +20,6 @@ export {
    Womens,
    Gifts,
    Hoodies,
+   CategoryItem,
    Product,
 }

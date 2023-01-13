@@ -1,4 +1,4 @@
-import {useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { mensReadyToWear, mensBags, mensShoes, mensAccessories, womensReadyToWear, womensBags, womensShoes, womensAccessories, gifts } from "./HeaderData";
 

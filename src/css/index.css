@@ -677,23 +677,33 @@ html {
   margin-left: 5px;
 }
 
-#index .mens-container {
-  height: 100vh;
+#index .category-container {
+  height: auto;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: block;
   padding-top: 111px;
 }
 
-#index .womens-container {
-  height: 100vh;
+#index .category-container .category-title {
+  padding: 80px 0;
+  text-align: center;
+}
+
+#index .category-container .category-title h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+#index .category-container .categories {
+  padding-bottom: 200px;
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: block;
+}
+
+#index .category-container .categories .category-grid-row {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -701,10 +711,101 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item {
+  height: 500px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+  text-decoration: none;
+  margin: 10px;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item:hover {
+  width: 150%;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item:hover .category-grid-overlay p {
+  opacity: 1;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item:hover .category-grid-overlay p:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 111px;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay p {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay p:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  color: white;
+  background-color: white;
+  -webkit-transition: -webkit-transform 0.25s ease;
+  transition: -webkit-transform 0.25s ease;
+  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, -webkit-transform 0.25s ease;
+}
+
+#index .category-container .categories .category-grid-row .category-grid-item img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #index .gifts-container {
@@ -736,9 +837,10 @@ html {
 }
 
 #index .hoodies-container .hoodies-title h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 500;
   margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 #index .hoodies-container .hoodies-title p {
