@@ -159,13 +159,18 @@ html {
   padding-left: 0px;
 }
 
+#index .header .header-container .header-left .header-left-container .header-list-item:nth-child(2) {
+  padding-right: 0px;
+}
+
 #index .header .header-container .header-left .header-left-container .header-list-item:last-child {
+  padding-left: 60px;
   padding-right: 0px;
 }
 
 #index .header .header-container .header-left .header-left-container .header-list-item {
   height: 100%;
-  padding: 0 30px;
+  padding-right: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -692,7 +697,15 @@ html {
 #index .category-container .category-title h1 {
   font-size: 5rem;
   font-weight: 500;
+  letter-spacing: 6px;
   text-transform: uppercase;
+  padding-bottom: 20px;
+}
+
+#index .category-container .category-title p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 6px;
 }
 
 #index .category-container .categories {
@@ -703,7 +716,7 @@ html {
   display: block;
 }
 
-#index .category-container .categories .category-grid-row {
+#index .category-container .categories .category-flex-row {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -713,7 +726,7 @@ html {
           align-items: center;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item {
+#index .category-container .categories .category-flex-row .category-flex-item {
   height: 500px;
   width: 100%;
   position: relative;
@@ -724,22 +737,22 @@ html {
   margin: 10px;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item:hover {
+#index .category-container .categories .category-flex-row .category-flex-item:hover {
   width: 150%;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item:hover .category-grid-overlay p {
+#index .category-container .categories .category-flex-row .category-flex-item:hover .category-flex-overlay p {
   opacity: 1;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item:hover .category-grid-overlay p:after {
+#index .category-container .categories .category-flex-row .category-flex-item:hover .category-flex-overlay p:after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay {
+#index .category-container .categories .category-flex-row .category-flex-item .category-flex-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -762,7 +775,7 @@ html {
           justify-content: center;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay h1 {
+#index .category-container .categories .category-flex-row .category-flex-item .category-flex-overlay h1 {
   font-size: 3rem;
   font-weight: 500;
   color: white;
@@ -770,7 +783,7 @@ html {
   margin-bottom: 20px;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay p {
+#index .category-container .categories .category-flex-row .category-flex-item .category-flex-overlay p {
   font-size: 1.2rem;
   font-weight: 500;
   text-transform: uppercase;
@@ -780,7 +793,7 @@ html {
   transition: 0.2s ease;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item .category-grid-overlay p:after {
+#index .category-container .categories .category-flex-row .category-flex-item .category-flex-overlay p:after {
   content: '';
   position: absolute;
   left: 0;
@@ -799,28 +812,13 @@ html {
   transition: transform 0.25s ease, -webkit-transform 0.25s ease;
 }
 
-#index .category-container .categories .category-grid-row .category-grid-item img {
+#index .category-container .categories .category-flex-row .category-flex-item img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-}
-
-#index .gifts-container {
-  height: 100vh;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 111px;
 }
 
 #index .hoodies-container {

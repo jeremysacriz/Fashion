@@ -7,6 +7,7 @@ const App = () => {
    return (
       <section id="index">
          <Header />
+
          <Routes>
             <Route path="/" element={<Main />}></Route>
             <Route path="/mens" element={<Mens />}></Route>
@@ -15,6 +16,7 @@ const App = () => {
             <Route path="/sweats-hoodies" element={<Hoodies />}></Route>
             <Route path="/tommy-hilfiger-hoodie" element={<Product />}></Route>
          </Routes>
+         
          <Footer />
       </section>
    )

@@ -25,7 +25,7 @@ export const Header = () => {
                            onMouseLeave={() => setActive()}
                            >
                               <Link 
-                              // to='/mens' 
+                              to='/mens' 
                               className={active === "MEN" ? 'list-btn active' : 'list-btn'}
                               onClick={() => {
                                  setActive()
@@ -46,7 +46,7 @@ export const Header = () => {
                            onMouseLeave={() => setActive()}
                            >
                               <Link 
-                              // to="/womens" 
+                              to="/womens" 
                               className={active === "WOMEN" ? 'list-btn active' : 'list-btn'} 
                               onClick={() => {
                                  setActive()
@@ -67,7 +67,7 @@ export const Header = () => {
                            onMouseLeave={() => setActive()}
                            >
                               <Link 
-                              // to="/gifts" 
+                              to="/gifts" 
                               className={active === "GIFTS" ? 'list-btn active' : 'list-btn'}
                               onClick={() => {
                                  setActive()
