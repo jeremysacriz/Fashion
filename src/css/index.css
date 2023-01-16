@@ -95,7 +95,7 @@ html {
   background-color: black;
   padding: 0 50px;
   padding-top: 10px;
-  padding-bottom: 40px;
+  padding-bottom: 60px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   z-index: -2;
@@ -877,6 +877,7 @@ html {
 #index .hoodies-container .hoodies-grid-container .hoodies-grid-item .product-view {
   position: absolute;
   font-size: 1.3rem;
+  letter-spacing: 1px;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 6px;
