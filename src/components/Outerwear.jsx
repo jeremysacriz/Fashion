@@ -1,17 +1,17 @@
 import { Link } from 'react-router-dom';
-import { HoodieData } from "./itemData";
+import { OuterwearData } from "./itemData";
 
-export const Hoodies = () => {
+export const Outerwear = () => {
    
    return (
       <div className="item-container">
          <div className="item-title">
-            <h1>Sweatshirts & Hoodies</h1>
-            <p>Keeping you warm for the Winter season !</p>
+            <h1>jackets & Coats</h1>
+            <p>We got the Winter fashion on lock.</p>
          </div>
 
          <div className="item-grid-container">
-            {HoodieData.map(item => {
+            {OuterwearData.map(item => {
                return (
                   <Link to={'/sweats-hoodies' + item.path}  className="item-grid-item" key={item.id} state={{ data: item}}>
                      <div className="item-grid-overlay">
@@ -32,7 +32,7 @@ export const Hoodies = () => {
             <span className="forward-slash">/</span>
             <Link to="/ready-to-wear" className="item-btn">Ready-To-Wear</Link>
             <span className="forward-slash">/</span>
-            <Link to="/sweats-hoodies" className="item-btn">Sweatshirts & Hoodies</Link>
+            <Link to="/jackets-coats" className="item-btn">Jackets & Coats</Link>
          </div>
       </div>
    )

@@ -1,22 +1,28 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
-// import { HoodieData } from "./HoodieData";
+import { Link, useLocation } from 'react-router-dom';
 
 export const Product = () => {
    useEffect(() => {
       window.scrollTo(0, 0)
    }, [])
 
+   const location = useLocation()
+   const data = location.state.data
+
    return (
       <div className="product-container">
          <div className="product-flex-container">
             <div className="product-image">
-               <img src="./img/Tommy Hilfiger Hoodie.jpeg" alt="testing"/>
+               <img src={data.src} alt="testing" />
+               <div className="product-image-buttons">
+                  <span className="material-symbols-outlined product-arrow-left">chevron_left</span>
+                  <span className="material-symbols-outlined product-arrow-right">chevron_right</span>
+               </div>
             </div>
             <div className="product-info-container">
                <div className="product-info">
-                  <h1 className="product-title">Tommy Hilfiger Hoodie Camo</h1>
-                  <h2 className="product-price">$ AUD</h2>
+                  <h1 className="product-title">{data.title}</h1>
+                  <h2 className="product-price">{data.price}</h2>
 
                   <div className="product-sizes">
                      <button>XS</button>

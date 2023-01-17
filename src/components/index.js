@@ -6,6 +6,8 @@ import { Mens } from './Mens';
 import { Womens } from './Womens';
 import { Gifts } from './Gifts';
 import { Hoodies } from './Hoodies';
+import { Tshirts } from './Tshirts';
+import { Outerwear } from './Outerwear';
 import { CategoryItem } from './CategoryItem';
 import { Product } from './Product';
 
@@ -20,6 +22,8 @@ export {
    Womens,
    Gifts,
    Hoodies,
+   Tshirts,
+   Outerwear,
    CategoryItem,
    Product,
 }

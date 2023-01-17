@@ -50,13 +50,13 @@
                width: 100%;
                background-color: black;
                padding: 0 50px;
-               padding-top: 10px;
+               padding-top: 21px;
                padding-bottom: 60px;
                transition: 0.3s ease;
                z-index: -2;
 
                &.active {
-                  top: 111px;
+                  top: 100px;
                }
 
                .submenu {
