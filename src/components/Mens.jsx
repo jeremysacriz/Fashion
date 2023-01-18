@@ -15,7 +15,7 @@ window.scrollTo(0, 0);
          <div className="categories">
             <div className="category-flex-row">
                <CategoryItem
-                  to="/mens-all-ready-to-wear"
+                  to="/mens/all-ready-to-wear"
                   src="img/all ready-to-wear.jpeg"
                   alt="category-ready-to-wear">
                <h1>All Ready-To-Wear</h1>

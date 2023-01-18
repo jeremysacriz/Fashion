@@ -1,13 +1,14 @@
 import { useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
-export const Product = () => {
+export const ProductView = () => {
    useEffect(() => {
       window.scrollTo(0, 0)
    }, [])
 
    const location = useLocation()
    const data = location.state.data
+   console.log(data)
 
    return (
       <div className="product-container">

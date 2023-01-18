@@ -21,25 +21,25 @@ export const mensReadyToWear = [
    {
       id: 1,
       title: "All Ready-to-Wear",
-      path: "./ready-to-wear",
+      path: "/all-ready-to-wear",
       cName: "mens-item",
    },
    {
       id: 2,
       title: "T-Shirts",
-      path: "./tshirts",
+      path: "/ready-to-wear/t-shirts",
       cName: "mens-item",
    },
    {
       id: 3,
       title: "Sweatshirts & Hoodies",
-      path: "./sweats-hoodies",
+      path: "/ready-to-wear/sweats-hoodies",
       cName: "mens-item",
    },
    {
       id: 4,
       title: "Jackets & Coats",
-      path: "./jackets-coats",
+      path: "/ready-to-wear/jackets-coats",
       cName: "mens-item",
    },
 ]
@@ -48,25 +48,25 @@ export const mensBags = [
    {
       id: 5,
       title: "All Bags",
-      path: "./all-bags",
+      path: "/all-bags",
       cName: "mens-item",
    },
    {
       id: 6,
       title: "Cross-body Bags",
-      path: "./cross-body-bags",
+      path: "/bags/cross-body-bags",
       cName: "mens-item",
    },
    {
       id: 14,
       title: "Backpacks",
-      path: "./backpacks",
+      path: "/bags/backpacks",
       cName: "mens-item",
    },
    {
       id: 7,
       title: "Week-end Bags",
-      path: "./week-end-bags",
+      path: "/bags/week-end-bags",
       cName: "mens-item",
    },
 ]
@@ -75,25 +75,25 @@ export const mensShoes = [
    {
       id: 8,
       title: "All Shoes",
-      path: "./all-shoes",
+      path: "/all-shoes",
       cName: "mens-item",
    },
    {
       id: 9,
       title: "Sneakers",
-      path: "./sneakers",
+      path: "/shoes/sneakers",
       cName: "mens-item",
    },
    {
       id: 10,
       title: "Slides & Sandals",
-      path: "./slides-sandals",
+      path: "/shoes/slides-sandals",
       cName: "mens-item",
    },
    {
       id: 11,
       title: "Boots & Derbies",
-      path: "./boots-derbies",
+      path: "/shoes/boots-derbies",
       cName: "mens-item",
    },
 ]
@@ -102,25 +102,25 @@ export const mensAccessories = [
    {
       id: 12,
       title: "All Accessories",
-      path: "./all-accessories",
+      path: "/all-accessories",
       cName: "mens-item",
    },
    {
       id: 13,
       title: "Jewelry",
-      path: "./jewelry",
+      path: "/accessories/jewelry",
       cName: "mens-item",
    },
    {
       id: 14,
       title: "Sunglasses",
-      path: "./sunglasses",
+      path: "/accessories/sunglasses",
       cName: "mens-item",
    },
    {
       id: 15,
       title: "Belts",
-      path: "./belts",
+      path: "/accessories/belts",
       cName: "mens-item",
    },
 ]
@@ -131,25 +131,25 @@ export const womensReadyToWear = [
    {
       id: 1,
       title: "All Ready-to-Wear",
-      path: "./readytowear",
+      path: "/all-ready-to-wear",
       cName: "womens-item",
    },
    {
       id: 2,
       title: "T-Shirts",
-      path: "./tshirts",
+      path: "/ready-to-wear/t-shirts",
       cName: "womens-item",
    },
    {
       id: 3,
       title: "Sweatshirts & Hoodies",
-      path: "./sweats-hoodies",
+      path: "/ready-to-wear/sweats-hoodies",
       cName: "womens-item",
    },
    {
       id: 4,
       title: "Outerwear & Blousons",
-      path: "./outerwear-blousons",
+      path: "/ready-to-wear/outerwear-blousons",
       cName: "womens-item",
    },
 ]
@@ -158,25 +158,25 @@ export const womensBags = [
    {
       id: 5,
       title: "All Bags",
-      path: "./all-bags",
+      path: "/all-bags",
       cName: "womens-item",
    },
    {
       id: 6,
       title: "Cross-body Bags",
-      path: "./cross-body-bags",
+      path: "/bags/cross-body-bags",
       cName: "womens-item",
    },
    {
       id: 7,
       title: "Shoulder Bags",
-      path: "./shoulder-bags",
+      path: "/bags/shoulder-bags",
       cName: "womens-item",
    },
    {
       id: 8,
       title: "Micro Bags",
-      path: "./micro-bags",
+      path: "/bags/micro-bags",
       cName: "womens-item",
    },
 ]
@@ -185,25 +185,25 @@ export const womensShoes = [
    {
       id: 9,
       title: "All Shoes",
-      path: "./all-shoes",
+      path: "/all-shoes",
       cName: "womens-item",
    },
    {
       id: 10,
       title: "Sneakers",
-      path: "./sneakers",
+      path: "/shoes/sneakers",
       cName: "womens-item",
    },
    {
       id: 11,
       title: "Heels",
-      path: "./heels",
+      path: "/shoes/heels",
       cName: "womens-item",
    },
    {
       id: 12,
       title: "Slides & Sandals",
-      path: "./slides-sandals",
+      path: "/shoes/slides-sandals",
       cName: "womens-item",
    },
 ]
@@ -212,25 +212,25 @@ export const womensAccessories = [
    {
       id: 13,
       title: "All Accessories",
-      path: "./all-accessories",
+      path: "/all-accessories",
       cName: "womens-item",
    },
    {
       id: 14,
       title: "Jewelry",
-      path: "./jewelry",
+      path: "/accessories/jewelry",
       cName: "womens-item",
    },
    {
       id: 15,
       title: "Belts",
-      path: "./belts",
+      path: "/accessories/belts",
       cName: "womens-item",
    },
    {
       id: 16,
       title: "Sunglasses",
-      path: "./sunglasses",
+      path: "/accessories/sunglasses",
       cName: "womens-item",
    },
 ]

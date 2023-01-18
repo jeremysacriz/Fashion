@@ -8,7 +8,7 @@ export const MensDropdown = (props) => {
    const MensList = ({item, setActive}) => {
       return (
          <li className={`submenu-item ${item.cName}`}>
-            <Link to={item.path} className="submenu-btn" onClick={() => setActive(false)}>{item.title}</Link>
+            <Link to={'mens' + item.path} className="submenu-btn" onClick={() => setActive(false)}>{item.title}</Link>
          </li>
       )
    }
@@ -60,10 +60,10 @@ export const MensDropdown = (props) => {
 export const WomensDropdown = (props) => {
    const [dropdown, setDropdown] = useState(false)
 
-   const WomensList = ({item}) => {
+   const WomensList = ({item, setActive}) => {
       return (
          <li className={`submenu-item ${item.cName}`}>
-            <Link to={item.path} className="submenu-btn">{item.title}</Link>
+            <Link to={'womens' + item.path} className="submenu-btn" onClick={() => setActive(false)}>{item.title}</Link>
          </li>
       )
    }
@@ -115,10 +115,10 @@ export const WomensDropdown = (props) => {
 export const GiftsDropdown = (props) => {
    const [dropdown, setDropdown] = useState(false)
 
-   const GiftsList = ({item}) => {
+   const GiftsList = ({item, setActive}) => {
       return (
          <li className={`submenu-item ${item.cName}`}>
-            <Link to={item.path} className="submenu-btn">{item.title}</Link>
+            <Link to={item.path} className="submenu-btn" onClick={() => setActive(false)}>{item.title}</Link>
          </li>
       )
    }
@@ -130,7 +130,7 @@ export const GiftsDropdown = (props) => {
          onClick={() => setDropdown(!dropdown)}
          >
             <div className="submenu-list">
-               <div className="submenu-title">Ready-to-Wear</div>
+               <div className="submenu-title">Gifts Selection</div>
                {gifts.map(item => {
                   return (
                      <GiftsList item={item} key={item.id} />

@@ -2,14 +2,15 @@ import { Header } from './Header';
 import { MensDropdown, WomensDropdown, GiftsDropdown } from './Dropdown';
 import { Main } from './Main';
 import { Footer } from './Footer';
+import { CategoryItem } from './CategoryItem';
 import { Mens } from './Mens';
 import { Womens } from './Womens';
 import { Gifts } from './Gifts';
+import { ProductItem } from './ProductItem';
 import { Hoodies } from './Hoodies';
 import { Tshirts } from './Tshirts';
 import { Outerwear } from './Outerwear';
-import { CategoryItem } from './CategoryItem';
-import { Product } from './Product';
+import { ProductView } from './Product';
 
 export {
    Header,
@@ -18,12 +19,13 @@ export {
    GiftsDropdown,
    Main,
    Footer,
+   CategoryItem,
    Mens,
    Womens,
    Gifts,
-   Hoodies,
+   ProductItem,
    Tshirts,
+   Hoodies,
    Outerwear,
-   CategoryItem,
-   Product,
+   ProductView,
 }

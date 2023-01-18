@@ -6,7 +6,7 @@ export const HoodieData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item1',
       desc: 'item description'
    },
    {
@@ -16,7 +16,7 @@ export const HoodieData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item2',
       desc: 'item description'
    },
    {
@@ -26,7 +26,7 @@ export const HoodieData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item3',
       desc: 'item description'
    },
    {
@@ -36,7 +36,7 @@ export const HoodieData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item4',
       desc: 'item description'
    },
    {
@@ -46,7 +46,7 @@ export const HoodieData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item5',
       desc: 'item description'
    },
    {
@@ -56,7 +56,7 @@ export const HoodieData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item6',
       desc: 'item description'
    },
 ]
@@ -69,7 +69,7 @@ export const TshirtData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item1',
       desc: 'item description'
    },
    {
@@ -79,7 +79,7 @@ export const TshirtData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item2',
       desc: 'item description'
    },
    {
@@ -89,7 +89,7 @@ export const TshirtData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item3',
       desc: 'item description'
    },
    {
@@ -99,7 +99,7 @@ export const TshirtData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item4',
       desc: 'item description'
    },
    {
@@ -109,7 +109,7 @@ export const TshirtData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item5',
       desc: 'item description'
    },
    {
@@ -119,7 +119,7 @@ export const TshirtData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item6',
       desc: 'item description'
    },
 ]
@@ -132,7 +132,7 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/gifts.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item1',
       desc: 'item description'
    },
    {
@@ -142,7 +142,7 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/gifts.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item2',
       desc: 'item description'
    },
    {
@@ -152,7 +152,7 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/gifts.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item3',
       desc: 'item description'
    },
    {
@@ -162,7 +162,7 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/gifts.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item4',
       desc: 'item description'
    },
    {
@@ -172,7 +172,7 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/gifts.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item5',
       desc: 'item description'
    },
    {
@@ -182,7 +182,7 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       src: '/img/gifts.jpg',
-      path: '/tommy-hilfiger-hoodie',
+      path: '/item6',
       desc: 'item description'
    },
 ]

@@ -1,7 +1,13 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { TshirtData } from "./itemData";
+import { ProductItem } from "./ProductItem";
 
 export const Tshirts = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, []);
+
    return (
       <div className="item-container">
          <div className="item-title">
@@ -12,16 +18,7 @@ export const Tshirts = () => {
          <div className="item-grid-container">
             {TshirtData.map(item => {
                return (
-                  <Link to={'/sweats-hoodies' + item.path}  className="item-grid-item" key={item.id} state={{ data: item}}>
-                     <div className="item-grid-overlay">
-                        <div className="item-grid-info">
-                           <h1>{item.title}</h1>
-                           <p>{item.price}</p>
-                        </div>
-                     </div>
-                     <img src={item.src} alt={item.desc}/>
-                     <div className="product-view">View Product</div>
-                  </Link>
+                  <ProductItem item={item} key={item.id} to={'/mens/ready-to-wear/t-shirts' + item.path} />
                )
             })}
          </div>
@@ -29,9 +26,9 @@ export const Tshirts = () => {
          <div className="item-nav">
             <Link to="/mens" className="item-btn">Mens</Link>
             <span className="forward-slash">/</span>
-            <Link to="/ready-to-wear" className="item-btn">Ready-To-Wear</Link>
+            <Link to="/mens/all-ready-to-wear" className="item-btn">Ready-To-Wear</Link>
             <span className="forward-slash">/</span>
-            <Link to="/tshirts" className="item-btn">T-Shirts</Link>
+            <Link to="/mens/ready-to-wear/t-shirts" className="item-btn" onClick={useEffect}>T-Shirts</Link>
          </div>
       </div>
    )
