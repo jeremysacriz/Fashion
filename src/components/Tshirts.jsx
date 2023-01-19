@@ -8,6 +8,16 @@ export const Tshirts = () => {
       window.scrollTo(0, 0);
    }, []);
 
+   // This maps over an array of img srcs to display in Product.jsx
+   // let filteredArr = TshirtData.filter(item => item.arr)
+   // {
+   //    filteredArr.map(item => (
+   //       item.arr.map(number => (
+   //          <li key={number}>{number}</li>
+   //       ))
+   //    ))
+   // }
+
    return (
       <div className="item-container">
          <div className="item-title">

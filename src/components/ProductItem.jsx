@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const ProductItem = ({item, to}) => {
    return (
-      <Link to={to} className="item-grid-item" state={{ data: item}}>
+      <Link to={to} className="item-grid-item" state={item}>
          <div className="item-grid-overlay">
             <div className="item-grid-info">
                <h1>{item.title}</h1>

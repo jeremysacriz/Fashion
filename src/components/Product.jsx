@@ -7,7 +7,7 @@ export const ProductView = () => {
    }, [])
 
    const location = useLocation()
-   const data = location.state.data
+   const data = location.state
    console.log(data)
 
    return (

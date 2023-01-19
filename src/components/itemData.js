@@ -70,7 +70,8 @@ export const TshirtData = [
       category: 'Sweatshirts & Hoodies',
       src: '/img/mens.jpg',
       path: '/item1',
-      desc: 'item description'
+      desc: 'item description',
+      arr: [1, 2, 3, 4, 5]
    },
    {
       id: 2,
