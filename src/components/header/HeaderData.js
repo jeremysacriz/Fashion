@@ -58,15 +58,9 @@ export const mensBags = [
       cName: "mens-item",
    },
    {
-      id: 14,
+      id: 7,
       title: "Backpacks",
       path: "/bags/backpacks",
-      cName: "mens-item",
-   },
-   {
-      id: 7,
-      title: "Week-end Bags",
-      path: "/bags/week-end-bags",
       cName: "mens-item",
    },
 ]
@@ -90,35 +84,29 @@ export const mensShoes = [
       path: "/shoes/slides-sandals",
       cName: "mens-item",
    },
-   {
-      id: 11,
-      title: "Boots & Derbies",
-      path: "/shoes/boots-derbies",
-      cName: "mens-item",
-   },
 ]
 
 export const mensAccessories = [
    {
-      id: 12,
+      id: 11,
       title: "All Accessories",
       path: "/all-accessories",
       cName: "mens-item",
    },
    {
-      id: 13,
+      id: 12,
       title: "Jewelry",
       path: "/accessories/jewelry",
       cName: "mens-item",
    },
    {
-      id: 14,
+      id: 13,
       title: "Sunglasses",
       path: "/accessories/sunglasses",
       cName: "mens-item",
    },
    {
-      id: 15,
+      id: 14,
       title: "Belts",
       path: "/accessories/belts",
       cName: "mens-item",
@@ -163,18 +151,12 @@ export const womensBags = [
    },
    {
       id: 6,
-      title: "Cross-body Bags",
-      path: "/bags/cross-body-bags",
-      cName: "womens-item",
-   },
-   {
-      id: 7,
       title: "Shoulder Bags",
       path: "/bags/shoulder-bags",
       cName: "womens-item",
    },
    {
-      id: 8,
+      id: 7,
       title: "Micro Bags",
       path: "/bags/micro-bags",
       cName: "womens-item",
@@ -183,27 +165,21 @@ export const womensBags = [
 
 export const womensShoes = [
    {
-      id: 9,
+      id: 8,
       title: "All Shoes",
       path: "/all-shoes",
       cName: "womens-item",
    },
    {
-      id: 10,
+      id: 9,
       title: "Sneakers",
       path: "/shoes/sneakers",
       cName: "womens-item",
    },
    {
-      id: 11,
+      id: 10,
       title: "Heels",
       path: "/shoes/heels",
-      cName: "womens-item",
-   },
-   {
-      id: 12,
-      title: "Slides & Sandals",
-      path: "/shoes/slides-sandals",
       cName: "womens-item",
    },
 ]

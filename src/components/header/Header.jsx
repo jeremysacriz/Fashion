@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import  { headerItems } from './HeaderData';
-import { MensDropdown, WomensDropdown, GiftsDropdown } from './index';
+import { MensDropdown, WomensDropdown, GiftsDropdown } from '../index';
 
 export const Header = () => {
    const [active, setActive] = useState()

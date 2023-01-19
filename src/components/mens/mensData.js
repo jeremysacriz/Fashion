@@ -1,0 +1,750 @@
+export const TshirtData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'T-Shirts',
+      linkcategory: 't-shirts',
+      src: '/img/mens.jpg',
+      path: '/item1',
+      desc: 'item description',
+      arr: [1, 2, 3, 4, 5]
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'T-Shirts',
+      linkcategory: 't-shirts',
+      src: '/img/mens.jpg',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'T-Shirts',
+      linkcategory: 't-shirts',
+      src: '/img/mens.jpg',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'T-Shirts',
+      linkcategory: 't-shirts',
+      src: '/img/mens.jpg',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'T-Shirts',
+      linkcategory: 't-shirts',
+      src: '/img/mens.jpg',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'T-Shirts',
+      linkcategory: 't-shirts',
+      src: '/img/mens.jpg',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const HoodieData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
+      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
+      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
+      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
+      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
+      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
+      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const OuterwearData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Jackets & Coats',
+      linkcategory: 'jackets-coats',
+      src: '/img/gifts.jpg',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Jackets & Coats',
+      linkcategory: 'jackets-coats',
+      src: '/img/gifts.jpg',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Jackets & Coats',
+      linkcategory: 'jackets-coats',
+      src: '/img/gifts.jpg',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Jackets & Coats',
+      linkcategory: 'jackets-coats',
+      src: '/img/gifts.jpg',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Jackets & Coats',
+      linkcategory: 'jackets-coats',
+      src: '/img/gifts.jpg',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'READY-TO-WEAR',
+      category: 'Jackets & Coats',
+      linkcategory: 'jackets-coats',
+      src: '/img/gifts.jpg',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const CrossBodyBagsData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Cross-Body Bags',
+      linkcategory: 'cross-body-bags',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Cross-Body Bags',
+      linkcategory: 'cross-body-bags',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Cross-Body Bags',
+      linkcategory: 'cross-body-bags',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Cross-Body Bags',
+      linkcategory: 'cross-body-bags',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Cross-Body Bags',
+      linkcategory: 'cross-body-bags',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Cross-Body Bags',
+      linkcategory: 'cross-body-bags',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const BackpacksData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Backpacks',
+      linkcategory: 'backpacks',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Backpacks',
+      linkcategory: 'backpacks',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Backpacks',
+      linkcategory: 'backpacks',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Backpacks',
+      linkcategory: 'backpacks',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Backpacks',
+      linkcategory: 'backpacks',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'BAGS',
+      category: 'Backpacks',
+      linkcategory: 'backpacks',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const SneakersData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Sneakers',
+      linkcategory: 'sneakers',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Sneakers',
+      linkcategory: 'sneakers',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Sneakers',
+      linkcategory: 'sneakers',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Sneakers',
+      linkcategory: 'sneakers',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Sneakers',
+      linkcategory: 'sneakers',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Sneakers',
+      linkcategory: 'sneakers',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const SlidesSandalsData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Slides & Sandals',
+      linkcategory: 'slides-sandals',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Slides & Sandals',
+      linkcategory: 'slides-sandals',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Slides & Sandals',
+      linkcategory: 'slides-sandals',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Slides & Sandals',
+      linkcategory: 'slides-sandals',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Slides & Sandals',
+      linkcategory: 'slides-sandals',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'SHOES',
+      category: 'Slides & Sandals',
+      linkcategory: 'slides-sandals',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const JewelryData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Jewelry',
+      linkcategory: 'jewelry',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Jewelry',
+      linkcategory: 'jewelry',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Jewelry',
+      linkcategory: 'jewelry',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Jewelry',
+      linkcategory: 'jewelry',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Jewelry',
+      linkcategory: 'jewelry',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Jewelry',
+      linkcategory: 'jewelry',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const SunglassesData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Sunglasses',
+      linkcategory: 'sunglasses',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Sunglasses',
+      linkcategory: 'sunglasses',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Sunglasses',
+      linkcategory: 'sunglasses',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Sunglasses',
+      linkcategory: 'sunglasses',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Sunglasses',
+      linkcategory: 'sunglasses',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Sunglasses',
+      linkcategory: 'sunglasses',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]
+
+export const BeltsData = [
+   {
+      id: 1,
+      title: 'Item Title 1',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Belts',
+      linkcategory: 'belts',
+      src: '',
+      path: '/item1',
+      desc: 'item description'
+   },
+   {
+      id: 2,
+      title: 'Item Title 2',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Belts',
+      linkcategory: 'belts',
+      src: '',
+      path: '/item2',
+      desc: 'item description'
+   },
+   {
+      id: 3,
+      title: 'Item Title 3',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Belts',
+      linkcategory: 'belts',
+      src: '',
+      path: '/item3',
+      desc: 'item description'
+   },
+   {
+      id: 4,
+      title: 'Item Title 4',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Belts',
+      linkcategory: 'belts',
+      src: '',
+      path: '/item4',
+      desc: 'item description'
+   },
+   {
+      id: 5,
+      title: 'Item Title 5',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Belts',
+      linkcategory: 'belts',
+      src: '',
+      path: '/item5',
+      desc: 'item description'
+   },
+   {
+      id: 6,
+      title: 'Item Title 6',
+      price: '$ Price',
+      gender: 'mens',
+      categories: 'ACCESSORIES',
+      category: 'Belts',
+      linkcategory: 'belts',
+      src: '',
+      path: '/item6',
+      desc: 'item description'
+   },
+]

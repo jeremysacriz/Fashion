@@ -38,11 +38,11 @@ export const ProductView = () => {
          </div>
 
          <div className="product-nav">
-            <Link to="/mens" className="product-btn">Mens</Link>
+            <Link to={'/' + data.gender} className="product-btn">{data.gender}</Link>
             <span className="forward-slash">/</span>
-            <Link to="/ready-to-wear" className="product-btn">Ready-To-Wear</Link>
+            <Link to={'/' + data.gender + '/all-' + data.categories.toLowerCase()} className="product-btn">{data.categories}</Link>
             <span className="forward-slash">/</span>
-            <Link to="/sweats-hoodies" className="product-btn">Sweatshirts & Hoodies</Link>
+            <Link to={'/' + data.gender + '/' + data.categories.toLowerCase() + '/' + data.linkcategory} className="product-btn">{data.category}</Link>
          </div>
 
       </div>
