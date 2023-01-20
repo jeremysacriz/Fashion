@@ -2,16 +2,6 @@ import { ProductItem } from "../ProductItem";
 import { MensProducts } from "./MensProducts";
 import { TshirtData, HoodieData, OuterwearData } from "./mensData";
 
-// This maps over an array of img srcs to display in Product.jsx
-// let filteredArr = TshirtData.filter(item => item.arr)
-// {
-//    filteredArr.map(item => (
-//       item.arr.map(number => (
-//          <li key={number}>{number}</li>
-//       ))
-//    ))
-// }
-
 export const Tshirts = () => {
    return (
       <MensProducts 

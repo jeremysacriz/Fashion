@@ -10,7 +10,7 @@ export const TshirtData = [
       src: '/img/mens.jpg',
       path: '/item1',
       desc: 'item description',
-      arr: [1, 2, 3, 4, 5]
+      arr: ['/img/mens.jpg', '/img/gifts.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 2,

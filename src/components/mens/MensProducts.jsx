@@ -7,7 +7,7 @@ export const MensProducts = ({title, description, data, link1, link2, link3, gen
    }, []);
    
    return (
-      <div className="item-container">
+      <div className="item-container"> 
          <div className="item-title">
             <h1>{title}</h1>
             <p>{description}</p>

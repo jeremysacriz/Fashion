@@ -1,23 +1,53 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export const ProductView = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0)
-   }, [])
+   const [activeIndex, setActiveIndex] = useState(0)
 
    const location = useLocation()
    const data = location.state
-   console.log(data)
+
+   const indexRight = () => {
+      let newArr = data.arr
+      setActiveIndex(activeIndex + 1)
+
+      if (activeIndex === newArr.length - 1) {
+         setActiveIndex(0)
+      }
+   }
+
+   const indexLeft = () => {
+      let newArr = data.arr
+      setActiveIndex(activeIndex - 1)
+
+      if (activeIndex === 0) {
+         setActiveIndex(newArr.length - 1)
+      }
+   }
+
+   useEffect(() => {
+      window.scrollTo(0, 0)
+   }, [])
 
    return (
       <div className="product-container">
          <div className="product-flex-container">
             <div className="product-image">
-               <img src={data.src} alt="testing" />
+               <div className="product-index">
+                  <h1>{activeIndex + 1} / {data.arr.length}</h1>
+               </div>
+               <div className="product-image-carousel">
+                  {
+                     data.arr.map((img, index) => {
+                        return (
+                           <img key={index} src={img} alt="img" className={index === activeIndex ? "product-img active" : "product-img"} />
+                        )
+                     })
+                  }
+               </div>
                <div className="product-image-buttons">
-                  <span className="material-symbols-outlined product-arrow-left">chevron_left</span>
-                  <span className="material-symbols-outlined product-arrow-right">chevron_right</span>
+                  <span className="material-symbols-outlined product-arrow-left" onClick={indexLeft}>chevron_left</span>
+                  <span className="material-symbols-outlined product-arrow-right" onClick={indexRight}>chevron_right</span>
                </div>
             </div>
             <div className="product-info-container">
