@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './css/index.css';
 import { 
-   Header, Main, Footer, Mens, Womens, Gifts, 
+   NotFound, Header, Main, Footer, Mens, Womens, Gifts, 
    Tshirts, SweatsHoodies, JacketsCoats, CrossBodyBags, Backpacks, Sneakers, SlidesSandals, Jewelry, Sunglasses, Belts, ProductView,
    WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensShoulderBags, WomensMicroBags, WomensSneakers, WomensHeels, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
@@ -39,6 +39,7 @@ const App = () => {
             <Route path="/womens/accessories/sunglasses" element={<WomensSunglasses />}></Route>
             <Route path="/mens/:category/:product/:item" element={<ProductView />}></Route>
             <Route path="/womens/:category/:product/:item" element={<ProductView />}></Route>
+            <Route path="*" element={<NotFound />}></Route>
          </Routes>
          
          <Footer />

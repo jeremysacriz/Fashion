@@ -6,6 +6,7 @@ export const WomensTshirtsData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
+      linkcategory: 't-shirts',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -17,6 +18,7 @@ export const WomensTshirtsData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
+      linkcategory: 't-shirts',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -28,6 +30,7 @@ export const WomensTshirtsData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
+      linkcategory: 't-shirts',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -39,6 +42,7 @@ export const WomensTshirtsData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
+      linkcategory: 't-shirts',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -50,6 +54,7 @@ export const WomensTshirtsData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
+      linkcategory: 't-shirts',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -61,6 +66,7 @@ export const WomensTshirtsData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
+      linkcategory: 't-shirts',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -75,6 +81,7 @@ export const WomensHoodieData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -86,6 +93,7 @@ export const WomensHoodieData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -97,6 +105,7 @@ export const WomensHoodieData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -108,6 +117,7 @@ export const WomensHoodieData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -119,6 +129,7 @@ export const WomensHoodieData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -130,6 +141,7 @@ export const WomensHoodieData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
+      linkcategory: 'sweats-hoodies',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -144,6 +156,7 @@ export const WomensOuterwearData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Outerwear & Blousons',
+      linkcategory: 'outerwear-blousons',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -155,6 +168,7 @@ export const WomensOuterwearData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Outerwear & Blousons',
+      linkcategory: 'outerwear-blousons',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -166,6 +180,7 @@ export const WomensOuterwearData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Outerwear & Blousons',
+      linkcategory: 'outerwear-blousons',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -177,6 +192,7 @@ export const WomensOuterwearData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Outerwear & Blousons',
+      linkcategory: 'outerwear-blousons',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -188,6 +204,7 @@ export const WomensOuterwearData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Outerwear & Blousons',
+      linkcategory: 'outerwear-blousons',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -199,6 +216,7 @@ export const WomensOuterwearData = [
       gender: 'womens',
       categories: 'READY-TO-WEAR',
       category: 'Outerwear & Blousons',
+      linkcategory: 'outerwear-blousons',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -213,6 +231,7 @@ export const WomensShoulderBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Shoulder Bags',
+      linkcategory: 'shoulder-bags',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -224,6 +243,7 @@ export const WomensShoulderBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Shoulder Bags',
+      linkcategory: 'shoulder-bags',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -235,6 +255,7 @@ export const WomensShoulderBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Shoulder Bags',
+      linkcategory: 'shoulder-bags',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -246,6 +267,7 @@ export const WomensShoulderBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Shoulder Bags',
+      linkcategory: 'shoulder-bags',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -257,6 +279,7 @@ export const WomensShoulderBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Shoulder Bags',
+      linkcategory: 'shoulder-bags',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -268,6 +291,7 @@ export const WomensShoulderBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Shoulder Bags',
+      linkcategory: 'shoulder-bags',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -282,6 +306,7 @@ export const WomensMicroBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Micro Bags',
+      linkcategory: 'micro-bags',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -293,6 +318,7 @@ export const WomensMicroBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Micro Bags',
+      linkcategory: 'micro-bags',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -304,6 +330,7 @@ export const WomensMicroBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Micro Bags',
+      linkcategory: 'micro-bags',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -315,6 +342,7 @@ export const WomensMicroBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Micro Bags',
+      linkcategory: 'micro-bags',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -326,6 +354,7 @@ export const WomensMicroBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Micro Bags',
+      linkcategory: 'micro-bags',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -337,6 +366,7 @@ export const WomensMicroBagsData = [
       gender: 'womens',
       categories: 'BAGS',
       category: 'Micro Bags',
+      linkcategory: 'micro-bags',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -351,6 +381,7 @@ export const WomensSneakersData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Sneakers',
+      linkcategory: 'sneakers',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -362,6 +393,7 @@ export const WomensSneakersData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Sneakers',
+      linkcategory: 'sneakers',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -373,6 +405,7 @@ export const WomensSneakersData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Sneakers',
+      linkcategory: 'sneakers',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -384,6 +417,7 @@ export const WomensSneakersData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Sneakers',
+      linkcategory: 'sneakers',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -395,6 +429,7 @@ export const WomensSneakersData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Sneakers',
+      linkcategory: 'sneakers',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -406,6 +441,7 @@ export const WomensSneakersData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Sneakers',
+      linkcategory: 'sneakers',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -420,6 +456,7 @@ export const WomensHeelsData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Heels',
+      linkcategory: 'heels',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -431,6 +468,7 @@ export const WomensHeelsData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Heels',
+      linkcategory: 'heels',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -442,6 +480,7 @@ export const WomensHeelsData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Heels',
+      linkcategory: 'heels',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -453,6 +492,7 @@ export const WomensHeelsData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Heels',
+      linkcategory: 'heels',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -464,6 +504,7 @@ export const WomensHeelsData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Heels',
+      linkcategory: 'heels',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -475,6 +516,7 @@ export const WomensHeelsData = [
       gender: 'womens',
       categories: 'SHOES',
       category: 'Heels',
+      linkcategory: 'heels',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -489,6 +531,7 @@ export const WomensJewelryData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
+      linkcategory: 'jewelry',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -500,6 +543,7 @@ export const WomensJewelryData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
+      linkcategory: 'jewelry',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -511,6 +555,7 @@ export const WomensJewelryData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
+      linkcategory: 'jewelry',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -522,6 +567,7 @@ export const WomensJewelryData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
+      linkcategory: 'jewelry',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -533,6 +579,7 @@ export const WomensJewelryData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
+      linkcategory: 'jewelry',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -544,6 +591,7 @@ export const WomensJewelryData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
+      linkcategory: 'jewelry',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -558,6 +606,7 @@ export const WomensBeltsData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Belts',
+      linkcategory: 'belts',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -569,6 +618,7 @@ export const WomensBeltsData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Belts',
+      linkcategory: 'belts',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -580,6 +630,7 @@ export const WomensBeltsData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Belts',
+      linkcategory: 'belts',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -591,6 +642,7 @@ export const WomensBeltsData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Belts',
+      linkcategory: 'belts',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -602,6 +654,7 @@ export const WomensBeltsData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Belts',
+      linkcategory: 'belts',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -613,6 +666,7 @@ export const WomensBeltsData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Belts',
+      linkcategory: 'belts',
       src: '',
       path: '/item6',
       desc: 'item description'
@@ -627,6 +681,7 @@ export const WomensSunglassesData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
+      linkcategory: 'sunglasses',
       src: '',
       path: '/item1',
       desc: 'item description'
@@ -638,6 +693,7 @@ export const WomensSunglassesData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
+      linkcategory: 'sunglasses',
       src: '',
       path: '/item2',
       desc: 'item description'
@@ -649,6 +705,7 @@ export const WomensSunglassesData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
+      linkcategory: 'sunglasses',
       src: '',
       path: '/item3',
       desc: 'item description'
@@ -660,6 +717,7 @@ export const WomensSunglassesData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
+      linkcategory: 'sunglasses',
       src: '',
       path: '/item4',
       desc: 'item description'
@@ -671,6 +729,7 @@ export const WomensSunglassesData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
+      linkcategory: 'sunglasses',
       src: '',
       path: '/item5',
       desc: 'item description'
@@ -682,6 +741,7 @@ export const WomensSunglassesData = [
       gender: 'womens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
+      linkcategory: 'sunglasses',
       src: '',
       path: '/item6',
       desc: 'item description'
