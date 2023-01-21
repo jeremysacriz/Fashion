@@ -75,7 +75,7 @@ export const WomensTshirtsData = [
 
 export const WomensHoodieData = [
    {
-      id: 1,
+      id: 7,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -87,7 +87,7 @@ export const WomensHoodieData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 8,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -99,7 +99,7 @@ export const WomensHoodieData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 9,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -111,7 +111,7 @@ export const WomensHoodieData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 10,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -123,7 +123,7 @@ export const WomensHoodieData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 11,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -135,7 +135,7 @@ export const WomensHoodieData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 12,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -150,7 +150,7 @@ export const WomensHoodieData = [
 
 export const WomensOuterwearData = [
    {
-      id: 1,
+      id: 13,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -162,7 +162,7 @@ export const WomensOuterwearData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 14,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -174,7 +174,7 @@ export const WomensOuterwearData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 15,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -186,7 +186,7 @@ export const WomensOuterwearData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 16,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -198,7 +198,7 @@ export const WomensOuterwearData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 17,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -210,7 +210,7 @@ export const WomensOuterwearData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 18,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -225,7 +225,7 @@ export const WomensOuterwearData = [
 
 export const WomensShoulderBagsData = [
    {
-      id: 1,
+      id: 19,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -237,7 +237,7 @@ export const WomensShoulderBagsData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 20,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -249,7 +249,7 @@ export const WomensShoulderBagsData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 21,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -261,7 +261,7 @@ export const WomensShoulderBagsData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 22,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -273,7 +273,7 @@ export const WomensShoulderBagsData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 23,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -285,7 +285,7 @@ export const WomensShoulderBagsData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 24,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -300,7 +300,7 @@ export const WomensShoulderBagsData = [
 
 export const WomensMicroBagsData = [
    {
-      id: 1,
+      id: 25,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -312,7 +312,7 @@ export const WomensMicroBagsData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 26,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -324,7 +324,7 @@ export const WomensMicroBagsData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 27,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -336,7 +336,7 @@ export const WomensMicroBagsData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 28,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -348,7 +348,7 @@ export const WomensMicroBagsData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 29,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -360,7 +360,7 @@ export const WomensMicroBagsData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 30,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -375,7 +375,7 @@ export const WomensMicroBagsData = [
 
 export const WomensSneakersData = [
    {
-      id: 1,
+      id: 31,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -387,7 +387,7 @@ export const WomensSneakersData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 32,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -399,7 +399,7 @@ export const WomensSneakersData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 33,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -411,7 +411,7 @@ export const WomensSneakersData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 34,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -423,7 +423,7 @@ export const WomensSneakersData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 35,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -435,7 +435,7 @@ export const WomensSneakersData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 36,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -450,7 +450,7 @@ export const WomensSneakersData = [
 
 export const WomensHeelsData = [
    {
-      id: 1,
+      id: 37,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -462,7 +462,7 @@ export const WomensHeelsData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 38,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -474,7 +474,7 @@ export const WomensHeelsData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 39,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -486,7 +486,7 @@ export const WomensHeelsData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 40,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -498,7 +498,7 @@ export const WomensHeelsData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 41,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -510,7 +510,7 @@ export const WomensHeelsData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 42,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -600,7 +600,7 @@ export const WomensJewelryData = [
 
 export const WomensBeltsData = [
    {
-      id: 1,
+      id: 43,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -612,7 +612,7 @@ export const WomensBeltsData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 44,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -624,7 +624,7 @@ export const WomensBeltsData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 45,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -636,7 +636,7 @@ export const WomensBeltsData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 46,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -648,7 +648,7 @@ export const WomensBeltsData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 47,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -660,7 +660,7 @@ export const WomensBeltsData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 48,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
@@ -675,7 +675,7 @@ export const WomensBeltsData = [
 
 export const WomensSunglassesData = [
    {
-      id: 1,
+      id: 49,
       title: 'Item Title 1',
       price: '$ Price',
       gender: 'womens',
@@ -687,7 +687,7 @@ export const WomensSunglassesData = [
       desc: 'item description'
    },
    {
-      id: 2,
+      id: 50,
       title: 'Item Title 2',
       price: '$ Price',
       gender: 'womens',
@@ -699,7 +699,7 @@ export const WomensSunglassesData = [
       desc: 'item description'
    },
    {
-      id: 3,
+      id: 51,
       title: 'Item Title 3',
       price: '$ Price',
       gender: 'womens',
@@ -711,7 +711,7 @@ export const WomensSunglassesData = [
       desc: 'item description'
    },
    {
-      id: 4,
+      id: 52,
       title: 'Item Title 4',
       price: '$ Price',
       gender: 'womens',
@@ -723,7 +723,7 @@ export const WomensSunglassesData = [
       desc: 'item description'
    },
    {
-      id: 5,
+      id: 53,
       title: 'Item Title 5',
       price: '$ Price',
       gender: 'womens',
@@ -735,7 +735,7 @@ export const WomensSunglassesData = [
       desc: 'item description'
    },
    {
-      id: 6,
+      id: 54,
       title: 'Item Title 6',
       price: '$ Price',
       gender: 'womens',
