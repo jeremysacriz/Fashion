@@ -1,8 +1,7 @@
-import { MensAllReadyToWear } from './Mens-All';
-import { Tshirts, SweatsHoodies, JacketsCoats } from './Mens-ReadyToWear';
-import { CrossBodyBags, Backpacks } from './Mens-Bags';
-import { Sneakers, SlidesSandals} from './Mens-Shoes';
-import { Jewelry, Sunglasses, Belts} from './Mens-Accessories';
+import { MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats } from './Mens-ReadyToWear';
+import { MensAllBags, CrossBodyBags, Backpacks } from './Mens-Bags';
+import { MensAllShoes, Sneakers, SlidesSandals} from './Mens-Shoes';
+import { MensAllAccessories, Jewelry, Sunglasses, Belts} from './Mens-Accessories';
 import { TshirtData } from './mensData';
 
 export {
@@ -11,10 +10,13 @@ export {
    TshirtData,
    SweatsHoodies,
    JacketsCoats,
+   MensAllBags,
    CrossBodyBags,
    Backpacks,
+   MensAllShoes,
    Sneakers,
    SlidesSandals,
+   MensAllAccessories,
    Jewelry,
    Sunglasses,
    Belts,

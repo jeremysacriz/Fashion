@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import './css/index.css';
 import { 
    NotFound, Header, Main, Footer, Mens, Womens, Gifts, 
-   MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, CrossBodyBags, Backpacks, Sneakers, SlidesSandals, Jewelry, Sunglasses, Belts, ProductView,
+   MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts, ProductView,
    WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensShoulderBags, WomensMicroBags, WomensSneakers, WomensHeels, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
 
@@ -21,10 +21,13 @@ const App = () => {
             <Route path="/mens/ready-to-wear/t-shirts" element={<Tshirts />}></Route>
             <Route path="/mens/ready-to-wear/sweats-hoodies" element={<SweatsHoodies />}></Route>
             <Route path="/mens/ready-to-wear/jackets-coats" element={<JacketsCoats />}></Route>
+            <Route path="/mens/all-bags" element={<MensAllBags />}></Route>
             <Route path="/mens/bags/cross-body-bags" element={<CrossBodyBags />}></Route>
             <Route path="/mens/bags/backpacks" element={<Backpacks />}></Route>
+            <Route path="/mens/all-shoes" element={<MensAllShoes />}></Route>
             <Route path="/mens/shoes/sneakers" element={<Sneakers />}></Route>
             <Route path="/mens/shoes/slides-sandals" element={<SlidesSandals />}></Route>
+            <Route path="/mens/all-accessories" element={<MensAllAccessories />}></Route>
             <Route path="/mens/accessories/jewelry" element={<Jewelry />}></Route>
             <Route path="/mens/accessories/sunglasses" element={<Sunglasses />}></Route>
             <Route path="/mens/accessories/belts" element={<Belts />}></Route>

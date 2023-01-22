@@ -7,7 +7,7 @@ import { Mens } from './Mens';
 import { Womens } from './Womens';
 import { Gifts } from './Gifts';
 import { ProductItem } from './ProductItem';
-import { MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, CrossBodyBags, Backpacks, Sneakers, SlidesSandals, Jewelry, Sunglasses, Belts } from './mens/index';
+import { MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts } from './mens/index';
 import { TshirtData } from './mens/index';
 import { WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensShoulderBags, WomensMicroBags, WomensSneakers, WomensHeels, WomensJewelry, WomensBelts, WomensSunglasses } from './womens/index';
 import { ProductView } from './Product';
@@ -30,10 +30,13 @@ export {
    TshirtData,
    SweatsHoodies,
    JacketsCoats,
+   MensAllBags,
    CrossBodyBags,
    Backpacks,
+   MensAllShoes,
    Sneakers,
    SlidesSandals,
+   MensAllAccessories,
    Jewelry,
    Sunglasses,
    Belts,
