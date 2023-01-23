@@ -5,7 +5,7 @@ export const MensProducts = ({title, description, data, link1, link2, link3, gen
    useEffect(() => {
       window.scrollTo(0, 0);
    }, []);
-   
+
    return (
       <div className="item-container"> 
          <div className="item-title">

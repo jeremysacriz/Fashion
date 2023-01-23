@@ -5,6 +5,11 @@ import { MensProducts } from "./MensProducts";
 import { CrossBodyBagsData, BackpacksData } from "./mensData";
 
 export const MensAllBags = () => {
+   const pageReload = () => {
+      window.location.reload()
+      window.scrollTo(0, 0);
+   }
+   
    const useOutsideAlerter = (ref) => {
       useEffect(() => {
          window.scrollTo(0, 0);
@@ -85,7 +90,7 @@ export const MensAllBags = () => {
          <div className="item-nav">
             <Link to="/mens" className="item-btn">Mens</Link>
             <span className="forward-slash">/</span>
-            <Link to="/mens/all-ready-to-wear" className="item-btn" onClick={useEffect}>All-Ready-To-Wear</Link>
+            <Link to="/mens/all-ready-to-wear" className="item-btn" onClick={pageReload}>All-Ready-To-Wear</Link>
          </div>
       </div>
    )
