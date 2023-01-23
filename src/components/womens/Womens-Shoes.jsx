@@ -1,10 +1,106 @@
+import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
-import { WomensProducts } from './WomensProducts';
+import { Catalogue } from '../Catalogue';
+import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
 import { WomensSneakersData, WomensHeelsData } from './womensData';
+
+export const WomensAllShoes = () => {
+   const pageReload = () => {
+      window.location.reload()
+      window.scrollTo(0, 0);
+   }
+   
+   const useOutsideAlerter = (ref) => {
+      useEffect(() => {
+         window.scrollTo(0, 0);
+         function handleOutsideClick(e) {
+            if (ref.current && !ref.current.contains(e.target)) {
+               setActive(false)
+            }
+         }
+
+         document.addEventListener("click", handleOutsideClick)
+         return () => document.removeEventListener("click", handleOutsideClick)
+      }, [ref]);
+   }
+
+   const box = useRef(null)
+   useOutsideAlerter(box)
+
+   const newData = WomensSneakersData.concat(WomensHeelsData)
+   const [data, setData] = useState(newData)
+   const [category, setCategory] = useState("All-Shoes")
+   const [active, setActive] = useState(false)
+
+   const toggleActive = () => {
+      setActive(!active)
+   }
+
+   const filterAll = () => {
+      setData(newData)
+      setCategory("All-Shoes")
+      setActive()
+   }
+   
+   const filterSneakers = () => {
+      const filterBySneakers = newData.filter(item => item.category === "Sneakers")
+      setData(filterBySneakers)
+      setCategory("Sneakers")
+      setActive()
+   }
+
+   const filterHeels = () => {
+      const filterByHeels = newData.filter(item => item.category === "Heels")
+      setData(filterByHeels)
+      setCategory("Heels")
+      setActive()
+   }
+
+   return (
+      <div className="item-container"> 
+         <CatalogueTitle 
+            title="Womens All Shoes"
+            data={data}
+            category={category}
+         />
+         <CatalogueFilter
+            active={active}
+            toggleActive={toggleActive}
+            box={box}
+            category={category}
+            setCategory="All-Shoes"
+            filterAll={filterAll}
+            button={
+               <>
+                  <button className="filter-btn" onClick={filterSneakers}><h1>Sneakers</h1></button>
+                  <button className="filter-btn" onClick={filterHeels}><h1>Heels</h1></button>
+               </>
+            }
+         />
+         <CatalogueGridData 
+            gridData={
+               data.map(item => {
+                  return (
+                     <ProductItem 
+                     item={item} 
+                     key={item.id} 
+                     to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} />
+                  )
+               })
+            }
+            gender="Womens"
+            link1="/womens"
+            link2="/womens/all-shoes"
+            pageReload={pageReload}
+            category="All-Shoes"
+         />
+      </div>
+   )
+}
 
 export const WomensSneakers = () => {
    return (
-      <WomensProducts 
+      <Catalogue 
          title="Sneakers"
          description="Insert Description here."
          data={
@@ -26,7 +122,7 @@ export const WomensSneakers = () => {
 
 export const WomensHeels = () => {
    return (
-      <WomensProducts 
+      <Catalogue 
          title="Heels"
          description="Insert Description here."
          data={

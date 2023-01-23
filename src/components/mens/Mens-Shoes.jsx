@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { ProductItem } from "../ProductItem";
-import { MensProducts } from "./MensProducts";
+import { Catalogue } from "../Catalogue";
+import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
 import { SneakersData, SlidesSandalsData } from "./mensData";
 
 export const MensAllShoes = () => {
@@ -58,24 +58,27 @@ export const MensAllShoes = () => {
 
    return (
       <div className="item-container"> 
-         <div className="item-title">
-            <h1>Mens All Shoes</h1>
-            <p>{data.length} results for {category}</p>
-         </div>
-         <div className="item-filter">
-            <h1 className="item-filter-title">Filter By:</h1>
-            <div className={active === true ? "item-filter-btn active" : "item-filter-btn"} onClick={toggleActive} ref={box}>
-               <h1 className="filter-category">Category: {category}</h1>
-               <span className="material-symbols-outlined filter-more">expand_more</span>
-               <div className={active === true ? "filter-dropdown active" : 'filter-dropdown'}>
-                  <button className={category === "All-Shoes" ? "filter-btn-inactive" : "filter-btn"} onClick={filterAll}><h1>All-Shoes</h1></button>
+         <CatalogueTitle 
+            title="Mens All Shoes"
+            data={data}
+            category={category}
+         />
+         <CatalogueFilter
+            active={active}
+            toggleActive={toggleActive}
+            box={box}
+            category={category}
+            setCategory="All-Shoes"
+            filterAll={filterAll}
+            button={
+               <>
                   <button className="filter-btn" onClick={filterSneakers}><h1>Sneakers</h1></button>
                   <button className="filter-btn" onClick={filterSlides}><h1>Slides & Sandals</h1></button>
-               </div>
-            </div>
-         </div>
-         <div className="item-grid-container">
-            {
+               </>
+            }
+         />
+         <CatalogueGridData 
+            gridData={
                data.map(item => {
                   return (
                      <ProductItem 
@@ -85,20 +88,19 @@ export const MensAllShoes = () => {
                   )
                })
             }
-         </div>
-
-         <div className="item-nav">
-            <Link to="/mens" className="item-btn">Mens</Link>
-            <span className="forward-slash">/</span>
-            <Link to="/mens/all-ready-to-wear" className="item-btn" onClick={pageReload}>All-Ready-To-Wear</Link>
-         </div>
+            gender="Mens"
+            link1="/mens"
+            link2="/mens/all-shoes"
+            pageReload={pageReload}
+            category="All-Shoes"
+         />
       </div>
    )
 }
 
 export const Sneakers = () => {
    return (
-      <MensProducts 
+      <Catalogue 
          title="Sneakers"
          description="Insert Description here."
          data={
@@ -120,7 +122,7 @@ export const Sneakers = () => {
 
 export const SlidesSandals = () => {
    return (
-      <MensProducts 
+      <Catalogue 
          title="Slides & Sandals"
          description="Insert Description here."
          data={

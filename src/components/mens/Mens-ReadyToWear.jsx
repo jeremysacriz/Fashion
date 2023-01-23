@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { ProductItem } from "../ProductItem";
-import { MensProducts } from "./MensProducts";
+import { Catalogue } from "../Catalogue";
+import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
 import { TshirtData, HoodieData, OuterwearData } from "./mensData";
 
 export const MensAllReadyToWear = () => {
@@ -65,25 +65,28 @@ export const MensAllReadyToWear = () => {
 
    return (
       <div className="item-container"> 
-         <div className="item-title">
-            <h1>Mens All Ready To Wear</h1>
-            <p>{data.length} results for {category}</p>
-         </div>
-         <div className="item-filter">
-            <h1 className="item-filter-title">Filter By:</h1>
-            <div className={active === true ? "item-filter-btn active" : "item-filter-btn"} onClick={toggleActive} ref={box}>
-               <h1 className="filter-category">Category: {category}</h1>
-               <span className="material-symbols-outlined filter-more">expand_more</span>
-               <div className={active === true ? "filter-dropdown active" : 'filter-dropdown'}>
-                  <button className={category === "All-Ready-To-Wear" ? "filter-btn-inactive" : "filter-btn"} onClick={filterAll}><h1>All-Ready-To-Wear</h1></button>
+         <CatalogueTitle 
+            title="Mens All Ready To Wear"
+            data={data}
+            category={category}
+         />
+         <CatalogueFilter
+            active={active}
+            toggleActive={toggleActive}
+            box={box}
+            category={category}
+            setCategory="All-Ready-To-Wear"
+            filterAll={filterAll}
+            button={
+               <>
                   <button className="filter-btn" onClick={filterShirts}><h1>T-Shirts</h1></button>
                   <button className="filter-btn" onClick={filterHoodies}><h1>Sweatshirts & Hoodies</h1></button>
                   <button className="filter-btn" onClick={filterJackets}><h1>Jackets & Coats</h1></button>
-               </div>
-            </div>
-         </div>
-         <div className="item-grid-container">
-            {
+               </>
+            }
+         />
+         <CatalogueGridData 
+            gridData={
                data.map(item => {
                   return (
                      <ProductItem 
@@ -93,20 +96,19 @@ export const MensAllReadyToWear = () => {
                   )
                })
             }
-         </div>
-
-         <div className="item-nav">
-            <Link to="/mens" className="item-btn">Mens</Link>
-            <span className="forward-slash">/</span>
-            <Link to="/mens/all-ready-to-wear" className="item-btn" onClick={pageReload}>All-Ready-To-Wear</Link>
-         </div>
+            gender="Mens"
+            link1="/mens"
+            link2="/mens/all-ready-to-wear"
+            pageReload={pageReload}
+            category="All-Ready-To-Wear"
+         />
       </div>
    )
 }
 
 export const Tshirts = () => {
    return (
-      <MensProducts 
+      <Catalogue 
          title="T-Shirts"
          description="Graphic tees & much more !"
          data={
@@ -128,7 +130,7 @@ export const Tshirts = () => {
 
 export const SweatsHoodies = () => {
    return (
-      <MensProducts 
+      <Catalogue 
          title="Sweatshirts & Hoodies"
          description="Keeping you warm for the Winter season !"
          data={
@@ -150,7 +152,7 @@ export const SweatsHoodies = () => {
 
 export const JacketsCoats = () => {
    return (
-      <MensProducts 
+      <Catalogue 
          title="Jackets & Coats"
          description="We got the Winter fashion on lock."
          data={

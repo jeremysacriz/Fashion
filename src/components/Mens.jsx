@@ -21,24 +21,24 @@ export const Mens = () => {
                <h1>All Ready-To-Wear</h1>
                </CategoryItem>
                <CategoryItem 
-                  to="/mens-bags" 
+                  to="/mens/all-bags" 
                   src="img/bags.jpg" 
                   alt="category-bags">
                <h1>Bags</h1>
                </CategoryItem>
             </div>
             <div className="category-flex-row">
-               <CategoryItem
-                  to="/mens-accessories"
-                  src="img/accessories.png"
-                  alt="category-accessories">
-               <h1>Accessories</h1>
-               </CategoryItem>
                <CategoryItem 
-                  to="/mens-shoes" 
+                  to="/mens/all-shoes" 
                   src="img/shoes.jpg" 
                   alt="category-shoes">
                <h1>Shoes</h1>
+               </CategoryItem>
+               <CategoryItem
+                  to="/mens/all-accessories"
+                  src="img/accessories.png"
+                  alt="category-accessories">
+               <h1>Accessories</h1>
                </CategoryItem>
             </div>
       </div>

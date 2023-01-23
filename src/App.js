@@ -4,7 +4,7 @@ import './css/index.css';
 import { 
    NotFound, Header, Main, Footer, Mens, Womens, Gifts, 
    MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts, ProductView,
-   WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensShoulderBags, WomensMicroBags, WomensSneakers, WomensHeels, WomensJewelry, WomensBelts, WomensSunglasses
+   WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
 
 const App = () => {
@@ -31,13 +31,17 @@ const App = () => {
             <Route path="/mens/accessories/jewelry" element={<Jewelry />}></Route>
             <Route path="/mens/accessories/sunglasses" element={<Sunglasses />}></Route>
             <Route path="/mens/accessories/belts" element={<Belts />}></Route>
+            <Route path="/womens/all-ready-to-wear" element={<WomensAllReadyToWear />}></Route>
             <Route path="/womens/ready-to-wear/t-shirts" element={<WomensTshirts />}></Route>
             <Route path="/womens/ready-to-wear/sweats-hoodies" element={<WomensSweatsHoodies />}></Route>
             <Route path="/womens/ready-to-wear/outerwear-blousons" element={<WomensOuterwearBlousons />}></Route>
+            <Route path="/womens/all-bags" element={<WomensAllBags />}></Route>
             <Route path="/womens/bags/shoulder-bags" element={<WomensShoulderBags />}></Route>
             <Route path="/womens/bags/micro-bags" element={<WomensMicroBags />}></Route>
+            <Route path="/womens/all-shoes" element={<WomensAllShoes />}></Route>
             <Route path="/womens/shoes/sneakers" element={<WomensSneakers />}></Route>
             <Route path="/womens/shoes/heels" element={<WomensHeels />}></Route>
+            <Route path="/womens/all-accessories" element={<WomensAllAccessories />}></Route>
             <Route path="/womens/accessories/jewelry" element={<WomensJewelry />}></Route>
             <Route path="/womens/accessories/belts" element={<WomensBelts />}></Route>
             <Route path="/womens/accessories/sunglasses" element={<WomensSunglasses />}></Route>

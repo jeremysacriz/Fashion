@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
-export const MensProducts = ({title, description, data, link1, link2, link3, gender, category, products}) => {
+export const Catalogue = ({title, description, data, link1, link2, link3, gender, category, products}) => {
    useEffect(() => {
       window.scrollTo(0, 0);
    }, []);

@@ -15,13 +15,13 @@ export const Womens = () => {
          <div className="categories">
             <div className="category-flex-row">
                <CategoryItem
-               to="/womens-all-ready-to-wear"
+               to="/womens/all-ready-to-wear"
                src="img/womens all-ready-to-wear.jpeg"
                alt="womens-ready-to-wear">
                <h1>All Ready-To-Wear</h1>
                </CategoryItem>
                <CategoryItem 
-                  to="/womens-bags"
+                  to="/womens/all-bags"
                   src="img/womensbags.jpeg" 
                   alt="womens-bags">
                <h1>Bags</h1>
@@ -29,14 +29,14 @@ export const Womens = () => {
             </div>
             <div className="category-flex-row">
                <CategoryItem
-               to="/womens-accessories"
+               to="/womens/all-accessories"
                src="img/womenaccessories.jpeg"
                alt="womens-accessories"
                >
                <h1>Accessories</h1>
                </CategoryItem>
                <CategoryItem 
-                  to="/womens-shoes"
+                  to="/womens/all-shoes"
                   src="img/womensshoes.jpeg" 
                   alt="womens-shoes">
                <h1>Shoes</h1>
