@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
 import { Catalogue } from '../Catalogue';
 import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
-import { WomensShoulderBagsData, WomensMicroBagsData } from './womensData';
+import { CartState } from '../../context/context';
 
 export const WomensAllBags = () => {
    const pageReload = () => {
@@ -27,7 +27,9 @@ export const WomensAllBags = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const newData = WomensShoulderBagsData.concat(WomensMicroBagsData)
+   const { state: {products}} = CartState()
+   const newData = products.filter(item => item.gender === "womens" && item.categories === "BAGS")
+
    const [data, setData] = useState(newData)
    const [category, setCategory] = useState("All-Bags")
    const [active, setActive] = useState(false)
@@ -99,6 +101,9 @@ export const WomensAllBags = () => {
 }
 
 export const WomensShoulderBags = () => {
+   const { state: {products}} = CartState()
+   const WomensShoulderBagsData = products.filter(item => item.gender === "womens" && item.category === "Shoulder Bags")
+
    return (
       <Catalogue 
          title="Shoulder Bags"
@@ -121,6 +126,9 @@ export const WomensShoulderBags = () => {
 }
 
 export const WomensMicroBags = () => {
+   const { state: {products}} = CartState()
+   const WomensMicroBagsData = products.filter(item => item.gender === "womens" && item.category === "Micro Bags")
+
    return (
       <Catalogue 
          title="Micro Bags"

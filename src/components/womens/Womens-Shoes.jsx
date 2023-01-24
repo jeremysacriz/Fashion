@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
 import { Catalogue } from '../Catalogue';
 import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
-import { WomensSneakersData, WomensHeelsData } from './womensData';
+import { CartState } from '../../context/context';
 
 export const WomensAllShoes = () => {
    const pageReload = () => {
@@ -27,7 +27,9 @@ export const WomensAllShoes = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const newData = WomensSneakersData.concat(WomensHeelsData)
+   const { state: {products}} = CartState()
+   const newData = products.filter(item => item.gender === "womens" && item.categories === "SHOES")
+
    const [data, setData] = useState(newData)
    const [category, setCategory] = useState("All-Shoes")
    const [active, setActive] = useState(false)
@@ -99,6 +101,9 @@ export const WomensAllShoes = () => {
 }
 
 export const WomensSneakers = () => {
+   const { state: {products}} = CartState()
+   const WomensSneakersData = products.filter(item => item.gender === "womens" && item.category === "Sneakers")
+
    return (
       <Catalogue 
          title="Sneakers"
@@ -121,6 +126,9 @@ export const WomensSneakers = () => {
 }
 
 export const WomensHeels = () => {
+   const { state: {products}} = CartState()
+   const WomensHeelsData = products.filter(item => item.gender === "womens" && item.category === "Heels")
+
    return (
       <Catalogue 
          title="Heels"

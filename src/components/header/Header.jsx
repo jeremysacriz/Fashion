@@ -2,12 +2,15 @@ import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import  { headerItems } from './HeaderData';
 import { MensDropdown, WomensDropdown, GiftsDropdown } from '../index';
+import { Cart } from '../index';
 
 export const Header = () => {
    const [active, setActive] = useState()
    const [search, setSearch] = useState()
 
    const inputRef = useRef(null)
+
+   const [cartStatus, setCartStatus] = useState()
 
    return (
       <>
@@ -128,9 +131,13 @@ export const Header = () => {
                      </div>
                   </li>
                   <li>
-                     <Link to="/cart">
+                     <button onClick={() => setCartStatus(true)}>
                         <span className="material-symbols-outlined">shopping_bag</span>
-                     </Link>
+                     </button>
+                     <Cart 
+                        cartStatus={cartStatus}
+                        setCartStatus={setCartStatus}
+                     />
                   </li>
                </ul>
             </div>

@@ -2,8 +2,8 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import './css/index.css';
 import { 
-   NotFound, Header, Main, Footer, Mens, Womens, Gifts, 
-   MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts, ProductView,
+   NotFound, Header, Main, Footer, Mens, Womens, Gifts, ProductView,
+   MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts,
    WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
 
@@ -19,7 +19,7 @@ const App = () => {
             <Route path="/gifts" element={<Gifts />}></Route>
             <Route path="/mens/all-ready-to-wear" element={<MensAllReadyToWear />}></Route>
             <Route path="/mens/ready-to-wear/t-shirts" element={<Tshirts />}></Route>
-            <Route path="/mens/ready-to-wear/sweats-hoodies" element={<SweatsHoodies />}></Route>
+            <Route path="/mens/ready-to-wear/sweatshirts-hoodies" element={<SweatsHoodies />}></Route>
             <Route path="/mens/ready-to-wear/jackets-coats" element={<JacketsCoats />}></Route>
             <Route path="/mens/all-bags" element={<MensAllBags />}></Route>
             <Route path="/mens/bags/cross-body-bags" element={<CrossBodyBags />}></Route>
@@ -33,7 +33,7 @@ const App = () => {
             <Route path="/mens/accessories/belts" element={<Belts />}></Route>
             <Route path="/womens/all-ready-to-wear" element={<WomensAllReadyToWear />}></Route>
             <Route path="/womens/ready-to-wear/t-shirts" element={<WomensTshirts />}></Route>
-            <Route path="/womens/ready-to-wear/sweats-hoodies" element={<WomensSweatsHoodies />}></Route>
+            <Route path="/womens/ready-to-wear/sweatshirts-hoodies" element={<WomensSweatsHoodies />}></Route>
             <Route path="/womens/ready-to-wear/outerwear-blousons" element={<WomensOuterwearBlousons />}></Route>
             <Route path="/womens/all-bags" element={<WomensAllBags />}></Route>
             <Route path="/womens/bags/shoulder-bags" element={<WomensShoulderBags />}></Route>

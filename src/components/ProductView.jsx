@@ -1,11 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { CartState } from '../context/context';
 
 export const ProductView = () => {
    const [activeIndex, setActiveIndex] = useState(0)
 
    const location = useLocation()
    const data = location.state
+
+   const {
+      state: { cart },
+      dispatch
+   } = CartState()
 
    const indexRight = () => {
       let newArr = data.arr
@@ -62,7 +68,23 @@ export const ProductView = () => {
                      <button>L</button>
                      <button>XL</button>
                   </div>
-                  <button className="product-bag"><h1>Add to Bag</h1></button>
+                  {
+                     cart.some(item => item.id === data.id) ? (
+                        <button className="product-remove" onClick={() => {
+                           dispatch({
+                              type: "REMOVE_FROM_CART",
+                              payload: data,
+                           })
+                        }}><h1>Remove from Bag</h1></button>
+                     ) : (
+                        <button className="product-bag" onClick={() => {
+                           dispatch({
+                              type: "ADD_TO_CART",
+                              payload: data,
+                           })
+                        }}><h1>Add to Bag</h1></button>
+                     )
+                  }
                </div>
             </div>
          </div>

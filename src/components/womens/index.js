@@ -3,6 +3,7 @@ import { WomensAllBags, WomensShoulderBags, WomensMicroBags } from './Womens-Bag
 import { WomensAllShoes, WomensSneakers, WomensHeels } from './Womens-Shoes';
 import { WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses } from './Womens-Accessories';
 
+
 export {
    WomensAllReadyToWear,
    WomensTshirts,

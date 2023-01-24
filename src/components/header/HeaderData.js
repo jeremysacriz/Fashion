@@ -33,7 +33,7 @@ export const mensReadyToWear = [
    {
       id: 3,
       title: "Sweatshirts & Hoodies",
-      path: "/ready-to-wear/sweats-hoodies",
+      path: "/ready-to-wear/sweatshirts-hoodies",
       cName: "mens-item",
    },
    {
@@ -131,7 +131,7 @@ export const womensReadyToWear = [
    {
       id: 3,
       title: "Sweatshirts & Hoodies",
-      path: "/ready-to-wear/sweats-hoodies",
+      path: "/ready-to-wear/sweatshirts-hoodies",
       cName: "womens-item",
    },
    {

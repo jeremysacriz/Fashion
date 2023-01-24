@@ -2,12 +2,10 @@ import { MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats } from './Mens
 import { MensAllBags, CrossBodyBags, Backpacks } from './Mens-Bags';
 import { MensAllShoes, Sneakers, SlidesSandals} from './Mens-Shoes';
 import { MensAllAccessories, Jewelry, Sunglasses, Belts} from './Mens-Accessories';
-import { TshirtData } from './mensData';
 
 export {
    MensAllReadyToWear,
    Tshirts,
-   TshirtData,
    SweatsHoodies,
    JacketsCoats,
    MensAllBags,

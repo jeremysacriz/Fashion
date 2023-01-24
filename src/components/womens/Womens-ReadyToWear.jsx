@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
 import { Catalogue } from '../Catalogue';
 import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
-import { WomensTshirtsData, WomensHoodieData, WomensOuterwearData } from './womensData';
+import { CartState } from '../../context/context';
 
 export const WomensAllReadyToWear = () => {
    const pageReload = () => {
@@ -27,7 +27,9 @@ export const WomensAllReadyToWear = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const newData = WomensTshirtsData.concat(WomensHoodieData, WomensOuterwearData)
+   const { state: { products }} = CartState()
+   const newData = products.filter(item => item.gender === "womens" && item.categories === "READY-TO-WEAR")
+
    const [data, setData] = useState(newData)
    const [category, setCategory] = useState("All-Ready-To-Wear")
    const [active, setActive] = useState(false)
@@ -108,6 +110,9 @@ export const WomensAllReadyToWear = () => {
 
 
 export const WomensTshirts = () => {
+   const { state: { products }} = CartState()
+   const WomensTshirtsData = products.filter(item => item.gender === "womens" && item.category === "T-Shirts")
+
    return (
       <Catalogue 
          title="T-Shirts"
@@ -130,6 +135,9 @@ export const WomensTshirts = () => {
 }
 
 export const WomensSweatsHoodies = () => {
+   const { state: { products }} = CartState()
+   const WomensHoodieData = products.filter(item => item.gender === "womens" && item.category === "Sweatshirts & Hoodies")
+
    return (
       <Catalogue 
          title="Sweatshirts & Hoodies"
@@ -137,13 +145,13 @@ export const WomensSweatsHoodies = () => {
          data={
             WomensHoodieData.map(item => {
                return (
-                  <ProductItem item={item} key={item.id} to={'/womens/ready-to-wear/sweats-hoodies' + item.path} />
+                  <ProductItem item={item} key={item.id} to={'/womens/ready-to-wear/sweatshirts-hoodies' + item.path} />
                )
             })
          }
          link1="/womens"
          link2="/womens/all-ready-to-wear"
-         link3="/womens/ready-to-wear/sweats-hoodies"
+         link3="/womens/ready-to-wear/sweatshirts-hoodies"
          gender="Womens"
          category="Ready-To-Wear"
          products="Sweatshirts & Hoodies"
@@ -152,6 +160,9 @@ export const WomensSweatsHoodies = () => {
 }
 
 export const WomensOuterwearBlousons = () => {
+   const { state: { products }} = CartState()
+   const WomensOuterwearData = products.filter(item => item.gender === "womens" && item.category === "Outerwear & Blousons")
+
    return (
       <Catalogue 
          title="Outerwear & Blousons"

@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
 import { Catalogue } from "../Catalogue";
 import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
-import { CrossBodyBagsData, BackpacksData } from "./mensData";
+import { CartState } from '../../context/context';
 
 export const MensAllBags = () => {
    const pageReload = () => {
@@ -27,7 +27,9 @@ export const MensAllBags = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const newData = CrossBodyBagsData.concat(BackpacksData)
+   const { state: { products }, } = CartState()
+   const newData = products.filter(item => item.gender === "mens" && item.categories === "BAGS")
+
    const [data, setData] = useState(newData)
    const [category, setCategory] = useState("All-Bags")
    const [active, setActive] = useState(false)
@@ -99,6 +101,9 @@ export const MensAllBags = () => {
 }
 
 export const CrossBodyBags = () => {
+   const { state: { products }, } = CartState()
+   const CrossBodyBagsData = products.filter(item => item.gender === "mens" && item.category === "Cross-Body Bags")
+
    return (
       <Catalogue 
          title="Cross-Body Bags"
@@ -121,6 +126,9 @@ export const CrossBodyBags = () => {
 }
 
 export const Backpacks = () => {
+   const { state: { products }, } = CartState()
+   const BackpacksData = products.filter(item => item.gender === "mens" && item.category === "Backpacks")
+
    return (
       <Catalogue 
          title="Backpacks"

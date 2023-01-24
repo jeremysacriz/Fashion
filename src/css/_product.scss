@@ -137,7 +137,8 @@
                }
             }
 
-            .product-bag {
+            .product-bag,
+            .product-remove {
                color: white;
                background-color: black;
                border: 2px solid transparent;
@@ -158,6 +159,12 @@
                   font-weight: 500;
                   letter-spacing: 4px;
                }
+            }
+
+            .product-remove {
+               color: black;
+               background-color: #F9F6F0;
+               border: 2px solid black;
             }
          }
       }
