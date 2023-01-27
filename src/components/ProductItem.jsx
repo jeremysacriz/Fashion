@@ -7,7 +7,7 @@ export const ProductItem = ({item, to}) => {
          <div className="item-grid-overlay">
             <div className="item-grid-info">
                <h1>{item.title}</h1>
-               <p>{item.price}</p>
+               <p>$ {item.price}</p>
             </div>
          </div>
          <img src={item.src} alt={item.desc}/>

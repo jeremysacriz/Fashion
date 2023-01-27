@@ -121,19 +121,31 @@
                button {
                   font-size: 1.2rem;
                   font-weight: 500;
+                  margin-right: 15px;
                   padding: 5px;
                   transition: 0.4s ease;
                   cursor: pointer;
                   background-color: transparent;
                   border: none;
+                  outline: none;
 
+                  &.active,
                   &:hover {
                      color: #F9F6F0;
                      background-color: black;
                   }
-                  &:not(:last-child) {
-                     margin-right: 15px;
+
+                  &:nth-child(5) {
+                     margin-right: 0;
                   }
+               }
+
+               .select-size {
+                  font-size: 1.2rem;
+                  font-weight: 500;
+                  color: red;
+                  position: relative;
+                  top: 5px;
                }
             }
 

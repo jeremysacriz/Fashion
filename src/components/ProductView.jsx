@@ -4,19 +4,27 @@ import { CartState } from '../context/context';
 
 export const ProductView = () => {
    const [activeIndex, setActiveIndex] = useState(0)
+   const [size, setSize] = useState()
+   const [errorMessage, setErrorMessage] = useState('')
 
    const location = useLocation()
    const data = location.state
+
+   const [itemData, setItemData] = useState({...data})
+
+   const itemSize = (e) => {
+      let size = e.target.name
+      setSize(size)
+      setItemData({...itemData, size})
+   }
 
    const {
       state: { cart },
       dispatch
    } = CartState()
 
-   console.log(cart)
-
    const indexRight = () => {
-      let newArr = data.arr
+      let newArr = itemData.arr
       setActiveIndex(activeIndex + 1)
 
       if (activeIndex === newArr.length - 1) {
@@ -25,7 +33,7 @@ export const ProductView = () => {
    }
 
    const indexLeft = () => {
-      let newArr = data.arr
+      let newArr = itemData.arr
       setActiveIndex(activeIndex - 1)
 
       if (activeIndex === 0) {
@@ -42,11 +50,11 @@ export const ProductView = () => {
          <div className="product-flex-container">
             <div className="product-image">
                <div className="product-index">
-                  <h1>{activeIndex + 1} / {data.arr.length}</h1>
+                  <h1>{activeIndex + 1} / {itemData.arr.length}</h1>
                </div>
                <div className="product-image-carousel">
                   {
-                     data.arr.map((img, index) => {
+                     itemData.arr.map((img, index) => {
                         return (
                            <img key={index} src={img} alt="img" className={index === activeIndex ? "product-img active" : "product-img"} />
                         )
@@ -60,30 +68,36 @@ export const ProductView = () => {
             </div>
             <div className="product-info-container">
                <div className="product-info">
-                  <h1 className="product-title">{data.title}</h1>
-                  <h2 className="product-price">{data.price}</h2>
+                  <h1 className="product-title">{itemData.title}</h1>
+                  <h2 className="product-price">$ {itemData.price}</h2>
 
                   <div className="product-sizes">
-                     <button>XS</button>
-                     <button>S</button>
-                     <button>M</button>
-                     <button>L</button>
-                     <button>XL</button>
+                     <button className={size === 'XS' ? 'active' : 'inactive'} name="XS" onClick={itemSize}>XS</button>
+                     <button className={size === 'S' ? 'active' : 'inactive'} name="S" onClick={itemSize}>S</button>
+                     <button className={size === 'M' ? 'active' : 'inactive'} name="M" onClick={itemSize}>M</button>
+                     <button className={size === 'L' ? 'active' : 'inactive'} name="L" onClick={itemSize}>L</button>
+                     <button className={size === 'XL' ? 'active' : 'inactive'} name="XL" onClick={itemSize}>XL</button>
+                     {size === undefined && <h1 className='select-size'>{errorMessage}</h1>}
                   </div>
                   {
-                     cart.some(item => item.id === data.id) ? (
+                     cart.some(item => item.id === itemData.id) ? (
                         <button className="product-remove" onClick={() => {
                            dispatch({
                               type: "REMOVE_FROM_CART",
-                              payload: data,
+                              payload: itemData,
                            })
+                           setErrorMessage(null)
                         }}><h1>Remove from Bag</h1></button>
                      ) : (
                         <button className="product-bag" onClick={() => {
-                           dispatch({
-                              type: "ADD_TO_CART",
-                              payload: data,
-                           })
+                           size === undefined ? 
+                              setErrorMessage("Please select a size") 
+                           : (
+                              dispatch({
+                                 type: "ADD_TO_CART",
+                                 payload: itemData,
+                              })
+                           )
                         }}><h1>Add to Bag</h1></button>
                      )
                   }

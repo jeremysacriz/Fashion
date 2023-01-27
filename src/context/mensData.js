@@ -2,7 +2,7 @@ export const TshirtData = [
    {
       id: 1,
       title: 'Item Title 1',
-      price: '$50',
+      price: 50,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
@@ -15,7 +15,7 @@ export const TshirtData = [
    {
       id: 2,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
@@ -27,7 +27,7 @@ export const TshirtData = [
    {
       id: 3,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
@@ -39,7 +39,7 @@ export const TshirtData = [
    {
       id: 4,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
@@ -51,7 +51,7 @@ export const TshirtData = [
    {
       id: 5,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
@@ -63,7 +63,7 @@ export const TshirtData = [
    {
       id: 6,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
@@ -78,7 +78,7 @@ export const HoodieData = [
    {
       id: 7,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
@@ -90,7 +90,7 @@ export const HoodieData = [
    {
       id: 8,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
@@ -102,7 +102,7 @@ export const HoodieData = [
    {
       id: 9,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
@@ -114,7 +114,7 @@ export const HoodieData = [
    {
       id: 10,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
@@ -126,7 +126,7 @@ export const HoodieData = [
    {
       id: 11,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
@@ -138,7 +138,7 @@ export const HoodieData = [
    {
       id: 12,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
@@ -153,7 +153,7 @@ export const OuterwearData = [
    {
       id: 13,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
@@ -165,7 +165,7 @@ export const OuterwearData = [
    {
       id: 14,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
@@ -177,7 +177,7 @@ export const OuterwearData = [
    {
       id: 15,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
@@ -189,7 +189,7 @@ export const OuterwearData = [
    {
       id: 16,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
@@ -201,7 +201,7 @@ export const OuterwearData = [
    {
       id: 17,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
@@ -213,7 +213,7 @@ export const OuterwearData = [
    {
       id: 18,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
@@ -228,7 +228,7 @@ export const CrossBodyBagsData = [
    {
       id: 19,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
@@ -240,7 +240,7 @@ export const CrossBodyBagsData = [
    {
       id: 20,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
@@ -252,7 +252,7 @@ export const CrossBodyBagsData = [
    {
       id: 21,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
@@ -264,7 +264,7 @@ export const CrossBodyBagsData = [
    {
       id: 22,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
@@ -276,7 +276,7 @@ export const CrossBodyBagsData = [
    {
       id: 23,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
@@ -288,7 +288,7 @@ export const CrossBodyBagsData = [
    {
       id: 24,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
@@ -303,7 +303,7 @@ export const BackpacksData = [
    {
       id: 25,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Backpacks',
@@ -315,7 +315,7 @@ export const BackpacksData = [
    {
       id: 26,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Backpacks',
@@ -327,7 +327,7 @@ export const BackpacksData = [
    {
       id: 27,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Backpacks',
@@ -339,7 +339,7 @@ export const BackpacksData = [
    {
       id: 28,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Backpacks',
@@ -351,7 +351,7 @@ export const BackpacksData = [
    {
       id: 29,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Backpacks',
@@ -363,7 +363,7 @@ export const BackpacksData = [
    {
       id: 30,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'BAGS',
       category: 'Backpacks',
@@ -378,7 +378,7 @@ export const SneakersData = [
    {
       id: 31,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Sneakers',
@@ -390,7 +390,7 @@ export const SneakersData = [
    {
       id: 32,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Sneakers',
@@ -402,7 +402,7 @@ export const SneakersData = [
    {
       id: 33,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Sneakers',
@@ -414,7 +414,7 @@ export const SneakersData = [
    {
       id: 34,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Sneakers',
@@ -426,7 +426,7 @@ export const SneakersData = [
    {
       id: 35,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Sneakers',
@@ -438,7 +438,7 @@ export const SneakersData = [
    {
       id: 36,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Sneakers',
@@ -453,7 +453,7 @@ export const SlidesSandalsData = [
    {
       id: 37,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Slides & Sandals',
@@ -465,7 +465,7 @@ export const SlidesSandalsData = [
    {
       id: 38,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Slides & Sandals',
@@ -477,7 +477,7 @@ export const SlidesSandalsData = [
    {
       id: 39,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Slides & Sandals',
@@ -489,7 +489,7 @@ export const SlidesSandalsData = [
    {
       id: 40,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Slides & Sandals',
@@ -501,7 +501,7 @@ export const SlidesSandalsData = [
    {
       id: 41,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Slides & Sandals',
@@ -513,7 +513,7 @@ export const SlidesSandalsData = [
    {
       id: 42,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'SHOES',
       category: 'Slides & Sandals',
@@ -528,7 +528,7 @@ export const JewelryData = [
    {
       id: 43,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
@@ -540,7 +540,7 @@ export const JewelryData = [
    {
       id: 44,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
@@ -552,7 +552,7 @@ export const JewelryData = [
    {
       id: 45,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
@@ -564,7 +564,7 @@ export const JewelryData = [
    {
       id: 46,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
@@ -576,7 +576,7 @@ export const JewelryData = [
    {
       id: 47,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
@@ -588,7 +588,7 @@ export const JewelryData = [
    {
       id: 48,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Jewelry',
@@ -603,7 +603,7 @@ export const SunglassesData = [
    {
       id: 49,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
@@ -615,7 +615,7 @@ export const SunglassesData = [
    {
       id: 50,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
@@ -627,7 +627,7 @@ export const SunglassesData = [
    {
       id: 51,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
@@ -639,7 +639,7 @@ export const SunglassesData = [
    {
       id: 52,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
@@ -651,7 +651,7 @@ export const SunglassesData = [
    {
       id: 53,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
@@ -663,7 +663,7 @@ export const SunglassesData = [
    {
       id: 54,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Sunglasses',
@@ -678,7 +678,7 @@ export const BeltsData = [
    {
       id: 55,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Belts',
@@ -690,7 +690,7 @@ export const BeltsData = [
    {
       id: 56,
       title: 'Item Title 2',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Belts',
@@ -702,7 +702,7 @@ export const BeltsData = [
    {
       id: 57,
       title: 'Item Title 3',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Belts',
@@ -714,7 +714,7 @@ export const BeltsData = [
    {
       id: 58,
       title: 'Item Title 4',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Belts',
@@ -726,7 +726,7 @@ export const BeltsData = [
    {
       id: 59,
       title: 'Item Title 5',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Belts',
@@ -738,7 +738,7 @@ export const BeltsData = [
    {
       id: 60,
       title: 'Item Title 6',
-      price: '$ Price',
+      price: 'Price',
       gender: 'mens',
       categories: 'ACCESSORIES',
       category: 'Belts',

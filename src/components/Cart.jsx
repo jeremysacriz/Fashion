@@ -10,7 +10,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
    const [total, setTotal] = useState()
 
    useEffect(() => {
-      setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0))
+      setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0))
    }, [cart])
 
    return (
@@ -24,16 +24,17 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                   <span className="material-symbols-outlined">close</span>
                </button>
                {
-                  cart.some(item => item.id) ? (
+                  cart.length !== 0 ? (
                      <>
                      {
                      cart.map(item => (
                         <div className="cart-item" key={item.id}>
                            <div className="cart-item-info">
                               <h1>{item.title}</h1>
-                              <h2>{item.price}</h2>
+                              <h2>$ {item.price}</h2>
                               <div className="cart-item-info-h3">
-                                 <h3>Size: (S)</h3><h3>Qty: (1)</h3>
+                                 <h3>Size: {'(' + item.size + ')'}</h3>
+                                 <h3>Qty: {item.qty}</h3>
                               </div>
                               <button className="remove-cart-item" onClick={() => {
                                  dispatch({
@@ -52,7 +53,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                         <div className="cart-total">
                            <h1>Total: {cart.length === 1 ? '(' + cart.length + ') Item' : '(' + cart.length + ') Items'}
                            </h1>
-                           <h2>{total}</h2>
+                           <h2>$ {total}</h2>
                         </div>
                         <button className="proceed-cart-checkout">
                            <h1>Proceed To Checkout</h1>
