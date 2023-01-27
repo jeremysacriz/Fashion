@@ -2,7 +2,7 @@ export const TshirtData = [
    {
       id: 1,
       title: 'Item Title 1',
-      price: '$ Price',
+      price: '$50',
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',

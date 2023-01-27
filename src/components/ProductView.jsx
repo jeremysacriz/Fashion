@@ -13,6 +13,8 @@ export const ProductView = () => {
       dispatch
    } = CartState()
 
+   console.log(cart)
+
    const indexRight = () => {
       let newArr = data.arr
       setActiveIndex(activeIndex + 1)

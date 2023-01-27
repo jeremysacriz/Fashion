@@ -131,7 +131,10 @@ export const Header = () => {
                      </div>
                   </li>
                   <li>
-                     <button onClick={() => setCartStatus(true)}>
+                     <button onClick={() => {
+                        setCartStatus(true)
+                        document.body.style.overflow = "hidden"
+                     }}>
                         <span className="material-symbols-outlined">shopping_bag</span>
                      </button>
                      <Cart 
