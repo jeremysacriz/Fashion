@@ -22,7 +22,7 @@ export const TshirtData = [
       linkcategory: 't-shirts',
       src: '/img/mens.jpg',
       path: '/item2',
-      desc: 'item description'
+      desc: 'item description',
    },
    {
       id: 3,

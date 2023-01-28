@@ -43,7 +43,8 @@ export const ProductView = () => {
 
    useEffect(() => {
       window.scrollTo(0, 0)
-   }, [])
+      console.log(cart)
+   }, [cart])
 
    return (
       <div className="product-container">

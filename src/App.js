@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { CartState } from './context/context';
 import './css/index.css';
 import { 
    NotFound, Header, Main, Footer, Mens, Womens, Gifts, ProductView,
@@ -8,6 +9,15 @@ import {
 } from './components';
 
 const App = () => {
+   const { 
+      state: { cart },
+      dispatch,
+   } = CartState()
+
+   useEffect(() => {
+      console.log(cart)
+   }, [cart])
+
    return (
       <section id="index">
          <Header />

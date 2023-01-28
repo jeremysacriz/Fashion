@@ -11,6 +11,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
 
    useEffect(() => {
       setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0))
+      console.log(cart)
    }, [cart])
 
    return (
