@@ -27,7 +27,7 @@ export const MensAllReadyToWear = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "READY-TO-WEAR")
    
    const [data, setData] = useState(newData)
@@ -109,7 +109,7 @@ export const MensAllReadyToWear = () => {
 }
 
 export const Tshirts = () => {
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const TshirtData = products.filter(item => item.gender === "mens" && item.category === "T-Shirts")
 
    return (
@@ -134,7 +134,7 @@ export const Tshirts = () => {
 }
 
 export const SweatsHoodies = () => {
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const HoodieData = products.filter(item => item.gender === "mens" && item.category === "Sweatshirts & Hoodies")
 
    return (
@@ -159,7 +159,7 @@ export const SweatsHoodies = () => {
 }
 
 export const JacketsCoats = () => {
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const OuterwearData = products.filter(item => item.gender === "mens" && item.category === "Jackets & Coats")
 
    return (

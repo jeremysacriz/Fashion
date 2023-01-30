@@ -42,7 +42,6 @@ export const ProductView = () => {
    }
 
    useEffect(() => {
-      window.scrollTo(0, 0)
       console.log(cart)
    }, [cart])
 
@@ -88,6 +87,7 @@ export const ProductView = () => {
                               payload: itemData,
                            })
                            setErrorMessage(null)
+                           setSize()
                         }}><h1>Remove from Bag</h1></button>
                      ) : (
                         <button className="product-bag" onClick={() => {

@@ -27,7 +27,7 @@ export const WomensAllAccessories = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "womens" && item.categories === "ACCESSORIES")
 
    const [data, setData] = useState(newData)
@@ -109,7 +109,7 @@ export const WomensAllAccessories = () => {
 }
 
 export const WomensJewelry = () => {
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const WomensJewelryData = products.filter(item => item.gender === "womens" && item.category === "Jewelry")
 
    return (
@@ -134,7 +134,7 @@ export const WomensJewelry = () => {
 }
 
 export const WomensBelts = () => {
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const WomensBeltsData = products.filter(item => item.gender === "womens" && item.category === "Belts")
 
    return (
@@ -159,7 +159,7 @@ export const WomensBelts = () => {
 }
 
 export const WomensSunglasses = () => {
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const WomensSunglassesData = products.filter(item => item.gender === "womens" && item.category === "Sunglasses")
 
    return (

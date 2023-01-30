@@ -11,7 +11,6 @@ import {
 const App = () => {
    const { 
       state: { cart },
-      dispatch,
    } = CartState()
 
    useEffect(() => {

@@ -27,7 +27,7 @@ export const MensAllAccessories = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const { state: { products } } = CartState()
+   const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "ACCESSORIES")
 
    const [data, setData] = useState(newData)

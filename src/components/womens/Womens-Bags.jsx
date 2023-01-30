@@ -27,7 +27,7 @@ export const WomensAllBags = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "womens" && item.categories === "BAGS")
 
    const [data, setData] = useState(newData)
@@ -101,7 +101,7 @@ export const WomensAllBags = () => {
 }
 
 export const WomensShoulderBags = () => {
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const WomensShoulderBagsData = products.filter(item => item.gender === "womens" && item.category === "Shoulder Bags")
 
    return (
@@ -126,7 +126,7 @@ export const WomensShoulderBags = () => {
 }
 
 export const WomensMicroBags = () => {
-   const { state: {products}} = CartState()
+   const { state: { products }} = CartState()
    const WomensMicroBagsData = products.filter(item => item.gender === "womens" && item.category === "Micro Bags")
 
    return (

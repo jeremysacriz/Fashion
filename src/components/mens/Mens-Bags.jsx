@@ -27,7 +27,7 @@ export const MensAllBags = () => {
    const box = useRef(null)
    useOutsideAlerter(box)
 
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "BAGS")
 
    const [data, setData] = useState(newData)
@@ -101,7 +101,7 @@ export const MensAllBags = () => {
 }
 
 export const CrossBodyBags = () => {
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const CrossBodyBagsData = products.filter(item => item.gender === "mens" && item.category === "Cross-Body Bags")
 
    return (
@@ -126,7 +126,7 @@ export const CrossBodyBags = () => {
 }
 
 export const Backpacks = () => {
-   const { state: { products }, } = CartState()
+   const { state: { products }} = CartState()
    const BackpacksData = products.filter(item => item.gender === "mens" && item.category === "Backpacks")
 
    return (
