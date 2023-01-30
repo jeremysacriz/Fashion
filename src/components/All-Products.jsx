@@ -1,23 +1,23 @@
 import { Link } from 'react-router-dom';
 
-export const CatalogueTitle = ({title, data, category}) => {
+export const CatalogueTitle = ({title, product}) => {
    return (
       <div className="item-title">
          <h1>{title}</h1>
-         <p>{data.length} results for {category}</p>
+         <p>{product.products.length} results for {product.category}</p>
       </div>
    )
 }
 
-export const CatalogueFilter = ({active, toggleActive, box, category, setCategory, filterAll, button}) => {
+export const CatalogueFilter = ({active, toggleActive, box, product, category, filterAll, button}) => {
    return (
       <div className="item-filter">
          <h1 className="item-filter-title">Filter By:</h1>
          <div className={active === true ? "item-filter-btn active" : "item-filter-btn"} onClick={toggleActive} ref={box}>
-            <h1 className="filter-category">Category: {category}</h1>
+            <h1 className="filter-category">Category: {product.category}</h1>
             <span className="material-symbols-outlined filter-more">expand_more</span>
             <div className={active === true ? "filter-dropdown active" : 'filter-dropdown'}>
-               <button className={category === setCategory ? "filter-btn-inactive" : "filter-btn"} onClick={filterAll}><h1>{setCategory}</h1></button>
+               <button className={product.category === category ? "filter-btn-inactive" : "filter-btn"} onClick={filterAll}><h1>{category}</h1></button>
                {button}
             </div>
          </div>

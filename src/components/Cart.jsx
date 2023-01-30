@@ -34,7 +34,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                               <h1>{item.title}</h1>
                               <h2>$ {item.price}</h2>
                               <div className="cart-item-info-h3">
-                                 <h3>Size: {'(' + item.size + ')'}</h3>
+                                 <h3>Size: {'( ' + item.size + ' )'}</h3>
                                  <h3>Qty: {item.qty}</h3>
                               </div>
                               <button className="remove-cart-item" onClick={() => {

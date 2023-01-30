@@ -30,38 +30,36 @@ export const MensAllAccessories = () => {
    const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "ACCESSORIES")
 
-   const [data, setData] = useState(newData)
-   const [category, setCategory] = useState("All-Accessories")
    const [active, setActive] = useState(false)
+   const [product, setProduct] = useState({
+      products: newData,
+      category: 'All-Accessories'
+   })
 
    const toggleActive = () => {
       setActive(!active)
    }
 
    const filterAll = () => {
-      setData(newData)
-      setCategory("All-Accessories")
+      setProduct({products: newData, category: 'All-Accessories'})
       setActive()
    }
    
    const filterJewelry = () => {
       const filterByJewelry = newData.filter(item => item.category === "Jewelry")
-      setData(filterByJewelry)
-      setCategory("Jewelry")
+      setProduct({products: filterByJewelry, category: 'Jewelry'})
       setActive()
    }
 
    const filterSunglasses = () => {
       const filterBySunglasses = newData.filter(item => item.category === "Sunglasses")
-      setData(filterBySunglasses)
-      setCategory("Sunglasses")
+      setProduct({products: filterBySunglasses, category: 'Sunglasses'})
       setActive()
    }
 
    const filterBelts = () => {
       const filterByBelts  = newData.filter(item => item.category === "Belts")
-      setData(filterByBelts)
-      setCategory("Belts")
+      setProduct({products: filterByBelts, category: 'Belts'})
       setActive()
    }
 
@@ -69,15 +67,14 @@ export const MensAllAccessories = () => {
       <div className="item-container"> 
          <CatalogueTitle 
             title="Mens All Accessories"
-            data={data}
-            category={category}
+            product={product}
          />
          <CatalogueFilter
             active={active}
             toggleActive={toggleActive}
             box={box}
-            category={category}
-            setCategory="All-Accessories"
+            product={product}
+            category="All-Accessories"
             filterAll={filterAll}
             button={
                <>
@@ -89,7 +86,7 @@ export const MensAllAccessories = () => {
          />
          <CatalogueGridData 
             gridData={
-               data.map(item => {
+               product.products.map(item => {
                   return (
                      <ProductItem 
                      item={item} 

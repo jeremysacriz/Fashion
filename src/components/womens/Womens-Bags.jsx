@@ -30,31 +30,30 @@ export const WomensAllBags = () => {
    const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "womens" && item.categories === "BAGS")
 
-   const [data, setData] = useState(newData)
-   const [category, setCategory] = useState("All-Bags")
    const [active, setActive] = useState(false)
+   const [product, setProduct] = useState({
+      products: newData,
+      category: 'All-Bags'
+   })
 
    const toggleActive = () => {
       setActive(!active)
    }
 
    const filterAll = () => {
-      setData(newData)
-      setCategory("All-Bags")
+      setProduct({products: newData, category: 'All-Bags'})
       setActive()
    }
    
    const filterShoulder = () => {
       const filterByShoulder = newData.filter(item => item.category === "Shoulder Bags")
-      setData(filterByShoulder)
-      setCategory("Shoulder Bags")
+      setProduct({products: filterByShoulder, category: 'Shoulder Bags'})
       setActive()
    }
 
    const filterMicro = () => {
       const filterByMicro = newData.filter(item => item.category === "Micro Bags")
-      setData(filterByMicro)
-      setCategory("Micro Bags")
+      setProduct({products: filterByMicro, category: 'Micro Bags'})
       setActive()
    }
 
@@ -62,15 +61,14 @@ export const WomensAllBags = () => {
       <div className="item-container"> 
          <CatalogueTitle 
             title="Womens All Bags"
-            data={data}
-            category={category}
+            product={product}
          />
          <CatalogueFilter
             active={active}
             toggleActive={toggleActive}
             box={box}
-            category={category}
-            setCategory="All-Bags"
+            product={product}
+            category="All-Bags"
             filterAll={filterAll}
             button={
                <>
@@ -81,7 +79,7 @@ export const WomensAllBags = () => {
          />
          <CatalogueGridData 
             gridData={
-               data.map(item => {
+               product.products.map(item => {
                   return (
                      <ProductItem 
                      item={item} 

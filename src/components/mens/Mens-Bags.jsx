@@ -30,31 +30,30 @@ export const MensAllBags = () => {
    const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "BAGS")
 
-   const [data, setData] = useState(newData)
-   const [category, setCategory] = useState("All-Bags")
    const [active, setActive] = useState(false)
+   const [product, setProduct] = useState({
+      products: newData,
+      category: 'All-Bags'
+   })
 
    const toggleActive = () => {
       setActive(!active)
    }
 
    const filterAll = () => {
-      setData(newData)
-      setCategory("All-Bags")
+      setProduct({products: newData, category: 'All-Bags'})
       setActive()
    }
    
    const filterCrossBody = () => {
       const filterByCrossBody = newData.filter(item => item.category === "Cross-Body Bags")
-      setData(filterByCrossBody)
-      setCategory("Cross-Body Bags")
+      setProduct({products: filterByCrossBody, category: 'Cross-Body Bags'})
       setActive()
    }
 
    const filterBackpacks = () => {
       const filterByBackpacks = newData.filter(item => item.category === "Backpacks")
-      setData(filterByBackpacks)
-      setCategory("Backpacks")
+      setProduct({products: filterByBackpacks, category: 'Backpacks'})
       setActive()
    }
 
@@ -62,15 +61,14 @@ export const MensAllBags = () => {
       <div className="item-container"> 
          <CatalogueTitle 
             title="Mens All Bags"
-            data={data}
-            category={category}
+            product={product}
          />
          <CatalogueFilter
             active={active}
             toggleActive={toggleActive}
             box={box}
-            category={category}
-            setCategory="All-Bags"
+            product={product}
+            category="All-Bags"
             filterAll={filterAll}
             button={
                <>
@@ -81,7 +79,7 @@ export const MensAllBags = () => {
          />
          <CatalogueGridData 
             gridData={
-               data.map(item => {
+               product.products.map(item => {
                   return (
                      <ProductItem 
                      item={item} 
@@ -94,7 +92,7 @@ export const MensAllBags = () => {
             link1="/mens"
             link2="/mens/all-bags"
             pageReload={pageReload}
-            category="All-Bags"
+            category="All-bags"
          />
       </div>
    )

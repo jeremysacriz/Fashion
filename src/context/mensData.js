@@ -1,190 +1,204 @@
 export const TshirtData = [
    {
       id: 1,
-      title: 'Item Title 1',
-      price: 50,
+      title: 'Givenchy Logo Tee',
+      price: 850,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
       linkcategory: 't-shirts',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/T-SHIRTS/Givenchy Tee.jpeg',
       path: '/item1',
       desc: 'item description',
-      arr: ['/img/mens.jpg', '/img/gifts.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      arr: ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 2,
-      title: 'Item Title 2',
-      price: 'Price',
+      title: 'Tommy Hilfiger Logo Tee',
+      price: 70,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
       linkcategory: 't-shirts',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/T-SHIRTS/Tommy Hilfiger Tee.jpg',
       path: '/item2',
       desc: 'item description',
+      arr: ['/img/MENS/T-SHIRTS/Tommy Hilfiger Tee.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 3,
-      title: 'Item Title 3',
-      price: 'Price',
+      title: 'Calvin Klein Tee',
+      price: 65,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
       linkcategory: 't-shirts',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/T-SHIRTS/Calvin Klein Tee.jpg',
       path: '/item3',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/T-SHIRTS/Calvin Klein Tee.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 4,
-      title: 'Item Title 4',
-      price: 'Price',
+      title: 'POLO Logo Tee',
+      price: 60,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
       linkcategory: 't-shirts',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/T-SHIRTS/POLO Tee.jpg',
       path: '/item4',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/T-SHIRTS/POLO Tee.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 5,
-      title: 'Item Title 5',
-      price: 'Price',
+      title: 'Lacoste Signature Tee',
+      price: 40,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
       linkcategory: 't-shirts',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/T-SHIRTS/Lacoste Tee.jpg',
       path: '/item5',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/T-SHIRTS/Lacoste Tee.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 6,
-      title: 'Item Title 6',
-      price: 'Price',
+      title: 'BURBERRY Logo Tee',
+      price: 515,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'T-Shirts',
       linkcategory: 't-shirts',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/T-SHIRTS/BURBERRY Tee.png',
       path: '/item6',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/T-SHIRTS/BURBERRY Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const HoodieData = [
    {
       id: 7,
-      title: 'Item Title 1',
-      price: 'Price',
+      title: 'Tommy Hilfiger Logo Hoodie',
+      price: 170,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       linkcategory: 'sweats-hoodies',
       src: '/img/Tommy Hilfiger Hoodie.jpeg',
       path: '/item1',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/Tommy Hilfiger Hoodie.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 8,
-      title: 'Item Title 2',
-      price: 'Price',
+      title: 'Armani Exchange Logo Hoodie',
+      price: 180,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       linkcategory: 'sweats-hoodies',
-      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      src: '/img/MENS/SWEATSHIRTS & HOODIES/Armani Hoodie.png',
       path: '/item2',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/SWEATSHIRTS & HOODIES/Armani Hoodie.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 9,
-      title: 'Item Title 3',
-      price: 'Price',
+      title: 'Gucci Hoodie',
+      price: 1250,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       linkcategory: 'sweats-hoodies',
-      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      src: '/img/MENS/SWEATSHIRTS & HOODIES/Gucci Hoodie.png',
       path: '/item3',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/SWEATSHIRTS & HOODIES/Gucci Hoodie.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 10,
-      title: 'Item Title 4',
-      price: 'Price',
+      title: 'KENZO Sweatshirt',
+      price: 330,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       linkcategory: 'sweats-hoodies',
-      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      src: '/img/MENS/SWEATSHIRTS & HOODIES/KENZO Sweatshirt.png',
       path: '/item4',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/SWEATSHIRTS & HOODIES/KENZO Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 11,
-      title: 'Item Title 5',
-      price: 'Price',
+      title: 'Givenchy Sweatshirt',
+      price: 1300,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       linkcategory: 'sweats-hoodies',
-      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      src: '/img/MENS/SWEATSHIRTS & HOODIES/Givenchy Sweatshirt.png',
       path: '/item5',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/SWEATSHIRTS & HOODIES/Givenchy Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 12,
-      title: 'Item Title 6',
-      price: 'Price',
+      title: 'Tommy Hilfiger Graphic Logo Sweatshirt',
+      price: 250,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Sweatshirts & Hoodies',
       linkcategory: 'sweats-hoodies',
-      src: '/img/Tommy Hilfiger Hoodie.jpeg',
+      src: '/img/MENS/SWEATSHIRTS & HOODIES/Tommy Hilfiger Sweatshirt.png',
       path: '/item6',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/SWEATSHIRTS & HOODIES/Tommy Hilfiger Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const OuterwearData = [
    {
       id: 13,
-      title: 'Item Title 1',
-      price: 'Price',
+      title: 'The North Face Puffer Jacket',
+      price: 390,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/gifts.jpg',
+      src: '/img/MENS/JACKETS & COATS/North Face Puffer Jacket.png',
       path: '/item1',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/North Face Puffer Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 14,
-      title: 'Item Title 2',
-      price: 'Price',
+      title: 'Oubre Jacket',
+      price: 160,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/gifts.jpg',
+      src: '/img/MENS/JACKETS & COATS/Oubre Jacket.png',
       path: '/item2',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Oubre Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 15,
-      title: 'Item Title 3',
-      price: 'Price',
+      title: 'Dolce & Gabanna Jacket',
+      price: 1100,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/gifts.jpg',
+      src: '/img/MENS/JACKETS & COATS/Dolce & Gabanna Jacket.png',
       path: '/item3',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Dolce & Gabanna Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 16,
@@ -194,9 +208,9 @@ export const OuterwearData = [
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/gifts.jpg',
+      src: '/img/mens.jpg',
       path: '/item4',
-      desc: 'item description'
+      desc: 'item description',
    },
    {
       id: 17,

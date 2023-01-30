@@ -30,31 +30,30 @@ export const WomensAllShoes = () => {
    const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "womens" && item.categories === "SHOES")
 
-   const [data, setData] = useState(newData)
-   const [category, setCategory] = useState("All-Shoes")
    const [active, setActive] = useState(false)
+   const [product, setProduct] = useState({
+      products: newData,
+      category: 'All-Shoes'
+   })
 
    const toggleActive = () => {
       setActive(!active)
    }
 
    const filterAll = () => {
-      setData(newData)
-      setCategory("All-Shoes")
+      setProduct({products: newData, category: 'All-Shoes'})
       setActive()
    }
    
    const filterSneakers = () => {
       const filterBySneakers = newData.filter(item => item.category === "Sneakers")
-      setData(filterBySneakers)
-      setCategory("Sneakers")
+      setProduct({products: filterBySneakers, category: 'Sneakers'})
       setActive()
    }
 
    const filterHeels = () => {
       const filterByHeels = newData.filter(item => item.category === "Heels")
-      setData(filterByHeels)
-      setCategory("Heels")
+      setProduct({products: filterByHeels, category: 'Heels'})
       setActive()
    }
 
@@ -62,15 +61,14 @@ export const WomensAllShoes = () => {
       <div className="item-container"> 
          <CatalogueTitle 
             title="Womens All Shoes"
-            data={data}
-            category={category}
+            product={product}
          />
          <CatalogueFilter
             active={active}
             toggleActive={toggleActive}
             box={box}
-            category={category}
-            setCategory="All-Shoes"
+            product={product}
+            category="All-Shoes"
             filterAll={filterAll}
             button={
                <>
@@ -81,7 +79,7 @@ export const WomensAllShoes = () => {
          />
          <CatalogueGridData 
             gridData={
-               data.map(item => {
+               product.products.map(item => {
                   return (
                      <ProductItem 
                      item={item} 
