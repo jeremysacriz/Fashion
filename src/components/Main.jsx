@@ -29,15 +29,6 @@ export const Main = () => {
                </MainBtn>
             </Link>
          </div>
-         <div className="main-gifts-container">
-            <Link to="/gifts" className="main-gifts-img-container">
-               <img src="img/gifts.jpg" alt="GIFTS" className="gifts-img" />
-               <h1 className="gifts-title">Gifts</h1>
-               <MainBtn className="gifts-img-btn">
-                  <h1>Shop Gifts</h1>
-               </MainBtn>
-            </Link>
-         </div>
       </div>
    )
 }

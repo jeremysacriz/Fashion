@@ -16,6 +16,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
 
    return (
       <>
+         <div className={cartStatus === true ? "cart-overlay active" : "cart-overlay"}></div>
          <div className={cartStatus === true ? "cart-container active" : "cart-container"}>
             <div className="cart-width">
                <button className="cart-close" onClick={() => {

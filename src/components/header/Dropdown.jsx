@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { mensReadyToWear, mensBags, mensShoes, mensAccessories, womensReadyToWear, womensBags, womensShoes, womensAccessories, gifts } from "./HeaderData";
+import { mensReadyToWear, mensBags, mensShoes, mensAccessories, womensReadyToWear, womensBags, womensShoes, womensAccessories } from "./HeaderData";
 
 export const MensDropdown = (props) => {
    const [dropdown, setDropdown] = useState(false)
@@ -103,37 +103,6 @@ export const WomensDropdown = (props) => {
                {womensAccessories.map(item => {
                   return (
                      <WomensList item={item} key={item.id} />
-                  )
-               })}
-            </div>
-         </ul>
-      </>
-   )
-}
-
-
-export const GiftsDropdown = (props) => {
-   const [dropdown, setDropdown] = useState(false)
-
-   const GiftsList = ({item, setActive}) => {
-      return (
-         <li className={`submenu-item ${item.cName}`}>
-            <Link to={item.path} className="submenu-btn" onClick={() => setActive(false)}>{item.title}</Link>
-         </li>
-      )
-   }
-   
-   return (
-      <>
-         <ul
-         className={props.className}
-         onClick={() => setDropdown(!dropdown)}
-         >
-            <div className="submenu-list">
-               <div className="submenu-title">Gifts Selection</div>
-               {gifts.map(item => {
-                  return (
-                     <GiftsList item={item} key={item.id} />
                   )
                })}
             </div>

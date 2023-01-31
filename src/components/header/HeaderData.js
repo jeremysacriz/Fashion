@@ -9,11 +9,6 @@ export const headerItems = [
       title: "WOMEN",
       cName: "header-list-item",
    },
-   {
-      id: 3,
-      title: "GIFTS",
-      cName: "header-list-item",
-   },
 ]
 
 // Men's List Items
@@ -209,21 +204,4 @@ export const womensAccessories = [
       path: "/accessories/sunglasses",
       cName: "womens-item",
    },
-]
-
-
-// Gift's List Items
-export const gifts = [
-   {
-      id: 1,
-      title: "Gifts for Her",
-      path: "./gifts-for-her",
-      cName: "gifts-item"
-   },
-   {
-      id: 2,
-      title: "Gifts for Him",
-      path: "./gifts-for-him",
-      cName: "gifts-item"
-   }
 ]

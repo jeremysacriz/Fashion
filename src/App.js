@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import { CartState } from './context/context';
 import './css/index.css';
 import { 
-   NotFound, Header, Main, Footer, Mens, Womens, Gifts, ProductView,
+   NotFound, Header, Main, Footer, Mens, Womens, ProductView,
    MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts,
    WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
@@ -25,7 +25,6 @@ const App = () => {
             <Route path="/" element={<Main />}></Route>
             <Route path="/mens" element={<Mens />}></Route>
             <Route path="/womens" element={<Womens />}></Route>
-            <Route path="/gifts" element={<Gifts />}></Route>
             <Route path="/mens/all-ready-to-wear" element={<MensAllReadyToWear />}></Route>
             <Route path="/mens/ready-to-wear/t-shirts" element={<Tshirts />}></Route>
             <Route path="/mens/ready-to-wear/sweatshirts-hoodies" element={<SweatsHoodies />}></Route>

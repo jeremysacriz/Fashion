@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import  { headerItems } from './HeaderData';
-import { MensDropdown, WomensDropdown, GiftsDropdown } from '../index';
+import { MensDropdown, WomensDropdown } from '../index';
 import { Cart } from '../index';
 
 export const Header = () => {
@@ -58,27 +58,6 @@ export const Header = () => {
                               </Link>
                               <div className={active === "WOMEN" ? "submenu-container active" : "submenu-container"}>
                                  <WomensDropdown className={active === "WOMEN" ? "submenu active" : "submenu"} />
-                              </div>
-                           </li>
-                        )
-                     } else if (item.title === "GIFTS") {
-                        return (
-                           <li 
-                           key={item.id}
-                           className={item.cName}
-                           onMouseEnter={() => setActive(item.title)}
-                           onMouseLeave={() => setActive()}
-                           >
-                              <Link 
-                              to="/gifts" 
-                              className={active === "GIFTS" ? 'list-btn active' : 'list-btn'}
-                              onClick={() => {
-                                 setActive()
-                              }}>
-                                 {item.title}
-                              </Link>
-                              <div className={active === "GIFTS" ? "submenu-container active" : "submenu-container"}>
-                                 <GiftsDropdown className={active === "GIFTS" ? "submenu active" : "submenu"} /> 
                               </div>
                            </li>
                         )
