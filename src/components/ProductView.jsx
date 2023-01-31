@@ -2,9 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { CartState } from '../context/context';
 
-export const ProductView = () => {
-   window.scrollTo(0, 0)
-   
+export const ProductView = () => {   
    const [activeIndex, setActiveIndex] = useState(0)
    const [size, setSize] = useState()
    const [errorMessage, setErrorMessage] = useState('')
@@ -44,8 +42,8 @@ export const ProductView = () => {
    }
 
    useEffect(() => {
-      console.log(cart)
-   }, [cart])
+      window.scrollTo(0, 0)
+   }, [])
 
    return (
       <div className="product-container">

@@ -202,54 +202,58 @@ export const OuterwearData = [
    },
    {
       id: 16,
-      title: 'Item Title 4',
-      price: 'Price',
+      title: 'Liquor & Poker Trucker Jacket',
+      price: 110,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/mens.jpg',
+      src: '/img/MENS/JACKETS & COATS/Liquor & Poker Trucker Jacket.png',
       path: '/item4',
       desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Liquor & Poker Trucker Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 17,
-      title: 'Item Title 5',
-      price: 'Price',
+      title: 'Vintage Jacket',
+      price: 80,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/gifts.jpg',
+      src: '/img/MENS/JACKETS & COATS/Vintage Jacket.jpg',
       path: '/item5',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Vintage Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 18,
-      title: 'Item Title 6',
-      price: 'Price',
+      title: 'Prada Pattern Jacket',
+      price: 800,
       gender: 'mens',
       categories: 'READY-TO-WEAR',
       category: 'Jackets & Coats',
       linkcategory: 'jackets-coats',
-      src: '/img/gifts.jpg',
+      src: '/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg',
       path: '/item6',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const CrossBodyBagsData = [
    {
       id: 19,
-      title: 'Item Title 1',
-      price: 'Price',
+      title: 'Adidas Essential Cbody',
+      price: 45,
       gender: 'mens',
       categories: 'BAGS',
       category: 'Cross-Body Bags',
       linkcategory: 'cross-body-bags',
-      src: '',
+      src: '/img/MENS/CROSS-BODY-BAGS/Adidas Festival Crossbody.jpeg',
       path: '/item1',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/CROSS-BODY-BAGS/Adidas Festival Crossbody.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 20,
@@ -261,7 +265,8 @@ export const CrossBodyBagsData = [
       linkcategory: 'cross-body-bags',
       src: '',
       path: '/item2',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/CROSS-BODY-BAGS/Gucci Cross Body.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 21,
@@ -273,7 +278,8 @@ export const CrossBodyBagsData = [
       linkcategory: 'cross-body-bags',
       src: '',
       path: '/item3',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 22,
@@ -285,7 +291,8 @@ export const CrossBodyBagsData = [
       linkcategory: 'cross-body-bags',
       src: '',
       path: '/item4',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 23,
@@ -297,7 +304,8 @@ export const CrossBodyBagsData = [
       linkcategory: 'cross-body-bags',
       src: '',
       path: '/item5',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 24,
@@ -309,7 +317,8 @@ export const CrossBodyBagsData = [
       linkcategory: 'cross-body-bags',
       src: '',
       path: '/item6',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
@@ -324,7 +333,8 @@ export const BackpacksData = [
       linkcategory: 'backpacks',
       src: '',
       path: '/item1',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 26,
@@ -336,7 +346,8 @@ export const BackpacksData = [
       linkcategory: 'backpacks',
       src: '',
       path: '/item2',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 27,
@@ -348,7 +359,8 @@ export const BackpacksData = [
       linkcategory: 'backpacks',
       src: '',
       path: '/item3',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 28,
@@ -360,7 +372,8 @@ export const BackpacksData = [
       linkcategory: 'backpacks',
       src: '',
       path: '/item4',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 29,
@@ -372,7 +385,8 @@ export const BackpacksData = [
       linkcategory: 'backpacks',
       src: '',
       path: '/item5',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       id: 30,
@@ -384,7 +398,8 @@ export const BackpacksData = [
       linkcategory: 'backpacks',
       src: '',
       path: '/item6',
-      desc: 'item description'
+      desc: 'item description',
+      arr: ['/img/MENS/JACKETS & COATS/Prada Pattern Jacket.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
