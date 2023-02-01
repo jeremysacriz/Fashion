@@ -3,14 +3,29 @@ import { Link } from 'react-router-dom';
 import  { headerItems } from './HeaderData';
 import { MensDropdown, WomensDropdown } from '../index';
 import { Cart } from '../index';
+import { CartState } from '../../context/context'
 
 export const Header = () => {
+   const { state: { products }} = CartState()
+
    const [active, setActive] = useState()
    const [search, setSearch] = useState()
 
    const inputRef = useRef(null)
 
    const [cartStatus, setCartStatus] = useState()
+   const [query, setQuery] = useState('')
+
+   const keys = ['title', 'gender', 'categories', 'category']
+
+   const searchQuery = (data) => {
+      return (
+         data.filter(
+            (item) =>
+            keys.some(key => item[key].toLowerCase().includes(query))
+         )
+      )
+   }
 
    return (
       <>
@@ -92,18 +107,27 @@ export const Header = () => {
                            <div className={search === true ? 'search-content' : null}>
                               <div className="search-input-width">
                                  <div className="search-input-container">
-                                    <input type="text" className="search-input" placeholder="Search..." ref={inputRef} />
+                                    <input type="text" className="search-input" placeholder="Search..." ref={inputRef} onChange={(e) => setQuery(e.target.value)} value={query} />
                                     <button className="search-btn">
                                        <span className="material-symbols-outlined search-icon">search</span>
                                     </button>
                                  </div>
                                  <span className="material-symbols-outlined close" onClick={() => {
+                                    setQuery('')
                                     setSearch(false)
                                     document.body.style.overflow = "visible"
                                  }}>close</span>
                               </div>
                               <div className="search-body-container">
-
+                                 <div className="search-body">
+                                    {query && 
+                                       searchQuery(products).map(item => (
+                                          <div className="search-item" key={item.id}>
+                                             <h1>{item.title}</h1>
+                                          </div>
+                                       ))
+                                    }
+                                 </div>
                               </div>
                            </div>
                         </div>

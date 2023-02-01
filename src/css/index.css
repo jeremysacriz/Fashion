@@ -373,8 +373,24 @@ html {
   height: 90%;
   width: 100%;
   border-top: 1px solid #C5C5C5;
+  border-bottom: 1px solid #C5C5C5;
   position: relative;
   top: 20px;
+}
+
+#index .header .header-container .header-right ul li .search-container .search .search-content .search-body-container .search-body {
+  height: 100%;
+  width: 90%;
+  margin: 0 auto;
+  padding: 40px 0;
+  overflow: auto;
+}
+
+#index .header .header-container .header-right ul li .search-container .search .search-content .search-body-container .search-body .search-item h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 4rem;
 }
 
 #index .header .header-container .header-right ul li .cart-overlay {

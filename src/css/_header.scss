@@ -257,7 +257,7 @@
                               position: relative;
                               display: flex;
                               align-items: center;
-      
+                              
                               .search-input {
                                  font-size: 1.4rem;
                                  font-weight: 100;
@@ -295,8 +295,26 @@
                            height: 90%;
                            width: 100%;
                            border-top: 1px solid #C5C5C5;
+                           border-bottom: 1px solid #C5C5C5;
                            position: relative;
                            top: 20px;
+
+                           .search-body {
+                              height: 100%;
+                              width: 90%;
+                              margin: 0 auto;
+                              padding: 40px 0;
+                              overflow: auto;
+
+                              .search-item {
+                                 h1 {
+                                    font-size: 1.5rem;
+                                    font-weight: 500;
+                                    letter-spacing: 1px;
+                                    line-height: 4rem;
+                                 }
+                              }
+                           }
                         }
                      }
                   }
