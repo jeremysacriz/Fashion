@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import  { headerItems } from './HeaderData';
 import { MensDropdown, WomensDropdown } from '../index';
 import { Cart } from '../index';
@@ -7,6 +7,7 @@ import { CartState } from '../../context/context'
 
 export const Header = () => {
    const { state: { products }} = CartState()
+   const navigate = useNavigate()
 
    const [active, setActive] = useState()
    const [search, setSearch] = useState()
@@ -18,30 +19,30 @@ export const Header = () => {
 
    const keys = ['title', 'gender', 'categories', 'category']
 
-   // const searchQuery = (data) => {
-   //    return (
-   //       data.filter(
-   //          (item) =>
-   //          keys.some(key => item[key].toLowerCase().includes(query))
-   //       )
-   //    )
-   // }
-
-   const [items, setItems] = useState()
+   const searchClose = () => {
+      setQuery('')
+      setSearch(false)
+      document.body.style.overflow = "visible"
+   }
 
    const handleSubmit = (e) => {
       e.preventDefault()
 
-      let newProducts = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
-      console.log(newProducts)
-      setItems(newProducts)
+      if (query !== '') {
+         let newProducts = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
+         console.log(newProducts)
+         searchClose()
+         navigate(`/search-results/${query}`)
+      }
    }
 
-   const searchClose = () => {
-      setQuery('')
-      setItems([])
-      setSearch(false)
-      document.body.style.overflow = "visible"
+   const filterSearch = (data) => {
+      return (
+         data.filter(
+            (item) => 
+            keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
+         )
+      )
    }
 
    return (
@@ -120,8 +121,8 @@ export const Header = () => {
                      </button>
                      <div className={search === true ? 'search-overlay active' : 'search-overlay'}></div>
                      <div className={search === true ? 'search-container active' : 'search-container'}>
-                        <div className={search === true ? 'search active' : 'search'}>
-                           <div className={search === true ? 'search-content' : null}>
+                        <div className='search'>
+                           <div className={search === true ? 'search-content active' : 'search-content'}>
                               <div className="search-input-width">
                                  <form className="search-input-container" onSubmit={handleSubmit}>
                                     <input type="text" className="search-input" placeholder="Search..." ref={inputRef} onChange={(e) => setQuery(e.target.value)} value={query} />
@@ -133,10 +134,8 @@ export const Header = () => {
                               </div>
                               <div className="search-body-container">
                                  <div className="search-body">
-                                    {items && items.map(item => (
-                                          <div className="search-item" key={item.id}>
-                                             <h1>{item.title}</h1>
-                                          </div>
+                                    {query && filterSearch(products).map(item => (
+                                          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
                                        ))
                                     }
                                  </div>

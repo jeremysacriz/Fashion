@@ -177,15 +177,12 @@
                   height: 100vh;
                   width: 100%;
                   background-color: rgba(0, 0, 0, 0.6);
-                  visibility: hidden;
-                  opacity: 0;
-                  transition: 0.2s ease;
+                  display: none;
                   z-index: -2;
 
                   &.active {
-                     visibility: visible;
-                     opacity: 1;
-                     z-index: 2;
+                     display: block;
+                     z-index: 3;
                   }
                }
 
@@ -196,7 +193,7 @@
                   height: 100vh;
                   width: 100%;
                   transition: 0.4s ease;
-                  z-index: -2;
+                  z-index: 3;
 
                   &.active {
                      top: 0;
@@ -205,7 +202,7 @@
 
                   .search {
                      position: absolute;
-                     top: -100%;
+                     top: 0;
                      height: 700px;
                      width: 100%;
                      padding: 50px 0;
@@ -214,16 +211,15 @@
                      z-index: 3;
                      transition: 0.4s ease;
 
-                     &.active {
-                        top: 0;
-                     }
-
                      .search-content {
                         height: 100%;
                         width: 100%;
                         opacity: 0;
-                        animation: fadeIn 1s ease forwards;
-                        animation-delay: 0.4s;
+
+                        &.active {
+                           animation: fadeIn 1s ease forwards;
+                           animation-delay: 0.4s;
+                        }
 
                         .close {
                            position: absolute;
@@ -311,12 +307,16 @@
                               grid-auto-rows: 60px;
 
                               .search-item {
+                                 font-size: 1.5rem;
+                                 font-weight: 500;
+                                 letter-spacing: 1px;
+                                 line-height: 4rem;
+                                 color: black;
                                  margin: 0 auto;
-                                 h1 {
-                                    font-size: 1.5rem;
-                                    font-weight: 500;
-                                    letter-spacing: 1px;
-                                    line-height: 4rem;
+                                 text-decoration: none;
+
+                                 &:hover {
+                                    transform: scale(1.1);
                                  }
                               }
                            }

@@ -5,6 +5,7 @@ import { Footer } from './Footer';
 import { CategoryItem } from './CategoryItem';
 import { Mens } from './Mens';
 import { Womens } from './Womens';
+import { SearchResults } from './SearchResults';
 import { ProductItem } from './ProductItem';
 import { MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts } from './mens/index';
 import { WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses } from './womens/index';
@@ -20,6 +21,7 @@ export {
    CategoryItem,
    Mens,
    Womens,
+   SearchResults,
    ProductItem,
    MensAllReadyToWear,
    Tshirts,
