@@ -301,12 +301,17 @@
 
                            .search-body {
                               height: 100%;
-                              width: 90%;
+                              width: 100%;
+                              max-width: 2000px;
                               margin: 0 auto;
-                              padding: 40px 0;
+                              padding: 40px;
                               overflow: auto;
+                              display: grid;
+                              grid-template-columns: repeat(auto-fill, minmax(400px, 3fr));
+                              grid-auto-rows: 60px;
 
                               .search-item {
+                                 margin: 0 auto;
                                  h1 {
                                     font-size: 1.5rem;
                                     font-weight: 500;

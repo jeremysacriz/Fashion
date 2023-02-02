@@ -18,13 +18,30 @@ export const Header = () => {
 
    const keys = ['title', 'gender', 'categories', 'category']
 
-   const searchQuery = (data) => {
-      return (
-         data.filter(
-            (item) =>
-            keys.some(key => item[key].toLowerCase().includes(query))
-         )
-      )
+   // const searchQuery = (data) => {
+   //    return (
+   //       data.filter(
+   //          (item) =>
+   //          keys.some(key => item[key].toLowerCase().includes(query))
+   //       )
+   //    )
+   // }
+
+   const [items, setItems] = useState()
+
+   const handleSubmit = (e) => {
+      e.preventDefault()
+
+      let newProducts = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
+      console.log(newProducts)
+      setItems(newProducts)
+   }
+
+   const searchClose = () => {
+      setQuery('')
+      setItems([])
+      setSearch(false)
+      document.body.style.overflow = "visible"
    }
 
    return (
@@ -106,22 +123,17 @@ export const Header = () => {
                         <div className={search === true ? 'search active' : 'search'}>
                            <div className={search === true ? 'search-content' : null}>
                               <div className="search-input-width">
-                                 <div className="search-input-container">
+                                 <form className="search-input-container" onSubmit={handleSubmit}>
                                     <input type="text" className="search-input" placeholder="Search..." ref={inputRef} onChange={(e) => setQuery(e.target.value)} value={query} />
                                     <button className="search-btn">
                                        <span className="material-symbols-outlined search-icon">search</span>
                                     </button>
-                                 </div>
-                                 <span className="material-symbols-outlined close" onClick={() => {
-                                    setQuery('')
-                                    setSearch(false)
-                                    document.body.style.overflow = "visible"
-                                 }}>close</span>
+                                 </form>
+                                 <span className="material-symbols-outlined close" onClick={searchClose}>close</span>
                               </div>
                               <div className="search-body-container">
                                  <div className="search-body">
-                                    {query && 
-                                       searchQuery(products).map(item => (
+                                    {items && items.map(item => (
                                           <div className="search-item" key={item.id}>
                                              <h1>{item.title}</h1>
                                           </div>
