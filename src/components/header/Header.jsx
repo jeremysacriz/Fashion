@@ -30,9 +30,9 @@ export const Header = () => {
 
       if (query !== '') {
          let newProducts = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
-         console.log(newProducts)
          searchClose()
-         navigate(`/search-results/${query}`)
+         // Pass the newProducts array data to SearchResults component & display each ProductItem using .map()
+         navigate(`/search-results/${query}`, { state: {products: newProducts, search: query} })
       }
    }
 
@@ -121,7 +121,7 @@ export const Header = () => {
                      </button>
                      <div className={search === true ? 'search-overlay active' : 'search-overlay'}></div>
                      <div className={search === true ? 'search-container active' : 'search-container'}>
-                        <div className='search'>
+                        <div className={search === true ? 'search active' : 'search'}>
                            <div className={search === true ? 'search-content active' : 'search-content'}>
                               <div className="search-input-width">
                                  <form className="search-input-container" onSubmit={handleSubmit}>
