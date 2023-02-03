@@ -8,10 +8,11 @@ export const Cart = ({cartStatus, setCartStatus}) => {
    } = CartState()
 
    const [total, setTotal] = useState()
+   const [qty, setQty] = useState()
 
    useEffect(() => {
-      setTotal(cart.reduce((acc, item) => acc + Number(item.price), 0))
-      console.log(cart)
+      setTotal(cart.reduce((acc, item) => acc + Number(item.price * item.qty), 0))
+      setQty(cart.reduce((acc, item) => acc + Number(item.qty), 0))
    }, [cart])
 
    return (
@@ -29,8 +30,8 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                   cart.length !== 0 ? (
                      <>
                      {
-                     cart.map(item => (
-                        <div className="cart-item" key={item.id}>
+                     cart.map((item, index) => (
+                        <div className="cart-item" key={index}>
                            <div className="cart-item-info">
                               <h1>{item.title}</h1>
                               <h2>$ {item.price}</h2>
@@ -41,7 +42,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                               <button className="remove-cart-item" onClick={() => {
                                  dispatch({
                                     type: "REMOVE_FROM_CART",
-                                    payload: item,
+                                    payload: item
                                  })
                               }}><h1>Remove</h1></button>
                            </div>
@@ -53,7 +54,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                      }
                      <div className="cart-checkout">
                         <div className="cart-total">
-                           <h1>Total: {cart.length === 1 ? '(' + cart.length + ') Item' : '(' + cart.length + ') Items'}
+                           <h1>Total: {qty === 1 ? '(' + qty + ') Item' : '(' + qty + ') Items'}
                            </h1>
                            <h2>$ {total}</h2>
                         </div>

@@ -29,20 +29,10 @@ export const Header = () => {
       e.preventDefault()
 
       if (query !== '') {
-         let newProducts = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
+         let newItems = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
          searchClose()
-         // Pass the newProducts array data to SearchResults component & display each ProductItem using .map()
-         navigate(`/search-results/${query}`, { state: {products: newProducts, search: query} })
+         navigate(`/search-results/${query}`, { state: {items: newItems, search: query} })
       }
-   }
-
-   const filterSearch = (data) => {
-      return (
-         data.filter(
-            (item) => 
-            keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
-         )
-      )
    }
 
    return (
@@ -134,7 +124,12 @@ export const Header = () => {
                               </div>
                               <div className="search-body-container">
                                  <div className="search-body">
-                                    {query && filterSearch(products).map(item => (
+                                    {query && products
+                                    .filter(
+                                       (item) => 
+                                       keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
+                                    )
+                                    .map(item => (
                                           <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
                                        ))
                                     }

@@ -6,7 +6,6 @@ export const ProductView = () => {
    const [activeIndex, setActiveIndex] = useState(0)
    const [size, setSize] = useState()
    const [errorMessage, setErrorMessage] = useState('')
-   const [active, setActive] = useState()
 
    const location = useLocation()
    const data = location.state
@@ -20,8 +19,7 @@ export const ProductView = () => {
    }
 
    const {
-      state: { cart },
-      dispatch
+      dispatch,
    } = CartState()
 
    const indexRight = () => {
@@ -45,15 +43,13 @@ export const ProductView = () => {
    const addToCart = () => {
       dispatch({
          type: "ADD_TO_CART",
-         payload: data,
+         payload: {...itemData},
       })
-      setActive(true)
       setErrorMessage()
    }
 
    useEffect(() => {
       setSize()
-      setActive()
       window.scrollTo(0, 0)
    }, [data])
 
@@ -97,7 +93,7 @@ export const ProductView = () => {
                      }}><h1>Add to Bag</h1></button>
                   ) : (
                      <button className="product-bag" onClick={addToCart}>
-                        {active === true ? <h1>Added</h1> : <h1>Add to Bag</h1>}
+                        <h1>Add to Bag</h1>
                      </button>
                   )}
                </div>

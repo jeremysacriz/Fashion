@@ -8,18 +8,16 @@ export const SearchResults = () => {
    }, [])
 
    const { state } = useLocation()
-   console.log(state.products)
-   console.log(state.search)
 
    return (
       <div className="item-container"> 
          <div className="item-title">
             <h1>Search Results:</h1>
-            <p>{state.products.length} results for "{state.search}"</p>
+            <p>{state.items.length} results for "{state.search}"</p>
          </div>
          <div className="item-grid-container">
             {
-               state.products.map(item => {
+               state.items.map(item => {
                   return (
                      <ProductItem 
                      item={item} 
