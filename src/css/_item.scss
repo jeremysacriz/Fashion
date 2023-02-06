@@ -134,17 +134,14 @@
 
    .item-grid-container {
       padding-bottom: 200px;
-      width: 100%;
       margin: 0 auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(500px, 3fr));
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
-
 
       .item-grid-item {
          height: 600px;
          width: 100%;
-         margin: 0 auto;
          position: relative;
          display: flex;
          align-items: center;
@@ -241,5 +238,11 @@
          font-weight: 500;
          margin-right: 20px;
       }
+   }
+}
+
+@media only screen and (max-width: 1440px) {
+   .item-container .item-grid-container {
+      grid-template-columns: repeat(2, 1fr);
    }
 }
