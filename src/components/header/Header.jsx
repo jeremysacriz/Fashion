@@ -25,13 +25,30 @@ export const Header = () => {
       document.body.style.overflow = "visible"
    }
 
+   const productSearch = products
+      .filter(
+         (item) => 
+         keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
+      )
+      .map(item => (
+         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
+      ))
+   
+   const handleSearchClick = () => {
+      setSearch(true)
+      setTimeout(() => {
+         inputRef.current.focus()
+      }, 1000)
+      document.body.style.overflow = "hidden"
+   }
+
    const handleSubmit = (e) => {
       e.preventDefault()
 
-      if (query !== '') {
+      if (query !== '' && productSearch.length !== 0 ) {
          let newItems = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
          searchClose()
-         navigate(`/search-results/${query}`, { state: {items: newItems, search: query} })
+         navigate(`/search-results/${query.toLowerCase()}`, { state: {items: newItems, search: query.toLowerCase()}})
       }
    }
 
@@ -102,17 +119,13 @@ export const Header = () => {
             <div className="header-right">
                <ul>
                   <li>
-                     <button onClick={() => {
-                        setSearch(true)
-                        inputRef.current.focus()
-                        document.body.style.overflow = "hidden"
-                     }}>
+                     <button onClick={handleSearchClick}>
                         <span className="material-symbols-outlined">search</span>
                      </button>
                      <div className={search === true ? 'search-overlay active' : 'search-overlay'}></div>
                      <div className={search === true ? 'search-container active' : 'search-container'}>
                         <div className={search === true ? 'search active' : 'search'}>
-                           <div className={search === true ? 'search-content active' : 'search-content'}>
+                           <div className='search-content'>
                               <div className="search-input-width">
                                  <form className="search-input-container" onSubmit={handleSubmit}>
                                     <input type="text" className="search-input" placeholder="Search..." ref={inputRef} onChange={(e) => setQuery(e.target.value)} value={query} />
@@ -124,15 +137,8 @@ export const Header = () => {
                               </div>
                               <div className="search-body-container">
                                  <div className="search-body">
-                                    {query && products
-                                    .filter(
-                                       (item) => 
-                                       keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
-                                    )
-                                    .map(item => (
-                                          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
-                                       ))
-                                    }
+                                    {query && productSearch}
+                                    {productSearch.length === 0 && <h1 className="no-results">No Results for "{query}" found...</h1>}
                                  </div>
                               </div>
                            </div>

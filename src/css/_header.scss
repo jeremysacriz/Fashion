@@ -217,11 +217,8 @@
                         height: 100%;
                         width: 100%;
                         opacity: 0;
-
-                        &.active {
-                           animation: fadeIn 1s ease forwards;
-                           animation-delay: 0.4s;
-                        }
+                        animation: fadeIn 1s ease forwards;
+                        animation-delay: 0.4s;
 
                         .close {
                            position: absolute;
@@ -320,6 +317,15 @@
                                  &:hover {
                                     transform: scale(1.1);
                                  }
+                              }
+
+                              .no-results {
+                                 font-size: 1.5rem;
+                                 font-weight: 500;
+                                 letter-spacing: 1px;
+                                 line-height: 4rem;
+                                 color: black;
+                                 margin: 0 auto;
                               }
                            }
                         }

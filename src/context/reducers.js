@@ -6,7 +6,7 @@ export const cartReducer = (state, action) => {
 
    switch (action.type) {
       case "ADD_TO_CART":
-         const itemExists = state.cart.find((item) => item.hasOwnProperty('cartID') && item.size === action.payload.size)
+         const itemExists = state.cart.find((item) => item.id === action.payload.id && item.size === action.payload.size)
 
          if (itemExists) {
             const newCart = state.cart.map((product) => {
