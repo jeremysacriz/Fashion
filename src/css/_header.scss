@@ -112,6 +112,10 @@
                   padding-left: 0px;
                }
 
+               &:last-child {
+                  padding-right: 0px;
+               }
+
                .list-btn {
                   font-size: 1.6rem;
                   font-weight: 500;

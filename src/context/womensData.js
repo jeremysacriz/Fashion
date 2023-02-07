@@ -9,7 +9,8 @@ export const WomensTshirtsData = [
       'linkcategory': 't-shirts',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 62,
@@ -17,7 +18,7 @@ export const WomensTshirtsData = [
       'price': 'Price',
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
-      category: 'T-Shirts',
+      'category': 'T-Shirts',
       'linkcategory': 't-shirts',
       'src': '',
       'path': '/item2',
@@ -84,7 +85,8 @@ export const WomensHoodieData = [
       'linkcategory': 'sweats-hoodies',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 68,
@@ -159,7 +161,8 @@ export const WomensOuterwearData = [
       'linkcategory': 'outerwear-blousons',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 74,
@@ -234,7 +237,8 @@ export const WomensShoulderBagsData = [
       'linkcategory': 'shoulder-bags',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 80,
@@ -309,7 +313,8 @@ export const WomensMicroBagsData = [
       'linkcategory': 'micro-bags',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 86,
@@ -376,150 +381,162 @@ export const WomensMicroBagsData = [
 export const WomensSneakersData = [
    {
       'id': 91,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Lacoste Sneakers',
+      'price': 160,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Sneakers',
       'linkcategory': 'sneakers',
-      'src': '',
+      'src': '/img/WOMENS/SNEAKERS/Lacoste Sneakers.jpg',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SNEAKERS/Lacoste Sneakers.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 92,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Givenchy Sneakers',
+      'price': 950,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Sneakers',
       'linkcategory': 'sneakers',
-      'src': '',
+      'src': '/img/WOMENS/SNEAKERS/Givenchy Sneakers.jpeg',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SNEAKERS/Givenchy Sneakers.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 93,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Tommy Hilfiger Sneakers',
+      'price': 190,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Sneakers',
       'linkcategory': 'sneakers',
-      'src': '',
+      'src': '/img/WOMENS/SNEAKERS/Tommy Hilfiger Sneakers.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SNEAKERS/Tommy Hilfiger Sneakers.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 94,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Adidas Originals Sneakers',
+      'price': 120,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Sneakers',
       'linkcategory': 'sneakers',
-      'src': '',
+      'src': '/img/WOMENS/SNEAKERS/adidas Originals Sneakers.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SNEAKERS/adidas Originals Sneakers.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 95,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'New Balance 608s',
+      'price': 250,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Sneakers',
       'linkcategory': 'sneakers',
-      'src': '',
+      'src': '/img/WOMENS/SNEAKERS/New Balance 608 Sneakers.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SNEAKERS/New Balance 608 Sneakers.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 96,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Gucci Ace Sneakers',
+      'price': 1050,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Sneakers',
       'linkcategory': 'sneakers',
-      'src': '',
+      'src': '/img/WOMENS/SNEAKERS/Gucci Ace Sneakers.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SNEAKERS/Gucci Ace Sneakers.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const WomensHeelsData = [
    {
       'id': 97,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Butterfly High Heels',
+      'price': 80,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Heels',
       'linkcategory': 'heels',
-      'src': '',
+      'src': '/img/WOMENS/HEELS/Butterfly High Heels.png',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/HEELS/Butterfly High Heels.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 98,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'GUESS High Heels',
+      'price': 170,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Heels',
       'linkcategory': 'heels',
-      'src': '',
+      'src': '/img/WOMENS/HEELS/GUESS High Heels.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/HEELS/GUESS High Heels.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 99,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Summer Laceup High Heels',
+      'price': 80,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Heels',
       'linkcategory': 'heels',
-      'src': '',
+      'src': '/img/WOMENS/HEELS/Summer Laceup High Heels.jpg',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/HEELS/Summer Laceup High Heels.jpg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 100,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Jimmy Choo High Heels',
+      'price': 800,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Heels',
       'linkcategory': 'heels',
-      'src': '',
+      'src': '/img/WOMENS/HEELS/Jimmy Choo High Heels.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/HEELS/Jimmy Choo High Heels.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 101,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Stiletto High Heels',
+      'price': 140,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Heels',
       'linkcategory': 'heels',
-      'src': '',
+      'src': '/img/WOMENS/HEELS/Stiletto High Heels.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/HEELS/Stiletto High Heels.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 102,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Tony Bianco High Heels',
+      'price': 950,
       'gender': 'womens',
       'categories': 'SHOES',
       'category': 'Heels',
       'linkcategory': 'heels',
-      'src': '',
+      'src': '/img/WOMENS/HEELS/Tony Bianco High Heels.jpeg',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/HEELS/Tony Bianco High Heels.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
@@ -534,7 +551,8 @@ export const WomensJewelryData = [
       'linkcategory': 'jewelry',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 104,
@@ -609,7 +627,8 @@ export const WomensBeltsData = [
       'linkcategory': 'belts',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 110,
@@ -684,7 +703,8 @@ export const WomensSunglassesData = [
       'linkcategory': 'sunglasses',
       'src': '',
       'path': '/item1',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 116,
