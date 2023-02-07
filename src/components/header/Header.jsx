@@ -1,6 +1,5 @@
 import { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import  { headerItems } from './HeaderData';
 import { MensDropdown, WomensDropdown } from '../index';
 import { Cart } from '../index';
 import { CartState } from '../../context/context'
@@ -17,15 +16,24 @@ export const Header = () => {
    const [cartStatus, setCartStatus] = useState()
    const [query, setQuery] = useState('')
 
-   const keys = ['title', 'gender', 'categories', 'category']
-
    const searchClose = () => {
       setQuery('')
       setSearch(false)
       document.body.style.overflow = "visible"
    }
 
+   const keys = ['title', 'gender', 'categories', 'category']
+
    const productSearch = products
+      .filter(
+         (item) => 
+         keys.some(key => item[key].toLowerCase().startsWith(query.toLowerCase()))
+      )
+      .map(item => (
+         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
+      ))
+
+   const includeSearch = products
       .filter(
          (item) => 
          keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
@@ -57,58 +65,42 @@ export const Header = () => {
       <header className="header">
          <div className="header-container">
             <nav className="header-left">
-               <ul className="header-left-container" onMouseEnter={() => {setActive("MEN")}}>
-                  {headerItems.map(item => {
-                     if (item.title === "MEN") {
-                        return (
-                           <li 
-                           key={item.id}
-                           className={item.cName}
-                           onMouseEnter={() => setActive(item.title)}
-                           onMouseLeave={() => setActive()}
-                           >
-                              <Link 
-                              to='/mens' 
-                              className={active === "MEN" ? 'list-btn active' : 'list-btn'}
-                              onClick={() => {
-                                 setActive()
-                              }}>
-                                 {item.title}
-                              </Link>
-                              <div className={active === "MEN" ? "submenu-container active" : "submenu-container"}>
-                                 <MensDropdown className={active === "MEN" ? "submenu active" : "submenu"} />
-                              </div>
-                           </li>
-                        )
-                     } else if (item.title === "WOMEN") {
-                        return (
-                           <li 
-                           key={item.id}
-                           className={item.cName}
-                           onMouseEnter={() => setActive(item.title)}
-                           onMouseLeave={() => setActive()}
-                           >
-                              <Link 
-                              to="/womens" 
-                              className={active === "WOMEN" ? 'list-btn active' : 'list-btn'} 
-                              onClick={() => {
-                                 setActive()
-                              }}>
-                                 {item.title}
-                              </Link>
-                              <div className={active === "WOMEN" ? "submenu-container active" : "submenu-container"}>
-                                 <WomensDropdown className={active === "WOMEN" ? "submenu active" : "submenu"} />
-                              </div>
-                           </li>
-                        )
-                     }
-                     
-                     return (
-                        <li key={item.id} className={item.cName}>
-                           <Link className="list-btn">{item.title}</Link>
-                        </li>
-                     )
-                  })}
+               <ul className="header-left-container">
+                  <li 
+                  className="header-list-item"
+                  onMouseEnter={() => setActive("MEN")}
+                  onMouseLeave={() => setActive()}
+                  >
+                     <Link 
+                     to='/mens' 
+                     className={active === "MEN" ? 'list-btn active' : 'list-btn'}
+                     onClick={() => {
+                        setActive()
+                     }}>
+                        MENS
+                     </Link>
+                     <div className={active === "MEN" || active === "WOMEN" ? "submenu-container active" : "submenu-container"}>
+                        {active === "MEN" && <MensDropdown className="submenu" />}
+                        {active === "WOMEN" && <WomensDropdown className="submenu" />}
+                     </div>
+                  </li>
+                  <li 
+                  className="header-list-item"
+                  onMouseEnter={() => setActive("WOMEN")}
+                  onMouseLeave={() => setActive()}
+                  >
+                     <Link 
+                     to='/womens' 
+                     className={active === "WOMEN" ? 'list-btn active' : 'list-btn'}
+                     onClick={() => {
+                        setActive()
+                     }}>
+                        WOMENS
+                     </Link>
+                     <div className={active === "WOMEN" ? "submenu-container active" : "submenu-container"}>
+                        {active === "WOMEN" && <WomensDropdown className="submenu" />}
+                     </div>
+                  </li>
                </ul>
             </nav>
 
@@ -138,7 +130,8 @@ export const Header = () => {
                               <div className="search-body-container">
                                  <div className="search-body">
                                     {query && productSearch}
-                                    {productSearch.length === 0 && <h1 className="no-results">No Results for "{query}" found...</h1>}
+                                    {productSearch.length === 0 && includeSearch}
+                                    {includeSearch.length === 0 && <h1 className="no-results">No Results for "{query}" found...</h1>}
                                  </div>
                               </div>
                            </div>

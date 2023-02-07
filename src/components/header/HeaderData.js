@@ -1,16 +1,3 @@
-export const headerItems = [
-   {
-      id: 1,
-      title: "MEN",
-      cName: "header-list-item",
-   },
-   {
-      id: 2,
-      title: "WOMEN",
-      cName: "header-list-item",
-   },
-]
-
 // Men's List Items
 export const mensReadyToWear = [
    {

@@ -64,11 +64,8 @@
                   width: 100%;
                   list-style: none;
                   opacity: 0;
-
-                  &.active {
-                     animation: fadeIn 0.6s ease forwards;
-                     animation-delay: 0.35s;
-                  }
+                  animation: fadeIn 0.6s ease forwards;
+                  animation-delay: 0.35s;
 
                   .submenu-list {
                      display: flex;
