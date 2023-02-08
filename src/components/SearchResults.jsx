@@ -22,6 +22,7 @@ export const SearchResults = () => {
                      <ProductItem 
                      item={item} 
                      key={item.id} 
+                     gender={item.gender}
                      to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} />
                   )
                })

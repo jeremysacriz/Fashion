@@ -543,227 +543,242 @@ export const WomensHeelsData = [
 export const WomensJewelryData = [
    {
       'id': 103,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Miami Cuban Link Chain',
+      'price': 250,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Jewelry',
       'linkcategory': 'jewelry',
-      'src': '',
+      'src': '/img/WOMENS/JEWELRY/Miami Cuban Link.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/JEWELRY/Miami Cuban Link.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 104,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Gold Curb Bracelet',
+      'price': 140,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Jewelry',
       'linkcategory': 'jewelry',
-      'src': '',
+      'src': '/img/WOMENS/JEWELRY/Gold Curb Bracelet.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/JEWELRY/Gold Curb Bracelet.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 105,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Gold Cuban Link Chain',
+      'price': 220,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Jewelry',
       'linkcategory': 'jewelry',
-      'src': '',
+      'src': '/img/WOMENS/JEWELRY/Gold Cuban Link.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/JEWELRY/Gold Cuban Link.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 106,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Saint Laurent Crystal Chain',
+      'price': 160,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Jewelry',
       'linkcategory': 'jewelry',
-      'src': '',
+      'src': '/img/WOMENS/JEWELRY/Saint Laurent Crystal.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/JEWELRY/Saint Laurent Crystal.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 107,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Crystal Cuban Link Ring',
+      'price': 180,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Jewelry',
       'linkcategory': 'jewelry',
-      'src': '',
+      'src': '/img/WOMENS/JEWELRY/Crystal Cuban Link Ring.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/JEWELRY/Crystal Cuban Link Ring.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 108,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Gold Initial Cuban Link ',
+      'price': 280,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Jewelry',
       'linkcategory': 'jewelry',
-      'src': '',
+      'src': '/img/WOMENS/JEWELRY/Gold Initial Cuban Link.png',
       'path': '/item6',
-      'desc': 'item description'
-   },
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/JEWELRY/Gold Initial Cuban Link.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+   }
 ]
 
 export const WomensBeltsData = [
    {
       'id': 109,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Louis Vuitton Initials Belt',
+      'price': 750,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Belts',
       'linkcategory': 'belts',
-      'src': '',
+      'src': '/img/WOMENS/BELTS/Louis Vuitton Initials Belt.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/BELTS/Louis Vuitton Initials Belt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 110,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Gucci Belt',
+      'price': 1050,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Belts',
       'linkcategory': 'belts',
-      'src': '',
+      'src': '/img/WOMENS/BELTS/Gucci Belt.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/BELTS/Gucci Belt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 111,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'GUESS Belt',
+      'price': 120,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Belts',
       'linkcategory': 'belts',
-      'src': '',
+      'src': '/img/WOMENS/BELTS/GUESS Belt.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/BELTS/GUESS Belt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 112,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Chanel Belt',
+      'price': 650,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Belts',
       'linkcategory': 'belts',
-      'src': '',
+      'src': '/img/WOMENS/BELTS/Chanel Belt.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/BELTS/Chanel Belt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 113,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Yves Saint Laurent Belt',
+      'price': 850,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Belts',
       'linkcategory': 'belts',
-      'src': '',
+      'src': '/img/WOMENS/BELTS/YSL Belt.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/BELTS/YSL Belt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 114,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Valentino Belt',
+      'price': 600,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Belts',
       'linkcategory': 'belts',
-      'src': '',
+      'src': '/img/WOMENS/BELTS/Valentino Belt.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/BELTS/Valentino Belt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const WomensSunglassesData = [
    {
       'id': 115,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Black Triangle Sunglasses',
+      'price': 50,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Sunglasses',
       'linkcategory': 'sunglasses',
-      'src': '',
+      'src': '/img/WOMENS/SUNGLASSES/Black Triangle.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/SUNGLASSES/Black Triangle.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 116,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Black Rectangle Sunglasses',
+      'price': 60,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Sunglasses',
       'linkcategory': 'sunglasses',
-      'src': '',
+      'src': '/img/WOMENS/SUNGLASSES/Black Rectangle.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SUNGLASSES/Black Rectangle.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 117,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Black Square Sunglasses',
+      'price': 50,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Sunglasses',
       'linkcategory': 'sunglasses',
-      'src': '',
+      'src': '/img/WOMENS/SUNGLASSES/Black Square.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SUNGLASSES/Black Square.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 118,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Prada Sunglasses',
+      'price': 350,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Sunglasses',
       'linkcategory': 'sunglasses',
-      'src': '',
+      'src': '/img/WOMENS/SUNGLASSES/Prada.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SUNGLASSES/Prada.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 119,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Ray Bans Sunglasses',
+      'price': 180,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Sunglasses',
       'linkcategory': 'sunglasses',
-      'src': '',
+      'src': '/img/WOMENS/SUNGLASSES/Ray Bans.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SUNGLASSES/Ray Bans.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 120,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Black Round Sunglasses',
+      'price': 50,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
       'category': 'Sunglasses',
       'linkcategory': 'sunglasses',
-      'src': '',
+      'src': '/img/WOMENS/SUNGLASSES/Black Round.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SUNGLASSES/Black Round.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]

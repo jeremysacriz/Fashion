@@ -193,11 +193,16 @@
                h1 {
                   font-size: 3rem;
                   font-weight: 500;
+                  padding-top: 10px;
                   padding-bottom: 20px;
                }
 
                p {
                   font-size: 1.3rem;
+
+                  &.item-gender {
+                     text-transform: capitalize;
+                  }
                }
             }
          }
