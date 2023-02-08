@@ -54,11 +54,26 @@ export const Header = () => {
       e.preventDefault()
 
       if (query !== '' && productSearch.length !== 0 ) {
+         let newItems = products.filter((item) => keys.some(key => item[key].toLowerCase().startsWith(query.toLowerCase())))
+         searchClose()
+         navigate(`/search-results/${query.toLowerCase()}`, { state: {items: newItems, search: query.toLowerCase()}})
+      }
+
+      if (query !== '' && productSearch.length === 0) {
          let newItems = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
          searchClose()
          navigate(`/search-results/${query.toLowerCase()}`, { state: {items: newItems, search: query.toLowerCase()}})
       }
    }
+
+   // Search Optimization, search query needs to match keywords in the result array
+   function extractValue(arr) {
+      let extractedValue = arr.map(item => keys.map(key => item[key]))
+      return extractedValue
+   }
+
+   const result = extractValue(products)
+   console.log(result)
 
    return (
       <>
