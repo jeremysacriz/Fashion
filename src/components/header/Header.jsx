@@ -67,13 +67,10 @@ export const Header = () => {
    }
 
    // Search Optimization, search query needs to match keywords in the result array
-   function extractValue(arr) {
-      let extractedValue = arr.map(item => keys.map(key => item[key]))
-      return extractedValue
-   }
+   // const result = products
+   //    .map(item => keys.map(key => item[key].split(' ').map((product) => product.toLowerCase())))
 
-   const result = extractValue(products)
-   console.log(result)
+   // console.log(result)
 
    return (
       <>
