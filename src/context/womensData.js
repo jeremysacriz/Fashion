@@ -229,152 +229,162 @@ export const WomensOuterwearData = [
 export const WomensShoulderBagsData = [
    {
       'id': 79,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'YSL Shoulder Bag',
+      'price': 1050,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Shoulder Bags',
       'linkcategory': 'shoulder-bags',
-      'src': '',
+      'src': '/img/WOMENS/SHOULDER BAGS/YSL Shoulder Bag.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/SHOULDER BAGS/YSL Shoulder Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 80,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Gucci Shoulder Bag',
+      'price': 1550,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Shoulder Bags',
       'linkcategory': 'shoulder-bags',
-      'src': '',
+      'src': '/img/WOMENS/SHOULDER BAGS/Gucci Shoulder Bag.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SHOULDER BAGS/Gucci Shoulder Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 81,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Dior Shoulder Bag',
+      'price': 850,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Shoulder Bags',
       'linkcategory': 'shoulder-bags',
-      'src': '',
+      'src': '/img/WOMENS/SHOULDER BAGS/Dior Shoulder Bag.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SHOULDER BAGS/Dior Shoulder Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 82,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Chanel Shoulder Bag',
+      'price': 700,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Shoulder Bags',
       'linkcategory': 'shoulder-bags',
-      'src': '',
+      'src': '/img/WOMENS/SHOULDER BAGS/Chanel Shoulder Bag.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SHOULDER BAGS/Chanel Shoulder Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 83,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Prada Shoulder Bag',
+      'price': 1050,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Shoulder Bags',
       'linkcategory': 'shoulder-bags',
-      'src': '',
+      'src': '/img/WOMENS/SHOULDER BAGS/Prada Shoulder Bag.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SHOULDER BAGS/Prada Shoulder Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 84,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Louis Vuitton Shoulder Bag',
+      'price': 1850,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Shoulder Bags',
       'linkcategory': 'shoulder-bags',
-      'src': '',
+      'src': '/img/WOMENS/SHOULDER BAGS/LV Shoulder Bag.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SHOULDER BAGS/LV Shoulder Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const WomensMicroBagsData = [
    {
       'id': 85,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Louis Vuitton Micro Bag',
+      'price': 1550,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Micro Bags',
       'linkcategory': 'micro-bags',
-      'src': '',
+      'src': '/img/WOMENS/MICRO BAGS/LV Micro Bag.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/MICRO BAGS/LV Micro Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 86,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Prada Micro Bag',
+      'price': 950,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Micro Bags',
       'linkcategory': 'micro-bags',
-      'src': '',
+      'src': '/img/WOMENS/MICRO BAGS/Prada Micro Bag.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/MICRO BAGS/Prada Micro Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 87,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Chanel Micro Bag',
+      'price': 800,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Micro Bags',
       'linkcategory': 'micro-bags',
-      'src': '',
+      'src': '/img/WOMENS/MICRO BAGS/Chanel Micro Bag.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/MICRO BAGS/Chanel Micro Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 88,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Gucci Micro Bag',
+      'price': 1250,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Micro Bags',
       'linkcategory': 'micro-bags',
-      'src': '',
+      'src': '/img/WOMENS/MICRO BAGS/Gucci Micro Bag.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/MICRO BAGS/Gucci Micro Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 89,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Dior Micro Bag',
+      'price': 950,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Micro Bags',
       'linkcategory': 'micro-bags',
-      'src': '',
+      'src': '/img/WOMENS/MICRO BAGS/Dior Micro Bag.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/MICRO BAGS/Dior Micro Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 90,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'YSL Micro Bag',
+      'price': 1150,
       'gender': 'womens',
       'categories': 'BAGS',
       'category': 'Micro Bags',
       'linkcategory': 'micro-bags',
-      'src': '',
+      'src': '/img/WOMENS/MICRO BAGS/YSL Micro Bag.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/MICRO BAGS/YSL Micro Bag.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
