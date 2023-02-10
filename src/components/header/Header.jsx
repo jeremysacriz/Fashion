@@ -41,6 +41,26 @@ export const Header = () => {
       .map(item => (
          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
       ))
+
+
+   // Search Optimization, search query needs to match keywords in the result array
+   const result = products
+      .map(item => keys.map(key => item[key].split('-').map((product) => product.toLowerCase()).join('')))
+
+   const includeSearch2 = products
+   .filter(
+      (item) => 
+      keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
+   )
+
+   console.log(includeSearch2)
+   // console.log(result)
+
+   // const searchArr = query.toLowerCase().split(' ')
+
+   // const exists = result.map((item) => item.filter(result => searchArr.every(elem => item.includes(elem))))
+
+   // console.log(exists)
    
    const handleSearchClick = () => {
       setSearch(true)
@@ -65,12 +85,6 @@ export const Header = () => {
          navigate(`/search-results/${query.toLowerCase()}`, { state: {items: newItems, search: query.toLowerCase()}})
       }
    }
-
-   // Search Optimization, search query needs to match keywords in the result array
-   // const result = products
-   //    .map(item => keys.map(key => item[key].split(' ').map((product) => product.toLowerCase())))
-
-   // console.log(result)
 
    return (
       <>

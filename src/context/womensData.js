@@ -1,228 +1,243 @@
 export const WomensTshirtsData = [
    {
       'id': 61,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Motorcycle Graphic Tee',
+      'price': 50,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'T-Shirts',
       'linkcategory': 't-shirts',
-      'src': '',
+      'src': '/img/WOMENS/T-SHIRTS/Motorcycle Graphic Tee.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/T-SHIRTS/Motorcycle Graphic Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 62,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Chicago Graphic Tee',
+      'price': 40,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'T-Shirts',
       'linkcategory': 't-shirts',
-      'src': '',
+      'src': '/img/WOMENS/T-SHIRTS/Chicago Graphic Tee.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/T-SHIRTS/Chicago Graphic Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 63,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Abstract Graphic Tee',
+      'price': 40,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'T-Shirts',
       'linkcategory': 't-shirts',
-      'src': '',
+      'src': '/img/WOMENS/T-SHIRTS/Abstract Graphic Tee.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/T-SHIRTS/Abstract Graphic Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 64,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Butterfly Graphic Tee',
+      'price': 50,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'T-Shirts',
       'linkcategory': 't-shirts',
-      'src': '',
+      'src': '/img/WOMENS/T-SHIRTS/Butterfly Graphic Tee.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/T-SHIRTS/Butterfly Graphic Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 65,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Moment Graphic Tee',
+      'price': 50,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'T-Shirts',
       'linkcategory': 't-shirts',
-      'src': '',
+      'src': '/img/WOMENS/T-SHIRTS/Moment Graphic Tee.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/T-SHIRTS/Moment Graphic Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 66,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'LA Graphic Tee',
+      'price': 50,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'T-Shirts',
       'linkcategory': 't-shirts',
-      'src': '',
+      'src': '/img/WOMENS/T-SHIRTS/LA Graphic Tee.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/T-SHIRTS/LA Graphic Tee.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const WomensHoodieData = [
    {
       'id': 67,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Butterfly Print Hoodie',
+      'price': 80,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Sweatshirts & Hoodies',
       'linkcategory': 'sweats-hoodies',
-      'src': '',
+      'src': '/img/WOMENS/SWEATSHIRTS & HOODIES/Butterfly Print Hoodie.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/SWEATSHIRTS & HOODIES/Butterfly Print Hoodie.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 68,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'LA Sweatshirt',
+      'price': 60,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Sweatshirts & Hoodies',
       'linkcategory': 'sweats-hoodies',
-      'src': '',
+      'src': '/img/WOMENS/SWEATSHIRTS & HOODIES/LA Sweatshirt.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SWEATSHIRTS & HOODIES/LA Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 69,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'LOLITA Hoodie',
+      'price': 80,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Sweatshirts & Hoodies',
       'linkcategory': 'sweats-hoodies',
-      'src': '',
+      'src': '/img/WOMENS/SWEATSHIRTS & HOODIES/LOLITA Hoodie.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SWEATSHIRTS & HOODIES/LOLITA Hoodie.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 70,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Stone Promise Land Graphic Sweatshirt',
+      'price': 80,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Sweatshirts & Hoodies',
       'linkcategory': 'sweats-hoodies',
-      'src': '',
+      'src': '/img/WOMENS/SWEATSHIRTS & HOODIES/Stone Promise Land Graphic Sweatshirt.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SWEATSHIRTS & HOODIES/Stone Promise Land Graphic Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 71,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Chicago Bulls Sweatshirt',
+      'price': 70,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Sweatshirts & Hoodies',
       'linkcategory': 'sweats-hoodies',
-      'src': '',
+      'src': '/img/WOMENS/SWEATSHIRTS & HOODIES/Chicago Bulls Sweatshirt.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SWEATSHIRTS & HOODIES/Chicago Bulls Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 72,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Las Vegas Sweatshirt',
+      'price': 80,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Sweatshirts & Hoodies',
       'linkcategory': 'sweats-hoodies',
-      'src': '',
+      'src': '/img/WOMENS/SWEATSHIRTS & HOODIES/Las Vegas Sweatshirt.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/SWEATSHIRTS & HOODIES/Las Vegas Sweatshirt.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 
 export const WomensOuterwearData = [
    {
       'id': 73,
-      'title': 'Item Title 1',
-      'price': 'Price',
+      'title': 'Lioness Leather Jacket',
+      'price': 120,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Outerwear & Blousons',
       'linkcategory': 'outerwear-blousons',
-      'src': '',
+      'src': '/img/WOMENS/OUTERWEAR & BLOUSONS/Lioness Leather Jacket.png',
       'path': '/item1',
       'desc': 'item description',
-      'arr': ['/img/MENS/T-SHIRTS/Givenchy Tee.jpeg', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
+      'arr': ['/img/WOMENS/OUTERWEAR & BLOUSONS/Lioness Leather Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 74,
-      'title': 'Item Title 2',
-      'price': 'Price',
+      'title': 'Moto Jacket Beige',
+      'price': 140,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Outerwear & Blousons',
       'linkcategory': 'outerwear-blousons',
-      'src': '',
+      'src': '/img/WOMENS/OUTERWEAR & BLOUSONS/Moto Jacket Beige.png',
       'path': '/item2',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/OUTERWEAR & BLOUSONS/Moto Jacket Beige.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 75,
-      'title': 'Item Title 3',
-      'price': 'Price',
+      'title': 'Varsity Graphic Jacket',
+      'price': 120,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Outerwear & Blousons',
       'linkcategory': 'outerwear-blousons',
-      'src': '',
+      'src': '/img/WOMENS/OUTERWEAR & BLOUSONS/Varsity Graphic Jacket.png',
       'path': '/item3',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/OUTERWEAR & BLOUSONS/Varsity Graphic Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 76,
-      'title': 'Item Title 4',
-      'price': 'Price',
+      'title': 'Two Tone Bomber Jacket',
+      'price': 120,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Outerwear & Blousons',
       'linkcategory': 'outerwear-blousons',
-      'src': '',
+      'src': '/img/WOMENS/OUTERWEAR & BLOUSONS/Two Tone Bomber Jacket.png',
       'path': '/item4',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/OUTERWEAR & BLOUSONS/Two Tone Bomber Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 77,
-      'title': 'Item Title 5',
-      'price': 'Price',
+      'title': 'Shoulder Bomber Jacket',
+      'price': 120,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Outerwear & Blousons',
       'linkcategory': 'outerwear-blousons',
-      'src': '',
+      'src': '/img/WOMENS/OUTERWEAR & BLOUSONS/Shoulder Bomber Jacket.png',
       'path': '/item5',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/OUTERWEAR & BLOUSONS/Shoulder Bomber Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
    {
       'id': 78,
-      'title': 'Item Title 6',
-      'price': 'Price',
+      'title': 'Wilderness Varsity Jacket',
+      'price': 140,
       'gender': 'womens',
       'categories': 'READY-TO-WEAR',
       'category': 'Outerwear & Blousons',
       'linkcategory': 'outerwear-blousons',
-      'src': '',
+      'src': '/img/WOMENS/OUTERWEAR & BLOUSONS/Wilderness Varsity Jacket.png',
       'path': '/item6',
-      'desc': 'item description'
+      'desc': 'item description',
+      'arr': ['/img/WOMENS/OUTERWEAR & BLOUSONS/Wilderness Varsity Jacket.png', '/img/mens.jpg', '/img/shoes.jpg', '/img/trash.jpg', '/img/bags.jpg']
    },
 ]
 

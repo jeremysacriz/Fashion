@@ -23,7 +23,7 @@ export const SearchResults = () => {
       gender: ''
    })
 
-   console.log(product)
+   // console.log(product)
 
    const toggleCategory = () => {
       setCategory(!category)
@@ -76,11 +76,6 @@ export const SearchResults = () => {
                      if (item.includes('-') && product.gender) {
                         let newItem = item.toLowerCase().split('-').map((item) => item[0].toUpperCase() + item.slice(1)).join('-')
                         return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase() && item.gender === product.gender.toLowerCase()), category: newItem})}><h1>{newItem}</h1></button>
-                     }
-
-                     if (item.includes('-') && product.category) {
-                        let newItem = item.toLowerCase().split('-').map((item) => item[0].toUpperCase() + item.slice(1)).join('-')
-                        return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === product.category.toUpperCase() && item.gender === product.gender.toLowerCase()), gender: product.gender})}><h1>{newItem}</h1></button>
                      }
 
                      if (product.gender) {
