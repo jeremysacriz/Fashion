@@ -42,30 +42,33 @@ export const Header = () => {
          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
       ))
 
-   
    // Search Optimization, search query needs to match keywords in the result array
-   // ['womens', 'snea'] should match with ['womens', 'sneakers'] & return a new array of result
+   // Return the corresponding object to the product array
 
-   const result = products
-      .map(item => keys.map(key => item[key].split('-').map((product) => product.toLowerCase()).join('').replace(/[^\w ]\s/g, '')))
+   const productSearch1 = products
+   .map(
+      (item) => // each product object is an item
+      keys.map(key => {
+         let firstArr = item[key].split('-').map((product) => product.toLowerCase()).join('').replace(/[^\w ]\s/g, '')
 
-   const removeWhiteSpace = result.map(item => item.map((product) => {
-      if (product.split(' ').length > 1) {
-         let splitStr = product.split(' ')
-         return splitStr.flat()
-      }
+         if (firstArr.split(' ').length > 1) {
+            let splitStr = firstArr.split(' ')
+            return splitStr.flat()
+         }
 
-      return product
-   }))
+         return firstArr
+      })
+   )
 
-   const flattenArr = removeWhiteSpace.map((item) => item.flat())
+   const productSearch2 = productSearch1.map((item) => item.flat())
 
-   const searchArr = query.toLowerCase().split(' ')
-
-   const exists = flattenArr.map((item) => item.filter(() => searchArr.every(elem => item.includes(elem))))
-   const filterProducts = exists.filter((item) => item.length !== 0)
+   let searchQuery = query.toLowerCase().split(' ')
+   const filterProducts = productSearch2
+   .map(item => item.filter(() => searchQuery.every(elem => item.some(product => product.startsWith(elem)))))
+   .filter(item => item.length !== 0)
 
    console.log(filterProducts)
+
    
    const handleSearchClick = () => {
       setSearch(true)
