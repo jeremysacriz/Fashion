@@ -42,25 +42,30 @@ export const Header = () => {
          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
       ))
 
-
+   
    // Search Optimization, search query needs to match keywords in the result array
+   // ['womens', 'snea'] should match with ['womens', 'sneakers'] & return a new array of result
+
    const result = products
-      .map(item => keys.map(key => item[key].split('-').map((product) => product.toLowerCase()).join('')))
+      .map(item => keys.map(key => item[key].split('-').map((product) => product.toLowerCase()).join('').replace(/[^\w ]\s/g, '')))
 
-   const includeSearch2 = products
-   .filter(
-      (item) => 
-      keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
-   )
+   const removeWhiteSpace = result.map(item => item.map((product) => {
+      if (product.split(' ').length > 1) {
+         let splitStr = product.split(' ')
+         return splitStr.flat()
+      }
 
-   console.log(includeSearch2)
-   // console.log(result)
+      return product
+   }))
 
-   // const searchArr = query.toLowerCase().split(' ')
+   const flattenArr = removeWhiteSpace.map((item) => item.flat())
 
-   // const exists = result.map((item) => item.filter(result => searchArr.every(elem => item.includes(elem))))
+   const searchArr = query.toLowerCase().split(' ')
 
-   // console.log(exists)
+   const exists = flattenArr.map((item) => item.filter(() => searchArr.every(elem => item.includes(elem))))
+   const filterProducts = exists.filter((item) => item.length !== 0)
+
+   console.log(filterProducts)
    
    const handleSearchClick = () => {
       setSearch(true)

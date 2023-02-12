@@ -633,7 +633,7 @@ export const WomensJewelryData = [
    },
    {
       'id': 108,
-      'title': 'Gold Initial Cuban Link ',
+      'title': 'Gold Initial Cuban Link',
       'price': 280,
       'gender': 'womens',
       'categories': 'ACCESSORIES',
