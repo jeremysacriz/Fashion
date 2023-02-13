@@ -9,13 +9,13 @@ import {
 } from './components';
 
 const App = () => {
-   // const { 
-   //    state: { cart },
-   // } = CartState()
+   const { 
+      state: { cart },
+   } = CartState()
 
-   // useEffect(() => {
-   //    console.log(cart)
-   // }, [cart])
+   useEffect(() => {
+      console.log(cart)
+   }, [cart])
 
    return (
       <section id="index">

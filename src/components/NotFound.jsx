@@ -6,11 +6,15 @@ export const NotFound = () => {
       window.scrollTo(0, 0);
    }, []);
 
+   const scrollUp = () => {
+      window.scrollTo(0, 0);
+   }
+
    return (
       <div className="notfound-container">
          <span className="material-symbols-outlined">sentiment_dissatisfied</span>
          <h1>Error 404 - Page Not Found</h1>
-         <Link to="/" className="NotFoundButton" onClick={useEffect}>Go To Homepage</Link>
+         <Link to="/" className="NotFoundButton" onClick={scrollUp}>Go To Homepage</Link>
       </div>
    )
 }

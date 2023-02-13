@@ -6,6 +6,10 @@ export const Catalogue = ({title, description, data, link1, link2, link3, gender
       window.scrollTo(0, 0);
    }, []);
 
+   const scrollUp = () => {
+      window.scrollTo(0, 0);
+   }
+
    return (
       <div className="item-container"> 
          <div className="item-title">
@@ -22,7 +26,7 @@ export const Catalogue = ({title, description, data, link1, link2, link3, gender
             <span className="forward-slash">/</span>
             <Link to={link2} className="item-btn">{category}</Link>
             <span className="forward-slash">/</span>
-            <Link to={link3} className="item-btn" onClick={useEffect}>{products}</Link>
+            <Link to={link3} className="item-btn" onClick={scrollUp}>{products}</Link>
          </div>
       </div>
    )

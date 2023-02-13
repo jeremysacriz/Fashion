@@ -23,74 +23,64 @@ export const Header = () => {
    }
 
    const keys = ['title', 'gender', 'categories', 'category']
-
-   const productSearch = products
-      .filter(
-         (item) => 
-         keys.some(key => item[key].toLowerCase().startsWith(query.toLowerCase()))
-      )
-      .map(item => (
-         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
-      ))
-
-   const includeSearch = products
-      .filter(
-         (item) => 
-         keys.some(key => item[key].toLowerCase().includes(query.toLowerCase()))
-      )
-      .map(item => (
-         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
-      ))
-
    const terms = query.toLowerCase().replace(/[^\w ]/g, '').split(' ')
 
-   const keywordSearch = products
+   const searchMap = (object) => {
+      return object
+      .map(item => (
+         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
+      ))
+   }
+
+   const filterProducts = products
       .filter(item => {
          return terms.every(term =>
             Object.values(item).some(() => keys.some(key => item[key].toLowerCase().replace(/[^\w ]/g, '').startsWith(term)))
          )
       })
-      .map(item => (
-         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
-      ))
 
-   const keywordSearch2 = products
+   const productSearch = searchMap(filterProducts)
+   // console.log(filterProducts)
+
+   const keywordProducts = products
       .filter(item => {
+         let objectValues = keys.map(key => item[key].toLowerCase().replace(/[^\w ]/g, ''))
+         
          return terms.every(term =>
-            Object.values(item).some(() => keys.some(key => item[key].toLowerCase().replace(/[^\w ]/g, '').includes(term)))
+            objectValues.some(() => keys.some(key => item[key].toLowerCase().replace(/[^\w ]/g, '').includes(term)))
          )
       })
-      .map(item => (
-         <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
-      ))
+
+   const keywordSearch = searchMap(keywordProducts)
+   console.log(keywordProducts)
+
 
    // Search Optimization, search query needs to match keywords in the result array
-   // Return the corresponding object to the product array
+   const productSearch1 = products
+   .map(
+      (item) =>
+      keys.map(key => {
+         let firstArr = item[key].split('-').map(product => product.toLowerCase()).join('').replace(/[^\w ]/g, '')
 
-   // const productSearch1 = products
-   // .map(
-   //    (item) => // each product object is an item
-   //    keys.map(key => {
-   //       let firstArr = item[key].split('-').map((product) => product.toLowerCase()).join('').replace(/[^\w ]\s/g, '')
+         if (firstArr.split(' ').length > 1) {
+            let splitStr = firstArr.split(' ')
+            return splitStr.flat()
+         }
 
-   //       if (firstArr.split(' ').length > 1) {
-   //          let splitStr = firstArr.split(' ')
-   //          return splitStr.flat()
-   //       }
+         return firstArr
+      })
+   )
 
-   //       return firstArr
-   //    })
-   // )
+   const productSearch2 = productSearch1.map(item => item.flat())
+   // console.log(productSearch2)
 
-   // const productSearch2 = productSearch1.map((item) => item.flat())
+   let searchQuery = query.toLowerCase().split(' ')
+   const filterSearch = productSearch2
+   .map(item => item.filter(() => searchQuery.every(elem => item.some(product => product.startsWith(elem)))))
+   .filter(item => item.length !== 0)
 
-   // let searchQuery = query.toLowerCase().split(' ')
-   // const filterProducts = productSearch2
-   // .map(item => item.filter(() => searchQuery.every(elem => item.some(product => product.startsWith(elem)))))
-   // .filter(item => item.length !== 0)
+   // console.log(filterSearch)
 
-   // console.log(filterProducts)
-   
    const handleSearchClick = () => {
       setSearch(true)
       setTimeout(() => {
@@ -102,16 +92,14 @@ export const Header = () => {
    const handleSubmit = (e) => {
       e.preventDefault()
 
-      if (query !== '' && productSearch.length !== 0 ) {
-         let newItems = products.filter((item) => keys.some(key => item[key].toLowerCase().startsWith(query.toLowerCase())))
+      if (query !== '' && filterProducts.length !== 0 ) {
          searchClose()
-         navigate(`/search-results/${query.toLowerCase()}`, { state: {items: newItems, search: query.toLowerCase()}})
+         navigate(`/search-results/${query.toLowerCase()}`, { state: {items: filterProducts, search: query.toLowerCase()}})
       }
 
-      if (query !== '' && productSearch.length === 0) {
-         let newItems = products.filter((item) => keys.some(key => item[key].toLowerCase().includes(query.toLowerCase())))
+      if (query !== '' && filterProducts.length === 0) {
          searchClose()
-         navigate(`/search-results/${query.toLowerCase()}`, { state: {items: newItems, search: query.toLowerCase()}})
+         navigate(`/search-results/${query.toLowerCase()}`, { state: {items: keywordProducts, search: query.toLowerCase()}})
       }
    }
 
@@ -185,10 +173,8 @@ export const Header = () => {
                               <div className="search-body-container">
                                  <div className="search-body">
                                     {query && productSearch}
-                                    {productSearch.length === 0 && includeSearch}
-                                    {includeSearch.length === 0 && keywordSearch}
-                                    {keywordSearch.length === 0 && keywordSearch2}
-                                    {keywordSearch2.length === 0 && <h1 className="no-results">No Results for "{query}" found...</h1>}
+                                    {productSearch.length === 0 && keywordSearch}
+                                    {productSearch.length === 0 && keywordSearch.length === 0 && <h1 className="no-results">No Results for "{query}" found...</h1>}
                                  </div>
                               </div>
                            </div>

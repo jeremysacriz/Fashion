@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ProductItem } from "./ProductItem";
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 export const SearchResults = () => {
    const { state } = useLocation()
@@ -55,6 +55,16 @@ export const SearchResults = () => {
       window.scrollTo(0, 0);
       setProduct({products: newData, category: '', gender: ''})
    }, [newData])
+
+   if (newData.length === 0) {
+      return (
+      <div className="notfound-container">
+         <span className="material-symbols-outlined">sentiment_dissatisfied</span>
+         <h1>No Search Results for "{state.search}"...</h1>
+         <Link to="/" className="NotFoundButton">Go Back to Homepage</Link>
+      </div>
+      )
+   }
 
    return (
       <div className="item-container"> 
