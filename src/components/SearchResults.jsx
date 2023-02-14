@@ -23,8 +23,6 @@ export const SearchResults = () => {
       gender: ''
    })
 
-   // console.log(product)
-
    const toggleCategory = () => {
       setCategory(!category)
    }
@@ -33,27 +31,24 @@ export const SearchResults = () => {
       setGender(!gender)
    }
 
-   // const useOutsideAlerter = (ref) => {
-   //    useEffect(() => {
-   //       window.scrollTo(0, 0);
-   //       function handleOutsideClick(e) {
-   //          if (ref.current && !ref.current.contains(e.target)) {
-   //             setCategory(false)
-   //             setGender(false)
-   //          }
-   //       }
-
-   //       document.addEventListener("click", handleOutsideClick)
-   //       return () => document.removeEventListener("click", handleOutsideClick)
-   //    }, [ref]);
-   // }
-
-   // const box = useRef(null)
-   // useOutsideAlerter(box)
+   // Function Component: Filters products array by Category & Gender
+   const FilterBtn = ({children, active, onClick, filterTitle}) => {
+      return (
+         <div className={active === true ? "item-filter-btn active" : "item-filter-btn"} onClick={onClick}>
+         <h1 className="filter-category">{filterTitle}</h1>
+         <span className="material-symbols-outlined filter-more">expand_more</span>
+         <div className={active === true ? "filter-dropdown active" : 'filter-dropdown'}>
+            {children}
+         </div>
+      </div>
+      )
+   }
 
    useEffect(() => {
       window.scrollTo(0, 0);
       setProduct({products: newData, category: '', gender: ''})
+      setGender(false)
+      setCategory(false)
    }, [newData])
 
    if (newData.length === 0) {
@@ -75,47 +70,46 @@ export const SearchResults = () => {
          
          <div className="item-filter">
             <h1 className="item-filter-title">Filter By:</h1>
-            <div className={category === true ? "item-filter-btn active" : "item-filter-btn"} onClick={toggleCategory}>
-               <h1 className="filter-category">Category: {product.category}</h1>
-               <span className="material-symbols-outlined filter-more">expand_more</span>
-               <div className={category === true ? "filter-dropdown active" : 'filter-dropdown'}>
-                  {(product.gender || product.category) && <button className="filter-btn" onClick={() => setProduct({...product, products: newData, category: '', gender: ''})}><h1>None</h1></button>}
-                  {removeDuplicates(filterCategory).map((item, index) => {
-                     let newItem = item[0].toUpperCase() + item.slice(1).toLowerCase()
+            <FilterBtn 
+               active={category} 
+               onClick={toggleCategory} 
+               filterTitle={`Category: ${product.category}`} 
+            >
+               {(product.category) && <button className="filter-btn" onClick={() => setProduct({...product, products: newData, category: '', gender: ''})}><h1>None</h1></button>}
+               {removeDuplicates(filterCategory).map((item, index) => {
+                  let newItem = item[0].toUpperCase() + item.slice(1).toLowerCase()
 
-                     if (item.includes('-') && product.gender) {
-                        let newItem = item.toLowerCase().split('-').map((item) => item[0].toUpperCase() + item.slice(1)).join('-')
-                        return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase() && item.gender === product.gender.toLowerCase()), category: newItem})}><h1>{newItem}</h1></button>
-                     }
+                  if (item.includes('-') && product.gender) {
+                     let newItem = item.toLowerCase().split('-').map((item) => item[0].toUpperCase() + item.slice(1)).join('-')
+                     return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase() && item.gender === product.gender.toLowerCase()), category: newItem})}><h1>{newItem}</h1></button>
+                  }
 
-                     if (product.gender) {
-                        return (
-                           <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase() && item.gender === product.gender.toLowerCase()), category: newItem})}><h1>{newItem}</h1></button>
-                        )
-                     }
+                  if (product.gender) {
+                     return (
+                        <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase() && item.gender === product.gender.toLowerCase()), category: newItem})}><h1>{newItem}</h1></button>
+                     )
+                  }
 
-                     return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase()), category: newItem})}><h1>{newItem}</h1></button>
-                  
-                  })}
-               </div>
-            </div>
-            <div className={gender === true ? "item-filter-btn active" : "item-filter-btn"} onClick={toggleGender}>
-               <h1 className="filter-category">Gender: {product.gender}</h1>
-               <span className="material-symbols-outlined filter-more">expand_more</span>
-               <div className={gender === true ? "filter-dropdown active" : 'filter-dropdown'}>
-                  {removeDuplicates(filterGender).map((item, index) => {
-                     let newItem = item[0].toUpperCase() + item.slice(1).toLowerCase()
+                  return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.categories === newItem.toUpperCase()), category: newItem})}><h1>{newItem}</h1></button>
+               })}
+            </FilterBtn>
+            <FilterBtn 
+               active={gender} 
+               onClick={toggleGender} 
+               filterTitle={`Gender: ${product.gender}`} 
+            >
+               {removeDuplicates(filterGender).map((item, index) => {
+                  let newItem = item[0].toUpperCase() + item.slice(1).toLowerCase()
 
-                     if (product.category) {
-                        return (
-                           <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.gender === newItem.toLowerCase() && item.categories === product.category.toUpperCase()), gender: newItem})}><h1>{newItem}</h1></button>
-                        )
-                     }
+                  if (product.category) {
+                     return (
+                        <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.gender === newItem.toLowerCase() && item.categories === product.category.toUpperCase()), gender: newItem})}><h1>{newItem}</h1></button>
+                     )
+                  }
 
-                     return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.gender === newItem.toLowerCase()), gender: newItem})}><h1>{newItem}</h1></button>
-                  })}
-               </div>
-            </div>
+                  return <button key={index} className="filter-btn" onClick={() => setProduct({...product, products: newData.filter((item) => item.gender === newItem.toLowerCase()), gender: newItem})}><h1>{newItem}</h1></button>
+               })}
+            </FilterBtn>
          </div>
 
          <div className="item-grid-container">

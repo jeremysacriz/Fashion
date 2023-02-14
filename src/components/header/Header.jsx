@@ -25,39 +25,19 @@ export const Header = () => {
    const keys = ['title', 'gender', 'categories', 'category']
    const terms = query.toLowerCase().replace(/[^\w ]/g, '').split(' ')
 
-   const searchMap = (object) => {
-      return object
+   // Reusable Functions
+   // Maps over filtered Products array, returns a new array of products based on matching keywords
+   const searchMap = (array) => {
+      return array
       .map(item => (
          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
       ))
    }
 
-   const filterProducts = products
-      .filter(item => {
-         let objectValues = keys.map(key => {
-            let filterKey = item[key].toLowerCase().replace(/[^\w ]/g, '')
-            if (filterKey.split(' ').length > 1) {
-               let splitStr = filterKey.split(' ')
-               return splitStr
-            }
-   
-            return filterKey
-         })
-   
-         let flattenValues = objectValues.flat()
-   
-         return terms.every(term =>
-            flattenValues.some(item => item.startsWith(term))
-         )
-      })
-
-   const productSearch = searchMap(filterProducts)
-   console.log(filterProducts)
-
-   const keywordProducts = products
-   .filter(item => {
-      let objectValues = keys.map(key => {
-         let filterKey = item[key].toLowerCase().replace(/[^\w ]/g, '')
+   // Converts property values to lowercase & removes special characters
+   const exampleArr = (property) => {
+      return keys.map(key => {
+         let filterKey = property[key].toLowerCase().replace(/[^\w ]/g, '')
          if (filterKey.split(' ').length > 1) {
             let splitStr = filterKey.split(' ')
             return splitStr
@@ -65,8 +45,23 @@ export const Header = () => {
 
          return filterKey
       })
+   }
 
-      let flattenValues = objectValues.flat()
+   const filterProducts = products
+   .filter(item => {
+      let flattenValues = exampleArr(item).flat()
+      
+      return terms.every(term =>
+         flattenValues.some(item => item.startsWith(term))
+      )
+   })
+
+   const productSearch = searchMap(filterProducts)
+   // console.log(filterProducts)
+
+   const keywordProducts = products
+   .filter(item => {
+      let flattenValues = exampleArr(item).flat()
 
       return terms.every(term =>
          flattenValues.some(item => item.includes(term))
