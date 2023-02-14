@@ -34,52 +34,47 @@ export const Header = () => {
 
    const filterProducts = products
       .filter(item => {
+         let objectValues = keys.map(key => {
+            let filterKey = item[key].toLowerCase().replace(/[^\w ]/g, '')
+            if (filterKey.split(' ').length > 1) {
+               let splitStr = filterKey.split(' ')
+               return splitStr
+            }
+   
+            return filterKey
+         })
+   
+         let flattenValues = objectValues.flat()
+   
          return terms.every(term =>
-            Object.values(item).some(() => keys.some(key => item[key].toLowerCase().replace(/[^\w ]/g, '').startsWith(term)))
+            flattenValues.some(item => item.startsWith(term))
          )
       })
 
    const productSearch = searchMap(filterProducts)
-   // console.log(filterProducts)
+   console.log(filterProducts)
 
    const keywordProducts = products
-      .filter(item => {
-         let objectValues = keys.map(key => item[key].toLowerCase().replace(/[^\w ]/g, ''))
-         
-         return terms.every(term =>
-            objectValues.some(() => keys.some(key => item[key].toLowerCase().replace(/[^\w ]/g, '').includes(term)))
-         )
-      })
-
-   const keywordSearch = searchMap(keywordProducts)
-   console.log(keywordProducts)
-
-
-   // Search Optimization, search query needs to match keywords in the result array
-   const productSearch1 = products
-   .map(
-      (item) =>
-      keys.map(key => {
-         let firstArr = item[key].split('-').map(product => product.toLowerCase()).join('').replace(/[^\w ]/g, '')
-
-         if (firstArr.split(' ').length > 1) {
-            let splitStr = firstArr.split(' ')
-            return splitStr.flat()
+   .filter(item => {
+      let objectValues = keys.map(key => {
+         let filterKey = item[key].toLowerCase().replace(/[^\w ]/g, '')
+         if (filterKey.split(' ').length > 1) {
+            let splitStr = filterKey.split(' ')
+            return splitStr
          }
 
-         return firstArr
+         return filterKey
       })
-   )
 
-   const productSearch2 = productSearch1.map(item => item.flat())
-   // console.log(productSearch2)
+      let flattenValues = objectValues.flat()
 
-   let searchQuery = query.toLowerCase().split(' ')
-   const filterSearch = productSearch2
-   .map(item => item.filter(() => searchQuery.every(elem => item.some(product => product.startsWith(elem)))))
-   .filter(item => item.length !== 0)
+      return terms.every(term =>
+         flattenValues.some(item => item.includes(term))
+      )
+   })
 
-   // console.log(filterSearch)
+   const keywordSearch = searchMap(keywordProducts)
+   // console.log(keywordProducts)
 
    const handleSearchClick = () => {
       setSearch(true)
