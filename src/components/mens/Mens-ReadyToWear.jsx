@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
-import { Catalogue } from "../Catalogue";
-import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
+import { Catalogue, CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
 import { CartState } from '../../context/context';
 
 export const MensAllReadyToWear = () => {
@@ -9,23 +8,6 @@ export const MensAllReadyToWear = () => {
       window.location.reload()
       window.scrollTo(0, 0);
    }
-
-   const useOutsideAlerter = (ref) => {
-      useEffect(() => {
-         window.scrollTo(0, 0);
-         function handleOutsideClick(e) {
-            if (ref.current && !ref.current.contains(e.target)) {
-               setActive(false)
-            }
-         }
-
-         document.addEventListener("click", handleOutsideClick)
-         return () => document.removeEventListener("click", handleOutsideClick)
-      }, [ref]);
-   }
-
-   const box = useRef(null)
-   useOutsideAlerter(box)
 
    const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "READY-TO-WEAR")
@@ -40,28 +22,50 @@ export const MensAllReadyToWear = () => {
       setActive(!active)
    }
 
+   // Reusable Function: Filters data based on category
+   const filterProduct = (product) => {
+      return newData.filter(item => item.category === product)
+   }
+
    const filterAll = () => {
       setProduct({products: newData, category: 'All-Ready-To-Wear'})
       setActive()
    }
    
    const filterShirts = () => {
-      const filterByShirts = newData.filter(item => item.category === "T-Shirts")
-      setProduct({products: filterByShirts, category: 'T-Shirts'})
+      setProduct({products: filterProduct("T-Shirts"), category: 'T-Shirts'})
       setActive()
    }
 
    const filterHoodies = () => {
-      const filterByHoodies = newData.filter(item => item.category === "Sweatshirts & Hoodies")
-      setProduct({products: filterByHoodies, category: 'Sweatshirts & Hoodies'})
+      setProduct({products: filterProduct("Sweatshirts & Hoodies"), category: 'Sweatshirts & Hoodies'})
       setActive()
    }
 
    const filterJackets = () => {
-      const filterByJackets= newData.filter(item => item.category === "Jackets & Coats")
-      setProduct({products: filterByJackets, category: 'Jackets & Coats'})
+      setProduct({products: filterProduct("Jackets & Coats"), category: 'Jackets & Coats'})
       setActive()
    }
+
+   const useOutsideAlerter = (ref) => {
+      useEffect(() => {
+         function handleOutsideClick(e) {
+            if (ref.current && !ref.current.contains(e.target)) {
+               setActive(false)
+            }
+         }
+
+         document.addEventListener("click", handleOutsideClick)
+         return () => document.removeEventListener("click", handleOutsideClick)
+      }, [ref]);
+   }
+
+   const box = useRef(null)
+   useOutsideAlerter(box)
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, [])
 
    return (
       <div className="item-container"> 

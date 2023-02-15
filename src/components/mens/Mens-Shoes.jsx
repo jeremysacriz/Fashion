@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
-import { Catalogue } from "../Catalogue";
-import { CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
+import { Catalogue, CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
 import { CartState } from '../../context/context';
 
 export const MensAllShoes = () => {
@@ -9,23 +8,6 @@ export const MensAllShoes = () => {
       window.location.reload()
       window.scrollTo(0, 0);
    }
-
-   const useOutsideAlerter = (ref) => {
-      useEffect(() => {
-         window.scrollTo(0, 0);
-         function handleOutsideClick(e) {
-            if (ref.current && !ref.current.contains(e.target)) {
-               setActive(false)
-            }
-         }
-
-         document.addEventListener("click", handleOutsideClick)
-         return () => document.removeEventListener("click", handleOutsideClick)
-      }, [ref]);
-   }
-
-   const box = useRef(null)
-   useOutsideAlerter(box)
 
    const { state: { products }} = CartState()
    const newData = products.filter(item => item.gender === "mens" && item.categories === "SHOES")
@@ -40,22 +22,45 @@ export const MensAllShoes = () => {
       setActive(!active)
    }
 
+   // Reusable Function: Filters data based on category
+   const filterProduct = (product) => {
+      return newData.filter(item => item.category === product)
+   }
+   
    const filterAll = () => {
       setProduct({products: newData, category: 'All-Shoes'})
       setActive()
    }
    
    const filterSneakers = () => {
-      const filterBySneakers = newData.filter(item => item.category === "Sneakers")
-      setProduct({products: filterBySneakers, category: 'Sneakers'})
+      setProduct({products: filterProduct("Sneakers"), category: 'Sneakers'})
       setActive()
    }
 
    const filterSlides = () => {
-      const filterBySlides = newData.filter(item => item.category === "Slides & Sandals")
-      setProduct({products: filterBySlides, category: 'Slides & Sandals'})
+      setProduct({products: filterProduct("Slides & Sandals"), category: 'Slides & Sandals'})
       setActive()
    }
+
+   const useOutsideAlerter = (ref) => {
+      useEffect(() => {
+         function handleOutsideClick(e) {
+            if (ref.current && !ref.current.contains(e.target)) {
+               setActive(false)
+            }
+         }
+
+         document.addEventListener("click", handleOutsideClick)
+         return () => document.removeEventListener("click", handleOutsideClick)
+      }, [ref]);
+   }
+
+   const box = useRef(null)
+   useOutsideAlerter(box)
+
+   useEffect(() => {
+      window.scrollTo(0, 0);
+   }, [])
 
    return (
       <div className="item-container"> 
