@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { MensDropdown, WomensDropdown } from '../index';
-import { Cart } from '../index';
+import { MensDropdown, WomensDropdown } from './Dropdown';
+import { Cart } from '../Cart';
 import { CartState } from '../../context/context'
 
 export const Header = () => {
@@ -55,9 +55,9 @@ export const Header = () => {
          flattenValues.some(item => item.startsWith(term))
       )
    })
+   // console.log(filterProducts)
 
    const productSearch = searchMap(filterProducts)
-   // console.log(filterProducts)
 
    const keywordProducts = products
    .filter(item => {
@@ -67,9 +67,9 @@ export const Header = () => {
          flattenValues.some(item => item.includes(term))
       )
    })
+   // console.log(keywordProducts)
 
    const keywordSearch = searchMap(keywordProducts)
-   // console.log(keywordProducts)
 
    const handleSearchClick = () => {
       setSearch(true)

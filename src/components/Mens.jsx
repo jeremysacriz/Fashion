@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CategoryItem } from "./index";
+import { CategoryItem } from "./CategoryItem";
 
 export const Mens = () => {
    useEffect(() => {

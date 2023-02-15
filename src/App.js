@@ -3,19 +3,19 @@ import { Routes, Route } from 'react-router-dom';
 import { CartState } from './context/context';
 import './css/index.css';
 import { 
-   NotFound, Header, Main, Footer, Mens, Womens, SearchResults, ProductView,
+   Header, Main, Mens, Womens, SearchResults, ProductView, NotFound, Footer,
    MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts,
    WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
 
 const App = () => {
-   // const { 
-   //    state: { cart },
-   // } = CartState()
+   const { 
+      state: { cart },
+   } = CartState()
 
-   // useEffect(() => {
-   //    console.log(cart)
-   // }, [cart])
+   useEffect(() => {
+      console.log(cart)
+   }, [cart])
 
    return (
       <section id="index">

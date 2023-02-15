@@ -67,7 +67,7 @@ export const SearchResults = () => {
       <div className="item-container"> 
          <div className="item-title">
             <h1>Search Results:</h1>
-            <p>{product.products.length} results for "{(product.category || product.gender) ? product.gender + ' ' + product.category : state.search}"</p>
+            <p>{product.products.length} results for "{(product.category && product.gender) ? product.gender + ' ' + product.category : state.search}"</p>
          </div>
          
          <div className="item-filter">
