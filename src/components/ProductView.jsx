@@ -40,12 +40,18 @@ export const ProductView = () => {
       }
    }
 
-   const addToCart = () => {
-      dispatch({
-         type: "ADD_TO_CART",
-         payload: {...itemData},
-      })
-      setErrorMessage()
+   const addToCart = (e) => {
+      e.preventDefault()
+
+      if (size === undefined) {
+         setErrorMessage("Please select a size")
+      } else {
+         dispatch({
+            type: "ADD_TO_CART",
+            payload: {...itemData},
+         })
+         setErrorMessage()
+      }
    }
 
    useEffect(() => {
@@ -79,23 +85,19 @@ export const ProductView = () => {
                   <h1 className="product-title">{data.title}</h1>
                   <h2 className="product-price">$ {data.price}</h2>
 
-                  <div className="product-sizes">
-                     <button className={size === 'XS' ? 'active' : 'inactive'} name="XS" onClick={itemSize}>XS</button>
-                     <button className={size === 'S' ? 'active' : 'inactive'} name="S" onClick={itemSize}>S</button>
-                     <button className={size === 'M' ? 'active' : 'inactive'} name="M" onClick={itemSize}>M</button>
-                     <button className={size === 'L' ? 'active' : 'inactive'} name="L" onClick={itemSize}>L</button>
-                     <button className={size === 'XL' ? 'active' : 'inactive'} name="XL" onClick={itemSize}>XL</button>
-                     {size === undefined && <h1 className='select-size'>{errorMessage}</h1>}
-                  </div>
-                  {size === undefined ? (
-                     <button className="product-bag" onClick={() => {
-                        setErrorMessage("Please select a size") 
-                     }}><h1>Add to Bag</h1></button>
-                  ) : (
-                     <button className="product-bag" onClick={addToCart}>
+                  <form className="product-sizes-form" onSubmit={addToCart}>
+                     <div className="product-sizes">
+                        <button className={size === 'XS' ? 'active' : 'inactive'} name="XS" type="button" onClick={itemSize}>XS</button>
+                        <button className={size === 'S' ? 'active' : 'inactive'} name="S" type="button" onClick={itemSize}>S</button>
+                        <button className={size === 'M' ? 'active' : 'inactive'} name="M" type="button" onClick={itemSize}>M</button>
+                        <button className={size === 'L' ? 'active' : 'inactive'} name="L" type="button" onClick={itemSize}>L</button>
+                        <button className={size === 'XL' ? 'active' : 'inactive'} name="XL" type="button" onClick={itemSize}>XL</button>
+                        {size === undefined && <h1 className='select-size'>{errorMessage}</h1>}
+                     </div>
+                     <button className="product-bag" type="submit">
                         <h1>Add to Bag</h1>
                      </button>
-                  )}
+                  </form>
                </div>
             </div>
          </div>
