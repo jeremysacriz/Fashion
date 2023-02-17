@@ -38,6 +38,7 @@
          font-size: 1.6rem;
          font-weight: 500;
          letter-spacing: 2px;
+         white-space: nowrap;
          margin-right: 50px;
       }
 
@@ -46,6 +47,7 @@
          align-items: center;
          justify-content: center;
          position: relative;
+         height: 100%;
          width: 400px;
          background-color: transparent;
          outline: none;
@@ -55,6 +57,11 @@
          padding: 8px 20px;
          transition: 0.4s ease;
          cursor: pointer;
+
+         &:last-child {
+            border-left: none;
+            border-right: 2px solid #E8E8E8;
+         }
 
          &:hover,
          &.active {
@@ -220,6 +227,7 @@
       padding-bottom: 80px;
       width: 100%;
       display: flex;
+      align-items: center;
       justify-content: center;
 
       .item-btn {
@@ -270,8 +278,94 @@
    }
 }
 
-@media only screen and (max-width: 1440px) {
-   .item-container .item-grid-container {
-      grid-template-columns: repeat(2, 1fr);
+@media only screen and (max-width: 1280px) {
+   .item-container {
+      padding-top: 90px;
+
+      .item-grid-container {
+         grid-template-columns: repeat(2, 1fr);
+      }
+   }
+}
+
+@media only screen and (max-width: 1024px) {
+   .item-container {
+      .item-title {
+         h1 {
+            font-size: 3rem;
+         }
+   
+         p {
+            font-size: 1.2rem;
+         }
+      }
+
+      .item-filter {
+         padding: 0px;
+
+         .item-filter-title {
+            font-size: 1.2rem;
+            margin: 0 20px;
+         }
+
+         .item-filter-btn .filter-category {
+            font-size: 1.2rem;
+         }
+      }
+
+      .item-grid-container {
+         padding-bottom: 100px;
+
+         .item-grid-item .item-grid-overlay .item-grid-info {
+            left: 30px;
+   
+            h1 {
+               font-size: 2rem;
+            }
+   
+            p {
+               font-size: 1.4rem;
+            }
+         }
+      }
+
+      .item-nav {
+         padding-bottom: 50px;
+
+         .item-btn {
+            font-size: 1.4rem;
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 900px) {
+   .item-container {
+      .item-title {
+         h1 {
+            font-size: 2.6rem;
+         }
+   
+         p {
+            font-size: 1rem;
+         }
+      }
+
+      .item-filter {
+         height: 57px;
+
+         .item-filter-btn .filter-dropdown {
+            top: 55px;
+         }
+      }
+
+      .item-grid-container {
+         grid-template-columns: repeat(1, 1fr);
+
+         .item-grid-item {
+            height: 400px;
+            width: 100%;
+         }
+      }
    }
 }

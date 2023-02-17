@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState, useMemo, useCallback, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MensDropdown, WomensDropdown } from './Dropdown';
 import { Cart } from '../Cart';
@@ -27,12 +27,12 @@ export const Header = () => {
 
    // Reusable Functions
    // Maps over filtered Products array, returns a new array of products based on matching keywords
-   const searchMap = (array) => {
+   const searchMap = useCallback((array) => {
       return array
       .map(item => (
          <Link to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} className="search-item" key={item.id} onClick={searchClose} state={item}>{item.title}</Link>
       ))
-   }
+   }, [])
 
    // Converts property values to lowercase & removes special characters
    const exampleArr = (property) => {
@@ -57,7 +57,7 @@ export const Header = () => {
    })
    // console.log(filterProducts)
 
-   const productSearch = searchMap(filterProducts)
+   const productSearch = useMemo(() => searchMap(filterProducts), [searchMap, filterProducts])
 
    const keywordProducts = products
    .filter(item => {
@@ -69,7 +69,7 @@ export const Header = () => {
    })
    // console.log(keywordProducts)
 
-   const keywordSearch = searchMap(keywordProducts)
+   const keywordSearch = useMemo(() => searchMap(keywordProducts), [searchMap, keywordProducts])
 
    const handleSearchClick = () => {
       setSearch(true)

@@ -56,7 +56,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                         <div className="cart-total">
                            <h1>Total: {qty === 1 ? '(' + qty + ') Item' : '(' + qty + ') Items'}
                            </h1>
-                           <h2>$ {total}</h2>
+                           <h1>$ {total}</h1>
                         </div>
                         <button className="proceed-cart-checkout">
                            <h1>Proceed To Checkout</h1>

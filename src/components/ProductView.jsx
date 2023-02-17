@@ -70,8 +70,8 @@ export const ProductView = () => {
                   }
                </div>
                <div className="product-image-buttons">
-                  <span className="material-symbols-outlined product-arrow-left" onClick={indexLeft}>chevron_left</span>
-                  <span className="material-symbols-outlined product-arrow-right" onClick={indexRight}>chevron_right</span>
+                  <button className="product-arrow-left"><span className="material-symbols-outlined" onClick={indexLeft}>chevron_left</span></button>
+                  <button className="product-arrow-right"><span className="material-symbols-outlined" onClick={indexRight}>chevron_right</span></button>
                </div>
             </div>
             <div className="product-info-container">

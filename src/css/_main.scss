@@ -2,7 +2,7 @@
    height: auto;
    width: 90%;
    margin: 0 auto;
-   padding: 111px 0;
+   padding-top: 111px;
    display: block;
 
    .shop-container {
@@ -122,6 +122,55 @@
                font-size: 2.8rem;
                margin-left: 5px;
             }
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 1280px) {
+   .index-container {
+      padding-top: 90px;
+
+      .shop-container {
+         padding: 60px 0;
+
+         .main-img-container {
+            height: 500px;
+   
+            .main-title {
+               font-size: 5rem;
+               bottom: 170px;
+            }
+   
+            .main-img-btn {
+               padding: 15px 25px;
+   
+               h1 {
+                  font-size: 1.4rem;
+               }
+   
+               span {
+                  font-size: 2rem;
+               }
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 1024px) {
+   .index-container .shop-container {
+      width: 90%;
+      margin: 0 auto;
+      flex-direction: column;
+
+      .main-img-container {
+         .main-title {
+            bottom: 120px;
+         }
+
+         .main-img-btn {
+            bottom: 50px;
          }
       }
    }
