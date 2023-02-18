@@ -689,10 +689,11 @@ html {
   }
   #index .index-container .shop-container .main-img-container .main-title {
     font-size: 5rem;
-    bottom: 170px;
+    bottom: 120px;
   }
   #index .index-container .shop-container .main-img-container .main-img-btn {
     padding: 15px 25px;
+    bottom: 50px;
   }
   #index .index-container .shop-container .main-img-container .main-img-btn h1 {
     font-size: 1.4rem;
@@ -707,11 +708,22 @@ html {
     margin: 0 auto;
     flex-direction: column;
   }
+}
+@media only screen and (max-width: 768px) {
   #index .index-container .shop-container .main-img-container .main-title {
-    bottom: 120px;
+    left: 30px;
+    bottom: 110px;
+    font-size: 3.6rem;
   }
   #index .index-container .shop-container .main-img-container .main-img-btn {
-    bottom: 50px;
+    left: 30px;
+    padding: 10px 20px;
+  }
+  #index .index-container .shop-container .main-img-container .main-img-btn h1 {
+    font-size: 1rem;
+  }
+  #index .index-container .shop-container .main-img-container .main-img-btn span {
+    font-size: 1.3rem;
   }
 }
 #index .category-container {
@@ -1474,13 +1486,14 @@ html {
   }
 }
 #index .notfound-container {
-  height: 100vh;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-top: 111px;
+  padding-top: 241px;
+  padding-bottom: 130px;
 }
 #index .notfound-container span {
   font-size: 10rem;
@@ -1494,7 +1507,7 @@ html {
   text-transform: uppercase;
   margin-bottom: 40px;
 }
-#index .notfound-container .NotFoundButton {
+#index .notfound-container .notfound-btn {
   font-size: 1.4rem;
   padding: 15px 30px;
   border-radius: 10px;
@@ -1503,8 +1516,33 @@ html {
   text-decoration: none;
   transition: 0.4s ease;
 }
-#index .notfound-container .NotFoundButton:hover {
+#index .notfound-container .notfound-btn:hover {
   background-color: rgba(0, 0, 0, 0.6);
+}
+@media only screen and (max-width: 1280px) {
+  #index .notfound-container {
+    padding-top: 220px;
+  }
+  #index .notfound-container span {
+    font-size: 8rem;
+  }
+  #index .notfound-container h1 {
+    font-size: 2.6rem;
+  }
+  #index .notfound-container .notfound-btn {
+    font-size: 1.3rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  #index .notfound-container span {
+    font-size: 6rem;
+  }
+  #index .notfound-container h1 {
+    font-size: 1.6rem;
+  }
+  #index .notfound-container .notfound-btn {
+    font-size: 1.2rem;
+  }
 }
 #index .footer {
   height: auto;

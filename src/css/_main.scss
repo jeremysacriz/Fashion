@@ -139,11 +139,12 @@
    
             .main-title {
                font-size: 5rem;
-               bottom: 170px;
+               bottom: 120px;
             }
    
             .main-img-btn {
                padding: 15px 25px;
+               bottom: 50px;
    
                h1 {
                   font-size: 1.4rem;
@@ -163,14 +164,29 @@
       width: 90%;
       margin: 0 auto;
       flex-direction: column;
+   }
+}
 
+@media only screen and (max-width: 768px) {
+   .index-container .shop-container {
       .main-img-container {
          .main-title {
-            bottom: 120px;
+            left: 30px;
+            bottom: 110px;
+            font-size: 3.6rem;
          }
 
          .main-img-btn {
-            bottom: 50px;
+            left: 30px;
+            padding: 10px 20px;
+
+            h1 {
+               font-size: 1rem;
+            }
+
+            span {
+               font-size: 1.3rem;
+            }
          }
       }
    }

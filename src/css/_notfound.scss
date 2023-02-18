@@ -1,11 +1,12 @@
 .notfound-container {
-   height: 100vh;
+   height: auto;
    width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
    justify-content: center;
-   padding-top: 111px;
+   padding-top: 241px;
+   padding-bottom: 130px;
 
    span {
       font-size: 10rem;
@@ -21,7 +22,7 @@
       margin-bottom: 40px;
    }
 
-   .NotFoundButton {
+   .notfound-btn {
       font-size: 1.4rem;
       padding: 15px 30px;
       border-radius: 10px;
@@ -32,6 +33,40 @@
 
       &:hover {
          background-color: rgba(0, 0, 0, 0.6);
+      }
+   }
+}
+
+@media only screen and (max-width: 1280px) {
+   .notfound-container {
+      padding-top: 220px;
+
+      span {
+         font-size: 8rem;
+      }
+
+      h1 {
+         font-size: 2.6rem;
+      }
+
+      .notfound-btn {
+         font-size: 1.3rem;
+      }
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .notfound-container {
+      span {
+         font-size: 6rem;
+      }
+
+      h1 {
+         font-size: 1.6rem;
+      }
+
+      .notfound-btn {
+         font-size: 1.2rem;
       }
    }
 }
