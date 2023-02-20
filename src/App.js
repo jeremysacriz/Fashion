@@ -3,19 +3,19 @@ import { Routes, Route } from 'react-router-dom';
 import { CartState } from './context/context';
 import './css/index.css';
 import { 
-   Header, Main, Mens, Womens, SearchResults, ProductView, NotFound, Footer,
+   Header, Main, Mens, Womens, SearchResults, ProductView, Checkout, NotFound, Footer,
    MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts,
    WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
 
 const App = () => {
-   const { 
-      state: { cart },
-   } = CartState()
+   // const { 
+   //    state: { cart },
+   // } = CartState()
 
-   useEffect(() => {
-      console.log(cart)
-   }, [cart])
+   // useEffect(() => {
+   //    console.log(cart)
+   // }, [cart])
 
    return (
       <section id="index">
@@ -56,6 +56,7 @@ const App = () => {
             <Route path="/womens/accessories/sunglasses" element={<WomensSunglasses />}></Route>
             <Route path="/mens/:category/:product/:item" element={<ProductView />}></Route>
             <Route path="/womens/:category/:product/:item" element={<ProductView />}></Route>
+            <Route path="/checkout" element={<Checkout />}></Route>
             <Route path="*" element={<NotFound />}></Route>
          </Routes>
          

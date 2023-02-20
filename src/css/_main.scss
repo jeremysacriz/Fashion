@@ -1,13 +1,14 @@
 .index-container {
    height: auto;
-   width: 90%;
-   margin: 0 auto;
+   width: 100%;
    padding-top: 111px;
    display: block;
+   background-color: #F9F6F0;
 
    .shop-container {
       padding: 80px 0;
-      width: 100%;
+      width: 90%;
+      margin: 0 auto;
       display: flex;
       align-items: center;
       justify-content: center;

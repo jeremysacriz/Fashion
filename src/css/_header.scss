@@ -488,6 +488,10 @@
                            width: 100%;
                            display: flex;
                            justify-content: space-between;
+
+                           h1:last-child {
+                              letter-spacing: 1px;
+                           }
                         }
 
                         .proceed-cart-checkout {

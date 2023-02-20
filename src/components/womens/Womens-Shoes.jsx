@@ -63,42 +63,44 @@ export const WomensAllShoes = () => {
    }, [])
 
    return (
-      <div className="item-container"> 
-         <CatalogueTitle 
-            title="Womens All Shoes"
-            product={product}
-         />
-         <CatalogueFilter
-            active={active}
-            toggleActive={toggleActive}
-            box={box}
-            product={product}
-            category="All-Shoes"
-            filterAll={filterAll}
-            button={
-               <>
-                  <button className="filter-btn" onClick={filterSneakers}><h1>Sneakers</h1></button>
-                  <button className="filter-btn" onClick={filterHeels}><h1>Heels</h1></button>
-               </>
-            }
-         />
-         <CatalogueGridData 
-            gridData={
-               product.products.map(item => {
-                  return (
-                     <ProductItem 
-                     item={item} 
-                     key={item.id} 
-                     to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} />
-                  )
-               })
-            }
-            gender="Womens"
-            link1="/womens"
-            link2="/womens/all-shoes"
-            pageReload={pageReload}
-            category="All-Shoes"
-         />
+      <div className="item-bg">
+         <div className="item-container"> 
+            <CatalogueTitle 
+               title="Womens All Shoes"
+               product={product}
+            />
+            <CatalogueFilter
+               active={active}
+               toggleActive={toggleActive}
+               box={box}
+               product={product}
+               category="All-Shoes"
+               filterAll={filterAll}
+               button={
+                  <>
+                     <button className="filter-btn" onClick={filterSneakers}><h1>Sneakers</h1></button>
+                     <button className="filter-btn" onClick={filterHeels}><h1>Heels</h1></button>
+                  </>
+               }
+            />
+            <CatalogueGridData 
+               gridData={
+                  product.products.map(item => {
+                     return (
+                        <ProductItem 
+                        item={item} 
+                        key={item.id} 
+                        to={'/' + item.gender + '/' + item.categories.toLowerCase() + '/' + item.linkcategory + item.path} />
+                     )
+                  })
+               }
+               gender="Womens"
+               link1="/womens"
+               link2="/womens/all-shoes"
+               pageReload={pageReload}
+               category="All-Shoes"
+            />
+         </div>
       </div>
    )
 }

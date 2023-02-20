@@ -1,38 +1,40 @@
-import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react'
 import { CartState } from '../context/context';
 
-export const Cart = ({cartStatus, setCartStatus}) => {
+export const Checkout = () => {
    const { 
       state: { cart },
-      dispatch,
+      dispatch
    } = CartState()
 
    const [total, setTotal] = useState()
    const [qty, setQty] = useState()
+   const [active, setActive] = useState(false)
 
-   const cartClose = () => {
-      setCartStatus(false)
-      document.body.style.overflow = "visible"
+   const confirmPurchase = (e) => {
+      e.preventDefault()
+
+      console.log('purchase is confirmed')
+      setActive(false)
+      console.log(active)
    }
 
    useEffect(() => {
       setTotal(cart.reduce((acc, item) => acc + Number(item.price * item.qty), 0))
       setQty(cart.reduce((acc, item) => acc + Number(item.qty), 0))
+      console.log(cart)
    }, [cart])
 
    return (
-      <>
-         <div className={cartStatus === true ? "cart-overlay active" : "cart-overlay"}></div>
-         <div className={cartStatus === true ? "cart-container active" : "cart-container"}>
-            <div className="cart-width">
-               <button className="cart-close" onClick={cartClose}>
-                  <span className="material-symbols-outlined">close</span>
-               </button>
-               {
-                  cart.length !== 0 ? (
-                     <>
-                     {
+      <div className="checkout-container">
+         {
+            cart.length !== 0 ? (
+               <>
+               <div className="checkout">
+                  <div className="checkout-title">
+                     <h1>Please confirm your purchase:</h1>
+                  </div>
+                  {
                      cart.map((item, index) => (
                         <div className="cart-item" key={index}>
                            <div className="cart-item-info">
@@ -54,26 +56,33 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                            </div>
                         </div>
                      ))
-                     }
+                  }
                      <div className="cart-checkout">
                         <div className="cart-total">
                            <h1>Total: {qty === 1 ? '(' + qty + ') Item' : '(' + qty + ') Items'}
                            </h1>
                            <h1>$ {total}</h1>
                         </div>
-                        <Link to="/checkout" onClick={() => setCartStatus(false)}>
-                           <button className="proceed-cart-checkout">
-                              <h1>Proceed To Checkout</h1>
-                           </button>
-                        </Link>
+                        <button className="proceed-cart-checkout" onClick={() => setActive(true)}>
+                           <h1>Proceed To Checkout</h1>
+                        </button>
                      </div>
-                     </>
-                  ) : (
-                     <h1 className="empty-cart-title">Your cart is empty ...</h1>
-                  )
-               }
-            </div>
+               </div>
+               </>
+            ) : (
+               <h1 className="empty-cart-title">Your cart is empty...</h1>
+            )
+         }
+         <div className={active === true ? "checkout-auth active" : "checkout-auth"}>
+            <form className="checkout-info" onSubmit={confirmPurchase}>
+               <div className="checkout-form-title">
+                  <h1>Please provide your details:</h1>
+               </div>
+               <input type="text" placeholder="Name" className="checkout-name" />
+               <input type="email" placeholder="Email" className="checkout-email"/>
+               <button type="submit" className="checkout-btn">Submit</button>
+            </form>
          </div>
-      </>
+      </div>
    )
 }
