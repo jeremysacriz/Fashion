@@ -935,7 +935,7 @@ html {
   transition: 0.4s ease;
   cursor: pointer;
 }
-#index .item-container .item-filter .item-filter-btn:last-child {
+#index .item-container .item-filter .item-filter-btn:nth-child(3) {
   border-left: none;
   border-right: 2px solid #E8E8E8;
 }
@@ -1055,8 +1055,7 @@ html {
 #index .item-container .item-grid-container .item-grid-item .item-grid-overlay .item-grid-info h1 {
   font-size: 3rem;
   font-weight: 500;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  line-height: 5rem;
 }
 #index .item-container .item-grid-container .item-grid-item .item-grid-overlay .item-grid-info p {
   font-size: 1.3rem;
@@ -1124,7 +1123,18 @@ html {
     padding-top: 90px;
   }
   #index .item-container .item-grid-container {
+    width: 90%;
     grid-template-columns: repeat(2, 1fr);
+  }
+  #index .item-container .item-grid-container .item-grid-item {
+    height: 500px;
+  }
+  #index .item-container .item-grid-container .item-grid-item .item-grid-overlay .item-grid-info {
+    bottom: 40px;
+  }
+  #index .item-container .item-grid-container .item-grid-item .item-grid-overlay .item-grid-info h1 {
+    font-size: 2.6rem;
+    line-height: 5rem;
   }
 }
 @media only screen and (max-width: 1024px) {
@@ -1182,6 +1192,13 @@ html {
   #index .item-container .item-grid-container .item-grid-item {
     height: 400px;
     width: 100%;
+  }
+  #index .item-container .item-grid-container .item-grid-item .item-grid-overlay .item-grid-info h1 {
+    font-size: 1.8rem;
+    line-height: 3rem;
+  }
+  #index .item-container .item-grid-container .item-grid-item .item-grid-overlay .item-grid-info p {
+    font-size: 1.2rem;
   }
 }
 #index .product-container {
