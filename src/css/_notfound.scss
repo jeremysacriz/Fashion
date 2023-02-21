@@ -26,6 +26,7 @@
    .notfound-btn {
       font-size: 1.4rem;
       padding: 15px 30px;
+      border: 2px solid transparent;
       border-radius: 10px;
       color: white;
       background-color: black;
@@ -33,7 +34,9 @@
       transition: 0.4s ease;
 
       &:hover {
-         background-color: rgba(0, 0, 0, 0.6);
+         color: black;
+         background-color: #F9F6F0;
+         border: 2px solid black;
       }
    }
 }

@@ -23,14 +23,6 @@ export const cartReducer = (state, action) => {
             }
          }
 
-         // Default solution: (Solves +0.5 to qty bug)
-         // if (itemExists) return {
-         //    ...state,
-         //    cart: state.cart.filter((product) => 
-         //       product.id === action.payload.id && product.size === action.payload.size ? ( product.qty = product.qty + 0.5 ) : product.qty
-         //    )
-         // }
-
          return {
             ...state, 
             cart: [...state.cart, {...action.payload, qty: 1, cartID: small_id}],
@@ -52,14 +44,6 @@ export const cartReducer = (state, action) => {
                cart: updatedCart
             }
          }
-
-         // Default solution: (Solves +0.5 to qty bug)
-         // if (cartItem.qty > 1) return {
-         //    ...state, 
-         //    cart: state.cart.filter((product) => 
-         //       product.cartID === action.payload.cartID ? ( product.qty = product.qty - 0.5 ) : product.qty
-         //    ),
-         // }
 
          return {
             ...state, 

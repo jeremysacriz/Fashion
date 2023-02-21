@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form'
 import { CartState } from '../context/context';
+import { zodResolver } from "@hookform/resolvers/zod"
 import { string, z } from 'zod'
 
 export const Checkout = () => {
@@ -12,27 +14,35 @@ export const Checkout = () => {
    const [total, setTotal] = useState()
    const [qty, setQty] = useState()
    const [active, setActive] = useState(false)
+   const [confirmed, setConfirmed] = useState(false)
+   const [formValues, setFormValues] = useState()
 
-   const { register, handleSubmit } = useForm()
+   const schema = z.object({
+      name: string().min(1, { message: 'Name is required' }),
+      email: string().email()
+   })
+
+   const { register, handleSubmit, formState } = useForm({resolver: zodResolver(schema)})
+   const { errors } = formState
    
    const cartConfirm = () => {
+      window.scrollTo(0, 0)
       setActive(true)
       document.body.style.overflow = "hidden"
    }
    
    const confirmPurchase = (formValues) => {
-      if (formValues.name.length === 0 || formValues.email.length === 0) {
-         console.log('none found')
-         // Set error messages here
-      } else {
-         console.log(formValues)
-         // Go to Checkout Confirmed and print a message 'Hey ${formValues.name}, we have sent you a receipt @ ${formValues.email}. Thank you for shopping at (title of E-Commerce Website)'
-         // document.body.style.overflow = "visible"
-      }
+      setConfirmed(true)
+      setFormValues(formValues)
    }
 
    const clearForm = () => {
       setActive(false)
+      document.body.style.overflow = "visible"
+   }
+
+   const backToHome = () => {
+      cart = []
       document.body.style.overflow = "visible"
    }
 
@@ -90,21 +100,29 @@ export const Checkout = () => {
             )
          }
          <div className={active === true ? "checkout-auth active" : "checkout-auth"}>
-            <form className="checkout-info" onSubmit={handleSubmit(confirmPurchase)}>
-               <button type="button" className="checkout-close" onClick={clearForm}>
-                  <span className="material-symbols-outlined">close</span>
-               </button>
-               <div className="checkout-form-title">
-                  <h1>Please provide your details:</h1>
+            <div className="checkout-info">
+               <form className={confirmed === false ? "checkout-form active" : "checkout-form"} onSubmit={handleSubmit(confirmPurchase)}>
+                  <button type="button" className="checkout-close" onClick={clearForm}>
+                     <span className="material-symbols-outlined">close</span>
+                  </button>
+                  <div className="checkout-form-title">
+                     <h1>Please provide your details:</h1>
+                  </div>
+                  <div>
+                     <input type="text" placeholder="Name" className="checkout-name" autoComplete="off" {...register('name')}/>
+                     <div className="error-message">{errors.name?.message}</div>
+                  </div>
+                  <div>
+                     <input type="email" placeholder="Email" className="checkout-email" autoComplete="off" {...register('email')}/>
+                     <div className="error-message">{errors.email?.message}</div>
+                  </div>
+                  <button type="submit" className="checkout-btn">Submit</button>
+               </form>
+               <div className={confirmed === true ? "checkout-confirmed active" : "checkout-confirmed"}>
+                  <h1>Hey {formValues && formValues.name}, we have sent you a receipt to your email at {formValues && formValues.email}. Thank you for shopping at my E-Commerce Store</h1>
+                  <Link to="/" className="notfound-btn" onClick={backToHome}>Back to Homepage</Link>
                </div>
-               <div>
-                  <input type="text" placeholder="Name" className="checkout-name" autoComplete="off" {...register('name')}/>
-               </div>
-               <div>
-                  <input type="email" placeholder="Email" className="checkout-email" autoComplete="off" {...register('email')}/>
-               </div>
-               <button type="submit" className="checkout-btn">Submit</button>
-            </form>
+            </div>
          </div>
       </div>
    )

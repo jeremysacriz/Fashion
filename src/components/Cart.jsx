@@ -69,7 +69,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                      </div>
                      </>
                   ) : (
-                     <h1 className="empty-cart-title">Your cart is empty ...</h1>
+                     <h1 className="empty-cart-title">Your cart is empty...</h1>
                   )
                }
             </div>
