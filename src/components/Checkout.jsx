@@ -42,7 +42,7 @@ export const Checkout = () => {
    }
 
    const backToHome = () => {
-      cart = []
+      cart.length = 0
       document.body.style.overflow = "visible"
    }
 

@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
-import { CartState } from './context/context';
+// import { CartState } from './context/context';
 import './css/index.css';
 import { 
    Header, Main, Mens, Womens, SearchResults, ProductView, Checkout, NotFound, Footer,

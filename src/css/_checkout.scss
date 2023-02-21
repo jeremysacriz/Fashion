@@ -75,9 +75,12 @@
             .checkout-form-title {
                position: absolute;
                top: 40px;
-               font-size: 1.4rem;
-               font-weight: 500;
-               text-align: center;
+
+               h1 {
+                  font-size: 1.8rem;
+                  font-weight: 500;
+                  text-align: center;
+               }
             }
    
             .checkout-name,
@@ -309,5 +312,40 @@
       font-weight: 500;
       letter-spacing: 4px;
       text-align: center;
+   }
+}
+
+@media only screen and (max-width: 1280px) {
+   .checkout-container {
+      .checkout-auth {
+         height: 100vh;
+   
+         .checkout-info {
+            height: 350px;
+            width: 500px;
+            bottom: 0px;
+
+            .checkout-form .checkout-btn {
+               top: 20px;
+            }
+         }
+      }
+   }
+}
+
+@media only screen and (max-width: 1024px) {
+   .checkout-container .checkout {
+      width: 100%;
+      padding: 20px;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+   .checkout-container .checkout-auth .checkout-info {
+      height: 300px;
+
+      .checkout-form .checkout-form-title {
+         top: 20px;
+      }
    }
 }
