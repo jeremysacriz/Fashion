@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react'
+import { useForm } from 'react-hook-form'
 import { CartState } from '../context/context';
+import { string, z } from 'zod'
 
 export const Checkout = () => {
    const { 
@@ -11,18 +13,32 @@ export const Checkout = () => {
    const [qty, setQty] = useState()
    const [active, setActive] = useState(false)
 
-   const confirmPurchase = (e) => {
-      e.preventDefault()
+   const { register, handleSubmit } = useForm()
+   
+   const cartConfirm = () => {
+      setActive(true)
+      document.body.style.overflow = "hidden"
+   }
+   
+   const confirmPurchase = (formValues) => {
+      if (formValues.name.length === 0 || formValues.email.length === 0) {
+         console.log('none found')
+         // Set error messages here
+      } else {
+         console.log(formValues)
+         // Go to Checkout Confirmed and print a message 'Hey ${formValues.name}, we have sent you a receipt @ ${formValues.email}. Thank you for shopping at (title of E-Commerce Website)'
+         // document.body.style.overflow = "visible"
+      }
+   }
 
-      console.log('purchase is confirmed')
+   const clearForm = () => {
       setActive(false)
-      console.log(active)
+      document.body.style.overflow = "visible"
    }
 
    useEffect(() => {
       setTotal(cart.reduce((acc, item) => acc + Number(item.price * item.qty), 0))
       setQty(cart.reduce((acc, item) => acc + Number(item.qty), 0))
-      console.log(cart)
    }, [cart])
 
    return (
@@ -63,7 +79,7 @@ export const Checkout = () => {
                            </h1>
                            <h1>$ {total}</h1>
                         </div>
-                        <button className="proceed-cart-checkout" onClick={() => setActive(true)}>
+                        <button className="proceed-cart-checkout" onClick={cartConfirm}>
                            <h1>Proceed To Checkout</h1>
                         </button>
                      </div>
@@ -74,12 +90,19 @@ export const Checkout = () => {
             )
          }
          <div className={active === true ? "checkout-auth active" : "checkout-auth"}>
-            <form className="checkout-info" onSubmit={confirmPurchase}>
+            <form className="checkout-info" onSubmit={handleSubmit(confirmPurchase)}>
+               <button type="button" className="checkout-close" onClick={clearForm}>
+                  <span className="material-symbols-outlined">close</span>
+               </button>
                <div className="checkout-form-title">
                   <h1>Please provide your details:</h1>
                </div>
-               <input type="text" placeholder="Name" className="checkout-name" />
-               <input type="email" placeholder="Email" className="checkout-email"/>
+               <div>
+                  <input type="text" placeholder="Name" className="checkout-name" autoComplete="off" {...register('name')}/>
+               </div>
+               <div>
+                  <input type="email" placeholder="Email" className="checkout-email" autoComplete="off" {...register('email')}/>
+               </div>
                <button type="submit" className="checkout-btn">Submit</button>
             </form>
          </div>

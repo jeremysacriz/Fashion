@@ -61,7 +61,7 @@ export const Cart = ({cartStatus, setCartStatus}) => {
                            </h1>
                            <h1>$ {total}</h1>
                         </div>
-                        <Link to="/checkout" onClick={() => setCartStatus(false)}>
+                        <Link to="/checkout" onClick={cartClose}>
                            <button className="proceed-cart-checkout">
                               <h1>Proceed To Checkout</h1>
                            </button>

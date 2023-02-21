@@ -9,7 +9,7 @@ export const SearchResults = () => {
    let filterGender = state.items.map((item) => item.gender)
 
    const removeDuplicates = (arr) => {
-      return arr.filter((item, index) => arr.indexOf(item) === index)
+      return [...new Set(arr)]
    }
 
    let newData = state.items
