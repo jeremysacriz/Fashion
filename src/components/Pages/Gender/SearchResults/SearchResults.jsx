@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { ProductItem } from "./ProductItem";
+import { ProductItem } from "../ProductItem";
 import { Link, useLocation } from 'react-router-dom';
 
 export const SearchResults = () => {

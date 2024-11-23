@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form'
-import { CartState } from '../context/context';
+import { CartState } from '../../../context/context';
 import { zodResolver } from "@hookform/resolvers/zod"
 import { string, z } from 'zod'
 

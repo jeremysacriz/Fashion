@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CategoryItem } from "./CategoryItem";
+import { CategoryItem } from "./CategoryItem/CategoryItem";
 
 export const Womens = () => {
   useEffect(() => {

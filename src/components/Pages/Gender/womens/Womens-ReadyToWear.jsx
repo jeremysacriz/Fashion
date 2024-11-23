@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
 import { Catalogue, CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
-import { CartState } from '../../context/context';
+import { CartState } from '../../../../context/context';
 
 export const WomensAllReadyToWear = () => {
    const pageReload = () => {

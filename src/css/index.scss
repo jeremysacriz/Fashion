@@ -16,14 +16,14 @@ html {
   min-height: 100vh;
   width: 100%;
 
-  @import "./header";
+  @import "../components/Layout/header/header";
 
-  @import "./main";
-  @import "./category-item";
-  @import "./item";
-  @import "./product";
-  @import "./checkout";
-  @import "./notfound";
+  @import "../components/Pages/Home/home";
+  @import "../components/Pages/Categories/CategoryItem/category-item";
+  @import "../components/Pages/Gender/SearchResults/searchResults";
+  @import "../components/Pages/Gender/Product/product";
+  @import "../components/Pages/Checkout/checkout";
+  @import "../components/Pages/NotFound/notfound";
 
-  @import "./footer";
+  @import "../components/Layout/Footer/footer";
 }

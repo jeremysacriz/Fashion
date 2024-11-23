@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { MensDropdown, WomensDropdown } from './Dropdown';
-import { Cart } from '../Cart';
-import { CartState } from '../../context/context'
+import { Cart } from '../Cart/Cart';
+import { CartState } from '../../../context/context';
 
 export const Header = () => {
    const { state: { products }} = CartState()

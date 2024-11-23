@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 // import { CartState } from './context/context';
 import './css/index.css';
 import { 
-   Header, Main, Mens, Womens, SearchResults, ProductView, Checkout, NotFound, Footer,
+   Header, Home, Mens, Womens, SearchResults, Product, Checkout, NotFound, Footer,
    MensAllReadyToWear, Tshirts, SweatsHoodies, JacketsCoats, MensAllBags, CrossBodyBags, Backpacks, MensAllShoes, Sneakers, SlidesSandals, MensAllAccessories, Jewelry, Sunglasses, Belts,
    WomensAllReadyToWear, WomensTshirts, WomensSweatsHoodies, WomensOuterwearBlousons, WomensAllBags, WomensShoulderBags, WomensMicroBags, WomensAllShoes, WomensSneakers, WomensHeels, WomensAllAccessories, WomensJewelry, WomensBelts, WomensSunglasses
 } from './components';
@@ -22,7 +22,7 @@ const App = () => {
          <Header />
 
          <Routes>
-            <Route path="/" element={<Main />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="/mens" element={<Mens />}></Route>
             <Route path="/womens" element={<Womens />}></Route>
             <Route path="/search-results/:query" element={<SearchResults />}></Route>
@@ -54,8 +54,8 @@ const App = () => {
             <Route path="/womens/accessories/jewelry" element={<WomensJewelry />}></Route>
             <Route path="/womens/accessories/belts" element={<WomensBelts />}></Route>
             <Route path="/womens/accessories/sunglasses" element={<WomensSunglasses />}></Route>
-            <Route path="/mens/:category/:product/:item" element={<ProductView />}></Route>
-            <Route path="/womens/:category/:product/:item" element={<ProductView />}></Route>
+            <Route path="/mens/:category/:product/:item" element={<Product />}></Route>
+            <Route path="/womens/:category/:product/:item" element={<Product />}></Route>
             <Route path="/checkout" element={<Checkout />}></Route>
             <Route path="*" element={<NotFound />}></Route>
          </Routes>

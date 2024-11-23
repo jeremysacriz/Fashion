@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { CartState } from '../context/context';
+import { CartState } from '../../../../context/context';
 
-export const ProductView = () => {   
+export const Product = () => {   
    const [activeIndex, setActiveIndex] = useState(0)
    const [size, setSize] = useState()
    const [errorMessage, setErrorMessage] = useState('')

@@ -1,16 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import { ProductItem } from "../ProductItem";
 import { Catalogue, CatalogueTitle, CatalogueFilter, CatalogueGridData } from "../All-Products";
-import { CartState } from '../../context/context';
+import { CartState } from '../../../../context/context';
 
-export const MensAllAccessories = () => {
+export const WomensAllAccessories = () => {
    const pageReload = () => {
       window.location.reload()
       window.scrollTo(0, 0);
    }
 
    const { state: { products }} = CartState()
-   const newData = products.filter(item => item.gender === "mens" && item.categories === "ACCESSORIES")
+   const newData = products.filter(item => item.gender === "womens" && item.categories === "ACCESSORIES")
 
    const [active, setActive] = useState(false)
    const [product, setProduct] = useState({
@@ -37,13 +37,13 @@ export const MensAllAccessories = () => {
       setActive()
    }
 
-   const filterSunglasses = () => {
-      setProduct({products: filterProduct("Sunglasses"), category: 'Sunglasses'})
+   const filterBelts = () => {
+      setProduct({products: filterProduct("Belts"), category: 'Belts'})
       setActive()
    }
 
-   const filterBelts = () => {
-      setProduct({products: filterProduct("Belts"), category: 'Belts'})
+   const filterSunglasses = () => {
+      setProduct({products: filterProduct("Sunglasses"), category: 'Sunglasses'})
       setActive()
    }
 
@@ -71,7 +71,7 @@ export const MensAllAccessories = () => {
       <div className="item-bg">
          <div className="item-container"> 
             <CatalogueTitle 
-               title="Mens All Accessories"
+               title="Womens All Accessories"
                product={product}
             />
             <CatalogueFilter
@@ -84,8 +84,8 @@ export const MensAllAccessories = () => {
                button={
                   <>
                      <button className="filter-btn" onClick={filterJewelry}><h1>Jewelry</h1></button>
-                     <button className="filter-btn" onClick={filterSunglasses}><h1>Sunglasses</h1></button>
                      <button className="filter-btn" onClick={filterBelts}><h1>Belts</h1></button>
+                     <button className="filter-btn" onClick={filterSunglasses}><h1>Sunglasses</h1></button>
                   </>
                }
             />
@@ -100,9 +100,9 @@ export const MensAllAccessories = () => {
                      )
                   })
                }
-               gender="Mens"
-               link1="/mens"
-               link2="/mens/all-accessories"
+               gender="Womens"
+               link1="/womens"
+               link2="/womens/all-accessories"
                pageReload={pageReload}
                category="All-Accessories"
             />
@@ -111,77 +111,77 @@ export const MensAllAccessories = () => {
    )
 }
 
-export const Jewelry = () => {
+export const WomensJewelry = () => {
    const { state: { products }} = CartState()
-   const JewelryData = products.filter(item => item.gender === "mens" && item.category === "Jewelry")
+   const WomensJewelryData = products.filter(item => item.gender === "womens" && item.category === "Jewelry")
 
    return (
       <Catalogue 
          title="Jewelry"
          description="Insert Description here."
          data={
-            JewelryData.map(item => {
+            WomensJewelryData.map(item => {
                return (
-                  <ProductItem item={item} key={item.id} to={'/mens/accessories/jewelry' + item.path} />
+                  <ProductItem item={item} key={item.id} to={'/womens/accessories/jewelry' + item.path} />
                )
             })
          }
-         link1="/mens"
-         link2="/mens/all-accessories"
-         link3="/mens/accessories/jewelry"
-         gender="Mens"
+         link1="/womens"
+         link2="/womens/all-accessories"
+         link3="/womens/accessories/jewelry"
+         gender="Womens"
          category="Accessories"
          products="Jewelry"
       />
    )
 }
 
-export const Sunglasses = () => {
+export const WomensBelts = () => {
    const { state: { products }} = CartState()
-   const SunglassesData = products.filter(item => item.gender === "mens" && item.category === "Sunglasses")
-
-   return (
-      <Catalogue 
-         title="Sunglasses"
-         description="Insert Description here."
-         data={
-            SunglassesData.map(item => {
-               return (
-                  <ProductItem item={item} key={item.id} to={'/mens/accessories/sunglasses' + item.path} />
-               )
-            })
-         }
-         link1="/mens"
-         link2="/mens/all-accessories"
-         link3="/mens/accessories/sunglasses"
-         gender="Mens"
-         category="Accessories"
-         products="Sunglasses"
-      />
-   )
-}
-
-export const Belts = () => {
-   const { state: { products }} = CartState()
-   const BeltsData = products.filter(item => item.gender === "mens" && item.category === "Belts")
+   const WomensBeltsData = products.filter(item => item.gender === "womens" && item.category === "Belts")
 
    return (
       <Catalogue 
          title="Belts"
          description="Insert Description here."
          data={
-            BeltsData.map(item => {
+            WomensBeltsData.map(item => {
                return (
-                  <ProductItem item={item} key={item.id} to={'/mens/accessories/belts' + item.path} />
+                  <ProductItem item={item} key={item.id} to={'/womens/accessories/belts' + item.path} />
                )
             })
          }
-         link1="/mens"
-         link2="/mens/all-accessories"
-         link3="/mens/accessories/belts"
-         gender="Mens"
+         link1="/womens"
+         link2="/womens/all-accessories"
+         link3="/womens/accessories/belts"
+         gender="Womens"
          category="Accessories"
          products="Belts"
+      />
+   )
+}
+
+export const WomensSunglasses = () => {
+   const { state: { products }} = CartState()
+   const WomensSunglassesData = products.filter(item => item.gender === "womens" && item.category === "Sunglasses")
+
+   return (
+      <Catalogue 
+         title="Sunglasses"
+         description="Insert Description here."
+         data={
+            WomensSunglassesData.map(item => {
+               return (
+                  <ProductItem item={item} key={item.id} to={'/womens/accessories/sunglasses' + item.path} />
+               )
+            })
+         }
+         link1="/womens"
+         link2="/womens/all-accessories"
+         link3="/womens/accessories/sunglasses"
+         gender="Womens"
+         category="Accessories"
+         products="Sunglasses"
       />
    )
 }

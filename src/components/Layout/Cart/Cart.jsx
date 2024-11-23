@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { CartState } from '../context/context';
+import { CartState } from '../../../context/context';
 
 export const Cart = ({cartStatus, setCartStatus}) => {
    const { 
